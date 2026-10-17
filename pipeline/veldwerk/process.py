@@ -170,7 +170,7 @@ def process_folder(
 # -- uitvoerbestanden ------------------------------------------------------
 
 SPECIES_COLS = ["scientific_name", "slug", "name_nl", "zone_id", "place_id", "last_seen",
-                "wikidata_qid", "status", "notes"]
+                "wikidata_qid", "status", "notes", "park_url"]
 
 
 def place_label(res: Result, pl: Place) -> str:

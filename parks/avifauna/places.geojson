@@ -1471,6 +1471,301 @@
      52.140206
     ]
    }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "food-001",
+    "kind": "facility",
+    "name_nl": "Restaurant De Lepelaar",
+    "facility_type": "food",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.646607,
+     52.140072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "playground-001",
+    "kind": "facility",
+    "name_nl": "Speeltuin",
+    "facility_type": "playground",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.647142,
+     52.13987
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "playground-002",
+    "kind": "facility",
+    "name_nl": "Speeltuin",
+    "facility_type": "playground",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.64801,
+     52.139912
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-001",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (struisvogel)",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648253,
+     52.140114
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-002",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (Nycticorax nycticorax)",
+    "source": "veldwerk",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648935,
+     52.140133
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-003",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (roodhalsgans)",
+    "source": "veldwerk",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649398,
+     52.139778
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-004",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (Grus antigone)",
+    "source": "veldwerk",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649612,
+     52.13942
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-005",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (Branta leucopsis)",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.656365,
+     52.137821
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-006",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (Branta hutchinsii)",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649006,
+     52.139068
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "info-001",
+    "kind": "facility",
+    "name_nl": "Meetingpoint Meet & Greet Rode Panda",
+    "facility_type": "info",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649006,
+     52.139068
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-007",
+    "kind": "enclosure",
+    "name_nl": "Verblijf (Ailurus fulgens)",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649488,
+     52.138985
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-008",
+    "kind": "enclosure",
+    "name_nl": "Lori Landing",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.656013,
+     52.138168
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "playground-003",
+    "kind": "facility",
+    "name_nl": "Speeltuin",
+    "facility_type": "playground",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650773,
+     52.139198
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "picnic-001",
+    "kind": "facility",
+    "name_nl": "Picknickplek bij speeltuin",
+    "facility_type": "picnic",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650773,
+     52.139198
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-009",
+    "kind": "enclosure",
+    "name_nl": "Gierenvallei Umvikeli",
+    "source": "veldwerk",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650773,
+     52.139198
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "feeding-001",
+    "kind": "facility",
+    "name_nl": "Pinguïns voeren",
+    "facility_type": "feeding",
+    "source": "veldwerk",
+    "last_seen": "2026-10-17"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.652068,
+     52.140594
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-010",
+    "kind": "enclosure",
+    "name_nl": "Pinguïns",
+    "source": "veldwerk"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.652068,
+     52.140594
+    ]
+   }
   }
  ]
 }

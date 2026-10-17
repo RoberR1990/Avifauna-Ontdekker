@@ -11,7 +11,11 @@ import './toddler.css'
 /** 0,01 s stilte (WAV), om het audio-element op iOS te ontgrendelen. */
 function playUrl(a: HTMLAudioElement, url: string) {
   a.src = url
-  void a.play().catch(() => {})
+  try {
+    a.play()?.catch(() => {})
+  } catch {
+    // geen audio-ondersteuning (bv. testomgeving)
+  }
 }
 
 const SILENT_WAV =
@@ -106,9 +110,9 @@ export function ToddlerPage() {
   useEffect(() => {
     const unlock = () => {
       if (sharedAudio.current || typeof Audio === 'undefined') return
-      const a = new Audio(SILENT_WAV)
+      const a = new Audio()
       sharedAudio.current = a
-      void a.play().catch(() => {})
+      playUrl(a, SILENT_WAV)
     }
     window.addEventListener('pointerdown', unlock, { capture: true })
     return () => window.removeEventListener('pointerdown', unlock, { capture: true })
