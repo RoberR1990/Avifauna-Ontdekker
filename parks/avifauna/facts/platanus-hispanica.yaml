@@ -1,0 +1,25 @@
+slug: platanus-hispanica
+reviewed: false
+is_bird: false
+length_cm: null
+height_cm: [2000, 4000]
+mass_g: null
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: null
+incubation_days: null
+continents: []
+range: { nl: "Gekweekte hybride, vooral aangeplant in steden en parken", en: "Cultivated hybrid, mostly planted in cities and parks" }
+range_center: null
+habitat: { nl: "Stadsstraten, pleinen en parken; verdraagt luchtvervuiling en weinig wortelruimte", en: "City streets, squares and parks; tolerates air pollution and limited root space" }
+diet: null
+colors: [green, grey, brown]
+iucn_trend: unknown
+threats: null
+wow: { nl: "De schors van de plataan schilfert in vlakken af, zodat er groene en gele plekken verschijnen.", en: "The plane tree sheds its bark in patches, leaving green and yellow spots underneath." }
+sources:
+  - title: Wikipedia, London plane
+    url: https://en.wikipedia.org/wiki/Platanus_%C3%97_acerifolia
+  - title: Wikipedia, Gewone plataan
+    url: https://nl.wikipedia.org/wiki/Gewone_plataan

@@ -1,0 +1,25 @@
+slug: numida-meleagris
+reviewed: false
+is_bird: true
+length_cm: [53, 58]
+height_cm: null
+mass_g: [1130, 1840]
+wingspan_cm: null
+lifespan_wild_y: [10, 20]
+lifespan_captivity_y: null
+clutch: { nl: "Meestal 6 tot 15 eieren", en: "Usually 6 to 15 eggs" }
+incubation_days: [26, 30]
+continents: [africa]
+range: { nl: "Afrika ten zuiden van de Sahara", en: "Africa south of the Sahara" }
+range_center: { lat: 0, lon: 20 }
+habitat: { nl: "Open terrein met verspreide bomen en struiken: savanne, grasland en akkers bij water", en: "Open country with scattered trees and shrubs: savannah, grassland and farmland near water" }
+diet: { nl: "Alleseter: zaden, granen, bladeren en vruchten, plus insecten, slakken en larven", en: "Omnivore: seeds, grain, leaves and fruit, plus insects, snails and larvae" }
+colors: [black, grey, white, blue]
+iucn_trend: stable
+threats: { nl: "Jacht en natuurlijke vijanden zoals luipaarden, slangen en krijgsarenden", en: "Hunting and natural predators such as leopards, snakes and martial eagles" }
+wow: { nl: "Een vrouwtje legt in één seizoen 6 tot 15 eieren.", en: "A female lays 6 to 15 eggs in one season." }
+sources:
+  - title: Wikipedia, Helmeted guineafowl
+    url: https://en.wikipedia.org/wiki/Helmeted_guineafowl
+  - title: Animal Diversity Web, Numida meleagris
+    url: https://animaldiversity.org/accounts/Numida_meleagris/

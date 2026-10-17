@@ -1,0 +1,25 @@
+slug: grus-antigone
+reviewed: false
+is_bird: true
+length_cm: null
+height_cm: [180, 180]
+mass_g: [5000, 12000]
+wingspan_cm: [220, 250]
+lifespan_wild_y: null
+lifespan_captivity_y: [42, 42]
+clutch: { nl: "Meestal 1 of 2 eieren", en: "Usually 1 or 2 eggs" }
+incubation_days: [26, 35]
+continents: [asia, oceania]
+range: { nl: "Indiase subcontinent, Zuidoost-Azië en Noord-Australië", en: "Indian subcontinent, Southeast Asia and northern Australia" }
+range_center: { lat: 20, lon: 90 }
+habitat: { nl: "Open moeras en natte graslanden, ook rijstvelden en akkers", en: "Open wetlands and wet grasslands, also rice paddies and farmland" }
+diet: { nl: "Alleseter: insecten, waterplanten, knollen, zaden, kreeftachtigen en kleine gewervelden", en: "Omnivore: insects, aquatic plants, tubers, seeds, crustaceans and small vertebrates" }
+colors: [grey, red, white]
+iucn_trend: unknown
+threats: { nl: "Verlies van wetlands, intensievere landbouw, aanvaringen met hoogspanningskabels en het rapen van eieren", en: "Loss of wetlands, intensive farming, collisions with power lines and egg collection" }
+wow: { nl: "De saruskraanvogel is de langste vogel ter wereld die kan vliegen: tot 1,8 meter hoog.", en: "The sarus crane is the tallest flying bird in the world: up to 1.8 metres tall." }
+sources:
+  - title: Wikipedia, Sarus crane
+    url: https://en.wikipedia.org/wiki/Sarus_crane
+  - title: Animal Diversity Web, Grus antigone
+    url: https://animaldiversity.org/accounts/Grus_antigone/

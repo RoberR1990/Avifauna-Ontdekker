@@ -1,0 +1,25 @@
+slug: nycticorax-nycticorax
+reviewed: false
+is_bird: true
+length_cm: [58, 72]
+height_cm: null
+mass_g: [520, 1010]
+wingspan_cm: [105, 118]
+lifespan_wild_y: [21, 21]
+lifespan_captivity_y: null
+clutch: { nl: "Meestal 3 tot 5 eieren", en: "Usually 3 to 5 eggs" }
+incubation_days: [24, 26]
+continents: [africa, asia, europe, north-america, south-america]
+range: { nl: "Bijna wereldwijd: Europa, Azië, Afrika en Noord- en Zuid-Amerika", en: "Almost worldwide: Europe, Asia, Africa and North and South America" }
+range_center: { lat: 30, lon: 30 }
+habitat: { nl: "Zoete en zoute wetlands: moerassen, rivieren, meren en rietkragen; broedt in boomkolonies of in riet", en: "Fresh and salt-water wetlands: marshes, rivers, lakes and reedbeds; nests in tree colonies or in reeds" }
+diet: { nl: "Vooral vis, aangevuld met kikkers, kreeftachtigen, insecten, wormen en kleine zoogdieren", en: "Mostly fish, supplemented with frogs, crustaceans, insects, worms and small mammals" }
+colors: [black, white, grey]
+iucn_trend: unknown
+threats: { nl: "Vroeger bestrijdingsmiddelen zoals DDT, verlies van leefgebied en conflicten bij viskwekerijen", en: "Formerly pesticides such as DDT, habitat loss and conflict at fish farms" }
+wow: { nl: "De kwak jaagt vooral van de avond tot in de vroege ochtend.", en: "The night heron hunts mostly from evening until early morning." }
+sources:
+  - title: Wikipedia, Black-crowned night heron
+    url: https://en.wikipedia.org/wiki/Black-crowned_night_heron
+  - title: Animal Diversity Web, Nycticorax nycticorax
+    url: https://animaldiversity.org/accounts/Nycticorax_nycticorax/

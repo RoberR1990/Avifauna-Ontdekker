@@ -1,0 +1,25 @@
+slug: sagittarius-serpentarius
+reviewed: false
+is_bird: true
+length_cm: [110, 150]
+height_cm: [90, 130]
+mass_g: [2300, 4270]
+wingspan_cm: [190, 210]
+lifespan_wild_y: [10, 15]
+lifespan_captivity_y: [19, 19]
+clutch: { nl: "Meestal 1 tot 3 eieren", en: "Usually 1 to 3 eggs" }
+incubation_days: [42, 46]
+continents: [africa]
+range: { nl: "Afrika ten zuiden van de Sahara, van Senegal tot Somalië en Zuid-Afrika", en: "Africa south of the Sahara, from Senegal to Somalia and South Africa" }
+range_center: { lat: 0, lon: 25 }
+habitat: { nl: "Open savanne, grasland en struikgebied met kort gras; mijdt dichte begroeiing en woestijn", en: "Open savannah, grassland and shrubland with short grass; avoids dense vegetation and desert" }
+diet: { nl: "Insecten zoals sprinkhanen, plus knaagdieren, hagedissen, slangen en soms vogels, op de grond bejaagd", en: "Insects such as grasshoppers, plus rodents, lizards, snakes and sometimes birds, hunted on the ground" }
+colors: [grey, black, white, orange]
+iucn_trend: decreasing
+threats: { nl: "Versnippering van leefgebied, overbegrazing door vee en oprukkende struiken", en: "Habitat fragmentation, overgrazing by livestock and woody plant encroachment" }
+wow: { nl: "De secretarisvogel jaagt te voet op sprinkhanen, knaagdieren en zelfs slangen.", en: "The secretarybird hunts on foot for grasshoppers, rodents and even snakes." }
+sources:
+  - title: Wikipedia, Secretarybird
+    url: https://en.wikipedia.org/wiki/Secretarybird
+  - title: Animal Diversity Web, Sagittarius serpentarius
+    url: https://animaldiversity.org/accounts/Sagittarius_serpentarius/

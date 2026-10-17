@@ -1,0 +1,25 @@
+slug: grus-japonensis
+reviewed: false
+is_bird: true
+length_cm: [101, 150]
+height_cm: [150, 158]
+mass_g: [4800, 10500]
+wingspan_cm: [220, 250]
+lifespan_wild_y: [20, 30]
+lifespan_captivity_y: [65, 65]
+clutch: { nl: "Meestal 2 eieren", en: "Usually 2 eggs" }
+incubation_days: [30, 31]
+continents: [asia]
+range: { nl: "Noordoost-Azië: Siberië, Noordoost-China, Mongolië, Korea en Hokkaido (Japan)", en: "Northeast Asia: Siberia, northeast China, Mongolia, Korea and Hokkaido (Japan)" }
+range_center: { lat: 45, lon: 130 }
+habitat: { nl: "Moerassen, rivieren en natte graslanden met diep water en staande dode vegetatie", en: "Marshes, rivers and wet grasslands with deep water and standing dead vegetation" }
+diet: { nl: "Alleseter: vis, amfibieën, insecten, kleine gewervelden, rietscheuten, bessen en granen", en: "Omnivore: fish, amphibians, insects, small vertebrates, reed shoots, berries and grain" }
+colors: [white, black, red]
+iucn_trend: unknown
+threats: { nl: "Verlies van moerassen door landbouw, kanalisatie van rivieren, ontbossing en wegenaanleg", en: "Loss of wetlands through farming, river canalisation, deforestation and road building" }
+wow: { nl: "In gevangenschap werd een Mantsjoerijse kraanvogel tot 65 jaar oud.", en: "A red-crowned crane in captivity lived up to 65 years." }
+sources:
+  - title: Wikipedia, Red-crowned crane
+    url: https://en.wikipedia.org/wiki/Red-crowned_crane
+  - title: Animal Diversity Web, Grus japonensis
+    url: https://animaldiversity.org/accounts/Grus_japonensis/

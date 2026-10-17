@@ -1,0 +1,25 @@
+slug: dromaius-novaehollandiae
+reviewed: false
+is_bird: true
+length_cm: [139, 164]
+height_cm: [150, 190]
+mass_g: [18000, 60000]
+wingspan_cm: null
+lifespan_wild_y: [5, 10]
+lifespan_captivity_y: [15, 20]
+clutch: { nl: "Meestal 5 tot 24 grote groene eieren", en: "Usually 5 to 24 large green eggs" }
+incubation_days: [48, 56]
+continents: [oceania]
+range: { nl: "Vrijwel heel Australië", en: "Almost all of Australia" }
+range_center: { lat: -25, lon: 134 }
+habitat: { nl: "Savanne, open bos en grasland; zeldzaam in dichtbevolkte streken en gebieden met weinig regen", en: "Savannah, open woodland and grassland; scarce in densely populated areas and in dry regions" }
+diet: { nl: "Alleseter: planten, zaden en vruchten, aangevuld met insecten zoals sprinkhanen en kevers", en: "Omnivore: plants, seeds and fruit, supplemented with insects such as grasshoppers and beetles" }
+colors: [brown, grey, black]
+iucn_trend: stable
+threats: { nl: "Versnippering van leefgebied, aanrijdingen en roof van eieren door ingevoerde roofdieren", en: "Habitat fragmentation, road collisions and egg predation by introduced predators" }
+wow: { nl: "Een mannetjes-emoe eet ongeveer 50 dagen bijna niets terwijl hij op de eieren zit.", en: "A male emu eats almost nothing for about 50 days while he sits on the eggs." }
+sources:
+  - title: Wikipedia, Emu
+    url: https://en.wikipedia.org/wiki/Emu
+  - title: Animal Diversity Web, Dromaius novaehollandiae
+    url: https://animaldiversity.org/accounts/Dromaius_novaehollandiae/
