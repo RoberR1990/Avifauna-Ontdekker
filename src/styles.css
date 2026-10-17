@@ -749,6 +749,31 @@ dl.facts dd {
 
 /* ---------- Start ---------- */
 
+.home-play {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+}
+
+.home-play__card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-height: 4.5rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.home-play__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.home-play__sub {
+  display: block;
+  font-size: 0.9375rem;
+}
+
 .tiles {
   display: grid;
   gap: 1rem;

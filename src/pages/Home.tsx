@@ -1,10 +1,13 @@
-import { useMemo } from 'react'
+import { lazy, Suspense, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { mediaUrl, useParkData } from '../data/ParkDataProvider'
 import { useT } from '../i18n'
 import { birdOfTheDay } from '../lib/bird-of-day'
 import { OfflineDownloadButton } from '../offline/OfflineDownloadButton'
 import { park } from '../park'
+
+const HomePlay = lazy(() => import('./HomePlay').then((m) => ({ default: m.HomePlay })))
+const ProgrammeStrip = lazy(() => import('../features/programme/ProgrammeStrip').then((m) => ({ default: m.ProgrammeStrip })))
 
 export function Home() {
   const t = useT()
@@ -27,7 +30,17 @@ export function Home() {
           <span className="tile__title">{t('home.tile.map')}</span>
           <span className="tile__sub">{t('home.tile.map.sub')}</span>
         </Link>
+        <Link to="/spelen" className="tile tile--sun">
+          <span className="tile__icon" aria-hidden="true">🧭</span>
+          <span className="tile__title">{t('home.tile.play')}</span>
+          <span className="tile__sub">{t('home.tile.play.sub')}</span>
+        </Link>
       </div>
+
+      <Suspense fallback={null}>
+        <HomePlay />
+        <ProgrammeStrip />
+      </Suspense>
 
       {bird && (
         <section className="card c-r botd" aria-labelledby="botd-h">
