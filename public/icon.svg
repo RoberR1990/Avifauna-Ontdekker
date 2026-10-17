@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="256" fill="#E07A2F"/>
+  <!-- eenvoudige vogel: lichaam, kop, snavel, staart -->
+  <ellipse cx="240" cy="290" rx="120" ry="82" fill="#FFF8EE"/>
+  <circle cx="340" cy="210" r="54" fill="#FFF8EE"/>
+  <polygon points="386,200 446,222 386,240" fill="#2B2118"/>
+  <polygon points="130,270 52,226 84,314" fill="#FFF8EE"/>
+  <circle cx="354" cy="200" r="9" fill="#2B2118"/>
+  <rect x="226" y="364" width="10" height="46" rx="4" fill="#2B2118"/>
+  <rect x="266" y="364" width="10" height="46" rx="4" fill="#2B2118"/>
+</svg>
