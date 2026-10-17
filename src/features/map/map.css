@@ -225,3 +225,58 @@
 .pm-sw-zone {
   background: color-mix(in srgb, var(--teal) 35%, transparent);
 }
+
+/* Route-overlay */
+.pm-route-ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 9px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.pm-route-line {
+  fill: none;
+  stroke: var(--sun);
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.pm-rstop {
+  pointer-events: none;
+}
+.pm-rstop-dot {
+  fill: var(--white);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+.pm-rstop-num {
+  fill: var(--ink);
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 13px;
+}
+.pm-routebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.9rem;
+  border: 3px solid var(--ink);
+  border-radius: 0.75rem;
+  background: var(--sun);
+  font-weight: 800;
+}
+.pm-routebar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+}

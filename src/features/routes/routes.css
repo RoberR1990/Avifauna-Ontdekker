@@ -1,0 +1,54 @@
+/* Routes: eigen stijl, tokens uit src/styles.css. */
+.rt-list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.rt-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.rt-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.rt-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.rt-concept {
+  display: inline-block;
+  margin: 0.5rem 0 0;
+  padding: 0.2rem 0.6rem;
+  border: 2px dashed var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.rt-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.5rem 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 800;
+}
+.rt-stops {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+.rt-stops li {
+  padding: 0.15rem 0;
+}
+.rt-in {
+  margin-left: 0.35rem;
+}
+.rt-note {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}

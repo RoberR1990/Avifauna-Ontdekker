@@ -3,6 +3,8 @@ import { makeT } from '../../i18n'
 export const useT = makeT({
   nl: {
     title: 'Parkkaart',
+    route_label: 'Route',
+    route_close: 'Sluit route',
     concept: 'Concept-kaart: zones nog niet gecontroleerd',
     map_label: 'Kaart van het park. Sleep om te verschuiven, knijp om te zoomen.',
     zoom_in: 'Inzoomen',
@@ -40,6 +42,8 @@ export const useT = makeT({
   },
   en: {
     title: 'Park map',
+    route_label: 'Route',
+    route_close: 'Close route',
     concept: 'Draft map: zones not yet checked',
     map_label: 'Map of the park. Drag to pan, pinch to zoom.',
     zoom_in: 'Zoom in',

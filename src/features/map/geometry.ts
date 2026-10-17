@@ -113,6 +113,19 @@ export function viewForPlace(f: PlaceFeature, affine: Affine, map: Size, size: S
   return clampView({ cx: (b.minX + b.maxX) / 2, cy: (b.minY + b.maxY) / 2, w }, map, size)
 }
 
+/** Zichtvenster dat een reeks punten ruim omvat (route). */
+export function viewForPoints(pts: Pt[], map: Size, size: Size): View {
+  if (pts.length === 0) return fitView(map, size)
+  const xs = pts.map((p) => p.x)
+  const ys = pts.map((p) => p.y)
+  const minX = Math.min(...xs)
+  const maxX = Math.max(...xs)
+  const minY = Math.min(...ys)
+  const maxY = Math.max(...ys)
+  const w = Math.max(map.w / 4, (maxX - minX) * 1.3, ((maxY - minY) * 1.3 * size.w) / size.h)
+  return clampView({ cx: (minX + maxX) / 2, cy: (minY + maxY) / 2, w }, map, size)
+}
+
 /** Zoom rond een punt in SVG-eenheden; het punt blijft op dezelfde schermplek. */
 export function zoomAt(v: View, factor: number, at: Pt, map: Size, size: Size): View {
   const w = v.w / factor

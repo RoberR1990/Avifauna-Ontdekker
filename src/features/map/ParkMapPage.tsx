@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { useBundle } from '../../data/ParkDataProvider'
-import type { ParkBundle } from '../../data/types'
+import type { BundleRoute, ParkBundle } from '../../data/types'
 import { useSettings } from '../../state/settings'
 import type { PlaceFeature } from '../../park/types'
 import {
@@ -11,6 +11,7 @@ import {
   fitView,
   locateInPark,
   viewForPlace,
+  viewForPoints,
   viewHeight,
   zoomAt,
   type Pt,
@@ -18,6 +19,8 @@ import {
   type View,
 } from './geometry'
 import { FACILITY_ORDER, FacilityBadge, FacilityGlyph, isFacilityType } from './icons'
+import { parsePoints, RouteLayer } from './RouteLayer'
+import { routeOpen } from '../routes/track-stubs'
 import { useT } from './strings'
 import { gpsToggle, mapOpen } from './track-stubs'
 import { useGeolocation, type GeoStatus } from './useGeolocation'
@@ -30,8 +33,10 @@ export function ParkMapPage() {
   const bundle = useBundle()
   const [params] = useSearchParams()
   const plek = params.get('plek')
+  const routeId = params.get('route')
+  const route = routeId ? ((bundle.routes ?? []).find((r) => r.id === routeId) ?? null) : null
   if (!bundle.map) return <NoMap />
-  return <MapView key={plek ?? ''} bundle={bundle} map={bundle.map} plek={plek} />
+  return <MapView key={`${plek ?? ''}|${route?.id ?? ''}`} bundle={bundle} map={bundle.map} plek={plek} route={route} />
 }
 
 function NoMap() {
@@ -53,7 +58,17 @@ function shortZoneName(name: string): string {
   return name.replace(/\s*\(concept\)\s*/i, '').split(':')[0]!.trim()
 }
 
-function MapView({ bundle, map, plek }: { bundle: ParkBundle; map: NonNullable<ParkBundle['map']>; plek: string | null }) {
+function MapView({
+  bundle,
+  map,
+  plek,
+  route,
+}: {
+  bundle: ParkBundle
+  map: NonNullable<ParkBundle['map']>
+  plek: string | null
+  route: BundleRoute | null
+}) {
   const t = useT()
   const { lang } = useSettings()
   const affine = map.georef.affine
@@ -71,9 +86,31 @@ function MapView({ bundle, map, plek }: { bundle: ParkBundle; map: NonNullable<P
   const [showZones, setShowZones] = useState(true)
   const [geoOn, setGeoOn] = useState(false)
 
+  const routePts = useMemo(() => (route ? parsePoints(route.svg_points) : []), [route])
+  const routeStops = useMemo(
+    () =>
+      route
+        ? route.stops.map((st) => {
+            const f = features.find((x) => x.properties.id === st.place_id)
+            return f ? featureCentroid(f, affine) : null
+          })
+        : [],
+    [route, features, affine],
+  )
+
   const effective: View = useMemo(
-    () => clampView(view ?? (plekFeature ? viewForPlace(plekFeature, affine, mapSize, size) : fitView(mapSize, size)), mapSize, size),
-    [view, plekFeature, affine, mapSize, size],
+    () =>
+      clampView(
+        view ??
+          (plekFeature
+            ? viewForPlace(plekFeature, affine, mapSize, size)
+            : routePts.length > 0
+              ? viewForPoints(routePts, mapSize, size)
+              : fitView(mapSize, size)),
+        mapSize,
+        size,
+      ),
+    [view, plekFeature, routePts, affine, mapSize, size],
   )
   const vh = viewHeight(effective, size)
   const s = effective.w / size.w // SVG-eenheden per scherm-pixel
@@ -81,6 +118,10 @@ function MapView({ bundle, map, plek }: { bundle: ParkBundle; map: NonNullable<P
   useEffect(() => {
     mapOpen()
   }, [])
+  const routeIdOpen = route?.id
+  useEffect(() => {
+    if (routeIdOpen) routeOpen(routeIdOpen)
+  }, [routeIdOpen])
 
   useEffect(() => {
     const el = holder.current
@@ -219,6 +260,15 @@ function MapView({ bundle, map, plek }: { bundle: ParkBundle; map: NonNullable<P
         </p>
       )}
 
+      {route && (
+        <div className="pm-routebar" data-testid="route-banner">
+          <span>
+            {t('route_label')}: {route.title}
+          </span>
+          <Link to="/kaart">{t('route_close')}</Link>
+        </div>
+      )}
+
       <div
         className="pm-holder"
         ref={holder}
@@ -324,6 +374,8 @@ function MapView({ bundle, map, plek }: { bundle: ParkBundle; map: NonNullable<P
               )
             })}
           </g>
+
+          {route && <RouteLayer route={route} stops={routeStops} s={s} />}
 
           {you && (
             <g className="pm-you" data-testid="gps-dot" transform={`translate(${you.x} ${you.y})`}>
