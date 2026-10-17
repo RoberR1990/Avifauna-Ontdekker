@@ -18,6 +18,8 @@ const MIME: Record<string, string> = {
 export interface ParkDataOptions {
   parkDir: string
   languages?: Lang[]
+  /** Taal waarvan de bundel vooraf geladen wordt als de gebruiker nog niets koos. */
+  defaultLanguage?: string
 }
 
 export function parkData(options: ParkDataOptions): Plugin {
@@ -38,6 +40,21 @@ export function parkData(options: ParkDataOptions): Plugin {
     name: 'avifauna-park-data',
     configResolved(config) {
       base = config.base
+    },
+    // Bundel zo vroeg mogelijk laden (LCP): preload in de taal uit de instellingen, anders de standaardtaal.
+    transformIndexHtml() {
+      const fallback = JSON.stringify(options.defaultLanguage ?? langs[0])
+      const allowed = JSON.stringify(langs)
+      const code =
+        `(function(){var l=${fallback};try{var s=JSON.parse(localStorage.getItem('ao-settings')||'{}');` +
+        `if(${allowed}.indexOf(s.lang)>=0)l=s.lang}catch(e){}var k=document.createElement('link');` +
+        `k.rel='preload';k.as='fetch';k.crossOrigin='anonymous';k.href=${JSON.stringify(base)}+'park/data.'+l+'.json';` +
+        `document.head.appendChild(k);` +
+        // Soortpagina: grote foto (vaste naamgeving van de pipeline) direct mee laden.
+        `var m=(location.pathname.split('/soort/')[1]||'').replace(/[/]$/,'');if(/^[a-z-]+$/.test(m)){var i=document.createElement('link');` +
+        `i.rel='preload';i.as='image';i.setAttribute('fetchpriority','high');` +
+        `i.href=${JSON.stringify(base)}+'park/media/photos/'+m+'.webp';document.head.appendChild(i)}})()`
+      return [{ tag: 'script', children: code, injectTo: 'head-prepend' }]
     },
     configureServer(server) {
       server.watcher.add([parkDir, ...defaultBuildCacheDirs()])

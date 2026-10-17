@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
     resolve: { alias: { '@park': parkDir } },
     plugins: [
       react(),
-      parkData({ parkDir, languages: park.languages }),
+      parkData({ parkDir, languages: park.languages, defaultLanguage: park.default_language }),
       VitePWA({
         registerType: 'autoUpdate',
         injectRegister: false, // we registreren zelf in src/main.tsx
@@ -46,7 +46,8 @@ export default defineConfig(({ mode }) => {
           skipWaiting: true,
           runtimeCaching: [
             {
-              urlPattern: ({ url }: { url: URL }) => url.pathname.startsWith(`${base}park/media/`),
+              // RegExp i.p.v. functie: Workbox serialiseert de matcher naar sw.js, waar `base` niet bestaat.
+              urlPattern: new RegExp(`${base.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}park/media/`),
               handler: 'CacheFirst',
               options: {
                 cacheName: 'park-media',

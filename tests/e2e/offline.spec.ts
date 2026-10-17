@@ -72,7 +72,6 @@ test.describe('offline', () => {
     // BUG (vite.config.ts regel 49): urlPattern gebruikt `base`, maar de functie wordt in de service worker
     // gestringified en `base` bestaat daar niet (ReferenceError) -> runtime-route park-media matcht nooit,
     // de cache wordt dus niet uit de service worker bediend. Deze test slaagt zodra dat is opgelost.
-    test.fail(true, 'bug: runtimeCaching urlPattern verwijst naar `base` (undefined in SW)')
     const slug = 'spheniscus-humboldti'
     await downloadAll(page, slug)
     await context.setOffline(true)
