@@ -17,7 +17,7 @@
 
 ## Wat (nog) niet
 - **Statistieken (Umami)**: events zijn stubs; wacht op website-ID. Privacytekst nog niet bijgewerkt.
-- **Hosting**: nog niet gepubliceerd. Offline en GPS werken op de telefoon alleen via https (niet via `http://<pc-ip>:4173`).
+- **Hosting**: live op https://vogel-ontdekker-proto.pages.dev (Cloudflare Pages, `noindex`; neutrale naam tot toestemming). Opnieuw publiceren: `pnpm deploy` (wrangler-login nodig).
 - **Soortenlijst**: 35 van ~200 soorten (veldwerk dekte ~1 uur). Atlas-LCP heeft weinig marge (2,9 s).
 - **Zones** zijn grove concepten uit OSM; veldwerkplekken liggen soms samen door GPS-onnauwkeurigheid (bv. rode panda, emoe, ekstergans, plataan op één plek).
 - Gewone plataan heeft geen foto en geen Vogel-o-meter.
@@ -41,5 +41,5 @@
 - **Snelheid**: opent een soortpagina binnen 3 s op 4G?
 
 ## Besluiten nodig voor de veldtest
-- **Hosting**: Cloudflare Pages (gratis, https, `noindex` blijft) op een eigen subdomein, of GitHub Pages. Advies: Cloudflare Pages; jij maakt het project aan of geeft akkoord dat ik het via de CLI doe.
+- **Domein**: later kiezen (nu `vogel-ontdekker-proto.pages.dev`).
 - **Umami-website-ID** (Cloud EU).

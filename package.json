@@ -13,6 +13,7 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "validate:park": "tsx scripts/validate-park.ts",
+    "deploy": "pnpm build && npx -y wrangler@4 pages deploy dist --project-name vogel-ontdekker-proto --branch main",
     "build:park": "tsx scripts/park-build/cli.ts",
     "check:core": "tsx scripts/check-core-size.ts",
     "lighthouse": "node scripts/lighthouse.mjs"
