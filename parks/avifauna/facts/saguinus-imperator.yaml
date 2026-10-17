@@ -1,0 +1,25 @@
+slug: saguinus-imperator
+reviewed: false
+is_bird: false
+length_cm: [23, 26]
+height_cm: null
+mass_g: [500, 520]
+wingspan_cm: null
+lifespan_wild_y: [10, 20]
+lifespan_captivity_y: [18, 20]
+clutch: { nl: "Meestal een tweeling (1 tot 3 jongen); draagtijd 140 tot 145 dagen", en: "Usually twins (1 to 3 young); gestation 140 to 145 days" }
+incubation_days: null
+continents: [south-america]
+range: { nl: "Zuidwest-Amazonebekken: Noordwest-Brazilië, Zuidoost-Peru en Noordwest-Bolivia", en: "Southwestern Amazon basin: northwest Brazil, southeast Peru and northwest Bolivia" }
+range_center: { lat: -10, lon: -70 }
+habitat: { nl: "Laaglandregenwoud, ook secundair bos en bosranden", en: "Lowland rainforest, including secondary forest and forest edges" }
+diet: { nl: "Vruchten, bloemen, boomsap, insecten en kleine gewervelden zoals kikkers", en: "Fruit, flowers, tree sap, insects and small vertebrates such as frogs" }
+colors: [grey, white, brown]
+iucn_trend: decreasing
+threats: { nl: "Ontbossing en versnippering van het bos", en: "Deforestation and forest fragmentation" }
+wow: { nl: "Zijn lange witte snor doet denken aan die van de Duitse keizer Wilhelm II; daar zou zijn naam vandaan komen.", en: "His long white moustache resembles that of German emperor Wilhelm II, which is where his name is said to come from." }
+sources:
+  - title: Wikipedia, Emperor tamarin
+    url: https://en.wikipedia.org/wiki/Emperor_tamarin
+  - title: Animal Diversity Web, Saguinus imperator
+    url: https://animaldiversity.org/accounts/Saguinus_imperator/

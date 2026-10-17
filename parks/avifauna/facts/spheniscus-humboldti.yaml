@@ -1,0 +1,25 @@
+slug: spheniscus-humboldti
+reviewed: false
+is_bird: true
+length_cm: [56, 70]
+height_cm: null
+mass_g: [2900, 6000]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: [18, 32]
+clutch: { nl: "Meestal 2 eieren", en: "Usually 2 eggs" }
+incubation_days: [41, 41]
+continents: [south-america]
+range: { nl: "Pacifische kust van Peru en Chili", en: "Pacific coast of Peru and Chile" }
+range_center: { lat: -22, lon: -72 }
+habitat: { nl: "Rotsige kusten en eilandjes; broedt in holen in guano, grotten en op kliktoppen", en: "Rocky coasts and islands; nests in burrows in guano, caves and clifftops" }
+diet: { nl: "Vooral zwermvis zoals ansjovis en sardine; ook inktvis en kreeftachtigen", en: "Mostly schooling fish such as anchovy and sardine; also squid and crustaceans" }
+colors: [black, white]
+iucn_trend: decreasing
+threats: { nl: "El Niño, overbevissing, bijvangst in netten, verstoring, verwilderde katten en ratten", en: "El Niño, overfishing, bycatch in nets, disturbance, feral cats and rats" }
+wow: { nl: "Een Humboldtpinguïn in een dierentuin werd bijna 32 jaar oud.", en: "One Humboldt penguin in captivity lived almost 32 years." }
+sources:
+  - title: Wikipedia, Humboldt penguin
+    url: https://en.wikipedia.org/wiki/Humboldt_penguin
+  - title: Animal Diversity Web, Spheniscus humboldti
+    url: https://animaldiversity.org/accounts/Spheniscus_humboldti/
