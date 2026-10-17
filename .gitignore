@@ -24,6 +24,7 @@ PITCH-IDEEEN.md
 
 # Pipeline: ruwe dumps en build-cache (NC-audio komt NOOIT in git)
 pipeline/data/bronze/
+pipeline/data/*/bronze/
 pipeline/data/cache/
 build-cache/
 tools/tessdata/
