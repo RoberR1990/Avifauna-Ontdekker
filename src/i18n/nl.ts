@@ -1,6 +1,8 @@
 export const nl = {
   'nav.home': 'Start',
   'nav.about': 'Over',
+  'nav.play': 'Spelen',
+  'nav.album': 'Album',
   'nav.main': 'Hoofdmenu',
   'skip.main': 'Naar de inhoud',
   'home.soon': 'Binnenkort: Vogelatlas, parkkaart en meer',
@@ -23,7 +25,7 @@ export const nl = {
   'nav.map': 'Kaart',
   'nav.sources': 'Bronnen',
   'header.lang': 'Taal',
-  'header.menu': 'Taal en peuterstand',
+  'header.menu': 'Menu: taal, peuterstand, over',
   'header.toddler': 'Peuterstand',
   'header.home': 'Naar start',
   'data.loading': 'Even laden…',

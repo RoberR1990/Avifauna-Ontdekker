@@ -12,6 +12,13 @@ const SpeciesPage = lazy(() => import('./features/species/SpeciesPage').then((m)
 const ParkMapPage = lazy(() => import('./features/map/ParkMapPage').then((m) => ({ default: m.ParkMapPage })))
 const ToddlerPage = lazy(() => import('./features/toddler/ToddlerPage').then((m) => ({ default: m.ToddlerPage })))
 const SourcesPage = lazy(() => import('./features/sources/SourcesPage').then((m) => ({ default: m.SourcesPage })))
+// Fase 2
+const PlayPage = lazy(() => import('./features/play/PlayPage').then((m) => ({ default: m.PlayPage })))
+const ExpeditionPage = lazy(() => import('./features/expeditions/ExpeditionPage').then((m) => ({ default: m.ExpeditionPage })))
+const BingoPage = lazy(() => import('./features/bingo/BingoPage').then((m) => ({ default: m.BingoPage })))
+const AlbumPage = lazy(() => import('./features/album/AlbumPage').then((m) => ({ default: m.AlbumPage })))
+const TodayPage = lazy(() => import('./features/today/TodayPage').then((m) => ({ default: m.TodayPage })))
+const RoutesPage = lazy(() => import('./features/routes/RoutesPage').then((m) => ({ default: m.RoutesPage })))
 
 export function App() {
   return (
@@ -27,6 +34,12 @@ export function App() {
             <Route path="kaart" element={<ParkMapPage />} />
             <Route path="peuter" element={<ToddlerPage />} />
             <Route path="bronnen" element={<SourcesPage />} />
+            <Route path="spelen" element={<PlayPage />} />
+            <Route path="expeditie/:id" element={<ExpeditionPage />} />
+            <Route path="bingo" element={<BingoPage />} />
+            <Route path="album" element={<AlbumPage />} />
+            <Route path="vandaag" element={<TodayPage />} />
+            <Route path="routes" element={<RoutesPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Route>

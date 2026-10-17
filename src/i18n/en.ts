@@ -3,6 +3,8 @@ import type { Key } from './nl'
 export const en: Record<Key, string> = {
   'nav.home': 'Home',
   'nav.about': 'About',
+  'nav.play': 'Play',
+  'nav.album': 'Album',
   'nav.main': 'Main menu',
   'skip.main': 'Skip to content',
   'home.soon': 'Coming soon: bird atlas, park map and more',
@@ -25,7 +27,7 @@ export const en: Record<Key, string> = {
   'nav.map': 'Map',
   'nav.sources': 'Sources',
   'header.lang': 'Language',
-  'header.menu': 'Language and toddler mode',
+  'header.menu': 'Menu: language, toddler mode, about',
   'header.toddler': 'Toddler mode',
   'header.home': 'Go to start',
   'data.loading': 'Loading…',

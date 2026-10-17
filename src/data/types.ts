@@ -1,7 +1,11 @@
 // Contract tussen de build (scripts/park-build) en de app. Zie docs/FASE-1.md.
 // De build maakt per taal één bestand: <base>park/data.<lang>.json (type ParkBundle).
 import type {
+  AgeGroup,
   IucnCategory,
+  RouteProfile,
+  Season,
+  TaskType,
   ParkJson,
   PlacesCollection,
   Programme,
@@ -129,6 +133,60 @@ export interface Georef {
   affine: { a: number; b: number; c: number; d: number; e: number; f: number }
 }
 
+/** Expeditie, gelokaliseerd naar de bundeltaal (en valt terug op nl). Seizoen filtert de app. */
+export interface BundleExpedition {
+  id: string
+  title: string
+  intro: string
+  age: AgeGroup
+  minutes: number | null
+  season: Season | null
+  badge: { id: string; name: string; icon: string }
+  stops: BundleStop[]
+}
+
+export interface BundleStop {
+  id: string
+  /** stop.title, anders de naam van de zone. */
+  title: string
+  zone_id: string
+  place_id: string | null
+  species: string | null
+  /** stop.indoor of zone.indoor: geen GPS, de opdracht is het bewijs. */
+  indoor: boolean
+  task: {
+    type: TaskType
+    prompt: string
+    options: string[] | null
+    /** choose: index; count: getal; anders null (niet gecontroleerd). */
+    answer: number | null
+    hint: string | null
+  }
+}
+
+export interface BundleBingo {
+  sizes: (9 | 16)[]
+  species_share: number
+  behaviours: { id: string; icon: string; label: string; indoor_ok: boolean }[]
+  /** Slugs: confirmed, met foto, niet uitgesloten. */
+  species: string[]
+}
+
+export interface BundleRoute {
+  id: string
+  profile: RouteProfile
+  title: string
+  intro: string
+  note: string | null
+  stops: { place_id: string; name: string; indoor: boolean }[]
+  /** SVG-polyline "x,y x,y ..." in kaartcoördinaten (map-base.svg). */
+  svg_points: string
+  length_m: number
+  minutes: number
+  /** Nog niet gelopen/gecontroleerd. */
+  concept: boolean
+}
+
 export interface ParkBundle {
   lang: Lang
   generated: string
@@ -141,4 +199,8 @@ export interface ParkBundle {
   map: { url: string; georef: Georef } | null
   /** Bestanden voor "download alles voor offline" (foto's groot + audio), relatief aan base. */
   media_manifest: { url: string; bytes: number }[]
+  /** Fase 2 (docs/FASE-2.md §4). Lege lijst / null als het park ze niet heeft. */
+  expeditions: BundleExpedition[]
+  bingo: BundleBingo | null
+  routes: BundleRoute[]
 }

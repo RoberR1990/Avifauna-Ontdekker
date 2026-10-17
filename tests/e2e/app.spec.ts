@@ -47,6 +47,7 @@ test('werkt offline na eerste bezoek', async ({ page, context }) => {
   await context.setOffline(true)
   await page.reload()
   await expectBar(page)
+  await page.getByRole('button', { name: /^Menu/ }).click()
   await page.getByRole('link', { name: 'Over', exact: true }).click()
   await expect(page).toHaveURL(/\/over$/)
   await expectBar(page)

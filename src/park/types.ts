@@ -110,6 +110,8 @@ export interface ExpeditionTask {
 
 export interface ExpeditionStop {
   id: string
+  /** Korte naam van de stop, bv. "Bij de gieren". */
+  title?: LocalizedNl
   zone_id: string
   place_id?: string
   species?: string
@@ -124,10 +126,15 @@ export interface Season {
   to: string
 }
 
+export type AgeGroup = '4-6' | '6-10' | 'all'
+
 export interface Expedition {
   id: string
   title: LocalizedNl
   intro: LocalizedNl
+  age?: AgeGroup
+  /** Geschatte duur in minuten. */
+  minutes?: number
   season?: Season
   badge: { id: string; name: LocalizedNl; icon: string }
   stops: ExpeditionStop[]
@@ -135,6 +142,42 @@ export interface Expedition {
 
 export interface ExpeditionsFile {
   expeditions: Expedition[]
+}
+
+// ---- bingo.yaml ----
+export interface BingoBehaviour {
+  id: string
+  /** Emoji. */
+  icon: string
+  label: LocalizedNl
+  /** Ook zinnig in de Tropenhal. */
+  indoor_ok?: boolean
+}
+
+export interface BingoFile {
+  sizes: (9 | 16)[]
+  /** Deel soortvakjes, 0..1. */
+  species_share: number
+  behaviours: BingoBehaviour[]
+  /** Soort-slugs die nooit in de bingo komen (bv. bomen). */
+  exclude?: string[]
+}
+
+// ---- routes.yaml ----
+export type RouteProfile = 'stroller' | 'rain' | 'all' | 'short'
+
+export interface RouteDef {
+  id: string
+  profile: RouteProfile
+  title: LocalizedNl
+  intro: LocalizedNl
+  /** Place-id's in volgorde. */
+  waypoints: string[]
+  note?: LocalizedNl
+}
+
+export interface RoutesFile {
+  routes: RouteDef[]
 }
 
 // ---- programme.json ----

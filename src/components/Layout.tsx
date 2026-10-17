@@ -71,6 +71,7 @@ export function Layout() {
               type="button"
               className="header-menu__button"
               aria-label={t('header.menu')}
+              title={t('header.menu')}
               aria-expanded={menuOpen}
               aria-controls="header-menu-panel"
               onClick={() => setMenuOpenAt(menuOpen ? null : pathname)}
@@ -98,6 +99,12 @@ export function Layout() {
               <Link to="/peuter" className="toddler-link" onClick={closeMenu}>
                 <span aria-hidden="true">🐣</span> {t('header.toddler')}
               </Link>
+              <Link to="/over" className="menu-link" onClick={closeMenu}>
+                {t('nav.about')}
+              </Link>
+              <Link to="/bronnen" className="menu-link" onClick={closeMenu}>
+                {t('nav.sources')}
+              </Link>
             </div>
           </div>
         )}
@@ -124,9 +131,13 @@ export function Layout() {
             <Icon d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2zM9 3v16M15 5v16" />
             <span>{t('nav.map')}</span>
           </NavLink>
-          <NavLink to="/over">
-            <Icon d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 11v6M12 7.5v.5" />
-            <span>{t('nav.about')}</span>
+          <NavLink to="/spelen">
+            <Icon d="M7 8h10a4 4 0 0 1 4 4v3a3 3 0 0 1-5.4 1.8L14 15h-4l-1.6 1.8A3 3 0 0 1 3 15v-3a4 4 0 0 1 4-4zM8 11v3M6.5 12.5h3M15.5 12h.01M17.5 13.5h.01" />
+            <span>{t('nav.play')}</span>
+          </NavLink>
+          <NavLink to="/album">
+            <Icon d="M5 4h11l3 3v13H5zM9 4v6l2-1.5L13 10V4" />
+            <span>{t('nav.album')}</span>
           </NavLink>
         </nav>
       )}

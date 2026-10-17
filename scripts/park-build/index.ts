@@ -344,6 +344,10 @@ export function buildBundle(parkDir: string, lang: Lang, opts: BuildOptions = {}
     attributions: outAttr,
     map,
     media_manifest: mediaManifest,
+    // Fase 2: gevuld door W1 (docs/FASE-2.md §4).
+    expeditions: [],
+    bingo: null,
+    routes: [],
   }
   return { bundle, files: [...files.values()], warnings }
 }
