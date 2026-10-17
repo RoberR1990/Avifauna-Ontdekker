@@ -145,7 +145,7 @@ export function slugFor(scientificName: string): string {
 }
 
 function readText(p: string): string {
-  return readFileSync(p, 'utf8').replace(/^FEFF/, '')
+  return readFileSync(p, 'utf8').replace(/^\uFEFF/, '')
 }
 
 function readJson(c: Collector, file: string, abs: string): unknown | undefined {
@@ -470,7 +470,7 @@ interface ParsedText {
   sectionIssues: string[]
 }
 function parseText(raw: string): ParsedText | { error: string } {
-  const src = raw.replace(/^FEFF/, '').replace(/\r\n/g, '\n')
+  const src = raw.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n')
   if (!src.startsWith('---\n')) return { error: 'frontmatter ontbreekt (bestand moet met --- beginnen)' }
   const end = src.indexOf('\n---', 4)
   if (end === -1) return { error: 'frontmatter niet afgesloten met ---' }
