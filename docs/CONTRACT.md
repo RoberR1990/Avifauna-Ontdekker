@@ -11,6 +11,8 @@ parks/avifauna/           parkpakket (alles parkspecifiek)
   expeditions.yaml
   programme.json
   texts/nl/<slug>.md      texts/en/<slug>.md
+  facts/<slug>.yaml       eigen feiten + bronnen (fase 1; type Facts in src/data/types.ts)
+  data/app-data.<taal>.json  goud, gepubliceerd door avipipe (fase 1)
   media/attributions.json
   map/                    OSM-afgeleid, ODbL (apart gehouden)
 parks/schema/             JSON-schema's (park-onafhankelijk)
@@ -65,3 +67,9 @@ Regels: licentie alleen CC0 / PD(M) / CC-BY-* / CC-BY-SA-*; uitzondering CC-BY-N
 ## Goud: app-data.<taal>.json
 `{ "park": {...uit park.json}, "generated": ISO, "species": [ { slug, scientific_name, name, name_alt, order, family, iucn: "LC|NT|VU|EN|CR|EW|EX|DD|NE", wingspan_cm, mass_g, lifespan_y, zone_id, place_id, last_seen, photo: {file, attribution_index}, audio: [{file, attribution_index}], links: {wikipedia, xeno_canto, wikidata} } ] }`
 Ontbrekende waarden: `null`, nooit weglaten.
+
+## Fase 1-aanvullingen
+- `facts/<slug>.yaml`: velden en betekenis als `Facts` in `src/data/types.ts`; schema `parks/schema/facts.schema.json`. Ranges als `[min, max]`; onbekend = `null` of `[]`. Altijd `sources` (≥ 1) en `reviewed`.
+- `park.json` optioneel `analytics: { "umami": { "host_url": "https://…", "website_id": "<uuid>" | null } }`; env `VITE_UMAMI_HOST`/`VITE_UMAMI_WEBSITE_ID` gaat voor.
+- `park.json` optioneel `links.species_page_template` (bv. `https://www.avifauna.nl/onze-dieren/{slug}/`) is níet nodig: parklinks per soort staan in `species.csv` kolom `park_url` (optioneel, fase 1).
+- De app leest geen goud uit `pipeline/`, alleen uit `parks/<park>/data/`. Bundelformaat: `ParkBundle` in `src/data/types.ts`, zie `docs/FASE-1.md`.
