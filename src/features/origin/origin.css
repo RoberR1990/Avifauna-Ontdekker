@@ -1,0 +1,12 @@
+/* Herkomstkaartje. Tokens komen uit het ontwerpsysteem. */
+.om { margin: 0; }
+.om-map { width: 100%; height: auto; display: block; background: #bfe9f0; border: 3px solid var(--ink); border-radius: 14px; }
+.om-sea { fill: #bfe9f0; }
+.om-land { fill: #efe3c2; stroke: var(--ink); stroke-width: 0.3; stroke-linejoin: round; }
+.om-land.on { fill: var(--sun); stroke-width: 0.7; }
+.om-arc { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 3 3; }
+.om-pin { fill: var(--violet); stroke: var(--ink); stroke-width: 1.2; }
+.om-home { fill: var(--white); stroke: var(--ink); stroke-width: 1.6; }
+.om-lbl { font-family: var(--head); font-size: 9px; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: var(--white); stroke-width: 2.4px; stroke-linejoin: round; }
+.om-km { font-size: 10px; }
+.om-cap { font-family: var(--body); font-size: 15px; font-weight: 600; margin: 10px 0 0; color: var(--ink); }

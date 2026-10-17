@@ -1,0 +1,14 @@
+/* Vogel-o-meter. Tokens (--ink, --violet, --teal, --sun, --white, --head, --body) komen uit het ontwerpsysteem. */
+.bom-card { position: relative; background: var(--white); border: 3px solid var(--ink); border-radius: 22px; padding: 18px 16px 16px; margin: 34px 0 20px; box-shadow: 0 6px 0 var(--ink); }
+.bom-card h2 { font-family: var(--head); font-weight: 700; font-size: 23px; line-height: 1.1; display: inline-block; padding: 4px 12px; background: var(--red, #e8452f); color: #fff; border: 3px solid var(--ink); border-radius: 12px; transform: rotate(-1.5deg); margin: -34px 0 10px -4px; box-shadow: 0 3px 0 var(--ink); }
+.bom-rows { display: grid; gap: 16px; }
+.bom-row { display: flex; align-items: flex-end; gap: 12px; }
+.bom-fig { flex: none; width: 132px; min-height: 104px; display: flex; align-items: flex-end; justify-content: center; gap: 6px; background: #e9e2ff; border: 3px solid var(--ink); border-radius: 16px; padding: 8px 6px 6px; overflow: hidden; }
+.bom-fig svg { display: block; }
+.bom-eq { align-self: center; font-family: var(--head); font-weight: 700; font-size: 18px; color: var(--ink); }
+.bom-stack { display: flex; align-items: flex-end; flex-wrap: nowrap; gap: 2px; min-width: 0; }
+.bom-stack svg { flex: none; max-width: 28px; }
+.bom-half { opacity: 0.4; }
+.bom-n { font-family: var(--head); font-size: 15px; color: var(--ink); align-self: center; }
+.bom-row p { margin: 0; font-family: var(--head); font-weight: 600; font-size: 22px; line-height: 1.15; color: var(--ink); }
+.bom-row p small { display: block; font-family: var(--body); font-size: 14px; font-weight: 700; margin-top: 4px; }
