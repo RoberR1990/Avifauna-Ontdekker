@@ -12,6 +12,7 @@ const PAGES = ['/', '/atlas', '/soort/spheniscus-humboldti']
 const MIN_PERFORMANCE = 90
 const MAX_LCP_MS = 3000
 const OUT = 'lighthouse-reports'
+const RUNS = Number(process.env.LH_RUNS ?? 3) // mediaan van n runs (metingen zijn ruisig)
 
 const pnpm = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm'
 const run = (args) => spawnSync(pnpm, args, { stdio: 'inherit', shell: process.platform === 'win32' })
@@ -53,23 +54,32 @@ try {
     chromePath: process.env.CHROME_PATH || (Launcher.getFirstInstallation() ? undefined : fallback),
     chromeFlags: ['--headless=new', '--no-sandbox'],
   })
+  const median = (xs) => [...xs].sort((x, y) => x - y)[Math.floor(xs.length / 2)]
   for (const path of PAGES) {
-    const res = await lighthouse(BASE + path, { port: chrome.port, output: ['json', 'html'], logLevel: 'error' }, undefined)
+    const runs = []
+    for (let i = 0; i < RUNS; i++) {
+      const res = await lighthouse(BASE + path, { port: chrome.port, output: ['json', 'html'], logLevel: 'error' }, undefined)
+      runs.push({ res, perfScore: res.lhr.categories.performance.score ?? 0 })
+    }
+    // Mediaan-run (op performance-score) bepaalt het rapport; LCP/TBT/CLS zijn per metriek de mediaan.
+    const sorted = [...runs].sort((x, y) => x.perfScore - y.perfScore)
+    const res = sorted[Math.floor(sorted.length / 2)].res
     const lhr = res.lhr
     const name = path === '/' ? 'home' : path.slice(1).replace(/\//g, '-')
     writeFileSync(`${OUT}/${name}.json`, res.report[0])
     writeFileSync(`${OUT}/${name}.html`, res.report[1])
     const score = (id) => Math.round((lhr.categories[id].score ?? 0) * 100)
-    const a = lhr.audits
+    const med = (id) => median(runs.map((r) => r.res.lhr.audits[id].numericValue))
     const row = {
       pagina: path,
-      perf: score('performance'),
+      perf: median(runs.map((r) => Math.round(r.perfScore * 100))),
       a11y: score('accessibility'),
       bp: score('best-practices'),
       seo: score('seo'),
-      lcp: Math.round(a['largest-contentful-paint'].numericValue),
-      tbt: Math.round(a['total-blocking-time'].numericValue),
-      cls: Number(a['cumulative-layout-shift'].numericValue.toFixed(3)),
+      lcp: Math.round(med('largest-contentful-paint')),
+      tbt: Math.round(med('total-blocking-time')),
+      cls: Number(med('cumulative-layout-shift').toFixed(3)),
+      runs: runs.map((r) => Math.round(r.perfScore * 100)).join('/'),
     }
     rows.push(row)
     if (row.perf < MIN_PERFORMANCE || row.lcp > MAX_LCP_MS) failed = true

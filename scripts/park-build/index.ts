@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import matter from 'gray-matter'
 import Papa from 'papaparse'
 import { parse as parseYaml } from 'yaml'
+import { mediumFileName, thumbFileName } from './medium.ts'
 import type {
   AudioRef,
   BundleAttribution,
@@ -30,6 +31,8 @@ import type {
 export interface BuildOptions {
   /** Mappen waarin build-cache-bestanden (NC-audio) gezocht worden; eerste treffer wint. */
   buildCacheDirs?: string[]
+  /** Map met `<slug>-800.webp` (zie medium.ts); ontbrekende bestanden worden overgeslagen. */
+  mediumDir?: string
   /** Vast tijdstip voor `generated` (tests). */
   now?: string
 }
@@ -217,13 +220,21 @@ export function buildBundle(parkDir: string, lang: Lang, opts: BuildOptions = {}
     addFile(abs, url)
     mediaManifest.push({ url, bytes: fileSize(abs) })
     const thumbName = basename(file).replace(/\.webp$/, '-thumb.webp')
-    const thumbAbs = join(photosDir, thumbName)
+    const builtThumb = opts.mediumDir ? join(opts.mediumDir, thumbFileName(basename(file))) : null
+    const thumbAbs = builtThumb && existsSync(builtThumb) ? builtThumb : join(photosDir, thumbName)
     let thumb_url = url
     if (existsSync(thumbAbs)) {
       thumb_url = `park/media/photos/${thumbName}`
       addFile(thumbAbs, thumb_url)
     }
-    return { url, thumb_url, attribution: addAttr(attr, url) }
+    const photo: PhotoRef = { url, thumb_url, attribution: addAttr(attr, url) }
+    const mediumAbs = opts.mediumDir ? join(opts.mediumDir, mediumFileName(basename(file))) : null
+    if (mediumAbs && existsSync(mediumAbs)) {
+      photo.medium_url = `park/media/photos/${basename(mediumAbs)}`
+      addFile(mediumAbs, photo.medium_url)
+      mediaManifest.push({ url: photo.medium_url, bytes: fileSize(mediumAbs) })
+    }
+    return photo
   }
 
   const findAudio = (file: string): string | null => {

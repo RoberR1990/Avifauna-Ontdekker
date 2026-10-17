@@ -188,7 +188,13 @@ export function SpeciesPage() {
       <figure className="sp-hero">
         {sp.photo && (
           <img
-            src={mediaUrl(sp.photo.url)}
+            src={mediaUrl(sp.photo.medium_url ?? sp.photo.url)}
+            srcSet={
+              sp.photo.medium_url
+                ? `${mediaUrl(sp.photo.thumb_url)} 400w, ${mediaUrl(sp.photo.medium_url)} 800w, ${mediaUrl(sp.photo.url)} 1200w`
+                : undefined
+            }
+            sizes={sp.photo.medium_url ? '(min-width: 640px) 600px, 100vw' : undefined}
             alt={sp.name}
             width={1200}
             height={900}

@@ -72,6 +72,8 @@ export interface PhotoRef {
   /** Volledig pad onder base, bv. "park/media/photos/x.webp" (relatief, zonder leading slash). */
   url: string
   thumb_url: string
+  /** Optioneel: middelgrote foto (800x600, ~50 kB) voor `srcset`; ontbreekt in oudere bundels. */
+  medium_url?: string
   /** Index in ParkBundle.attributions (van de grote foto). */
   attribution: number
 }
