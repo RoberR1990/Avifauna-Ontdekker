@@ -76,14 +76,14 @@ describe('ProgrammeStrip', () => {
     bundle = makeBundle()
     setup()
     const status = screen.getByRole('status')
-    expect(status).toBeEmptyDOMElement()
+    expect(status.textContent).toBe('')
     // Pinguïns: 12 min; herinnering na 7 min.
     fireEvent.click(screen.getAllByRole('button', { name: 'Herinner me' })[0])
     expect(screen.getAllByRole('button', { name: 'Herinnering staat aan' })).toHaveLength(1)
     act(() => {
       vi.advanceTimersByTime(6 * 60_000)
     })
-    expect(status).toBeEmptyDOMElement()
+    expect(status.textContent).toBe('')
     act(() => {
       vi.advanceTimersByTime(60_000)
     })

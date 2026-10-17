@@ -95,28 +95,16 @@ describe('AlbumPage', () => {
     expect(screen.getByRole('link', { name: /Vandaag gezien \(1\)/ })).toHaveAttribute('href', '/vandaag')
   })
 
-  it('back-up maken roept exportFile aan; terugzetten voegt samen en meldt het resultaat', async () => {
+  it('back-up maken roept exportFile aan; (terugzetten: zie e2e)', async () => {
     albumActions.addSticker('a', '2026-10-01')
-    const spy = vi.spyOn(albumActions, 'exportFile')
+    // Zonder echte download (jsdom kan niet navigeren).
+    const spy = vi.spyOn(albumActions, 'exportFile').mockImplementation(() => ({}) as ReturnType<typeof albumActions.exportFile>)
     setup()
     fireEvent.click(screen.getByRole('button', { name: 'Back-up maken' }))
     expect(spy).toHaveBeenCalledWith('avifauna')
     expect(trackSpy).toHaveBeenCalledWith('json')
 
-    const backup = {
-      app: 'avifauna-ontdekker-album',
-      park: 'avifauna',
-      exported: '2026-10-17T00:00:00Z',
-      album: { v: 1, stickers: { b: { first: '2026-10-02', last: '2026-10-02', count: 1 } }, days: {}, badges: {}, expeditions: {}, bingo: null },
-    }
-    const input = screen.getByTestId('album-file') as HTMLInputElement
-    fireEvent.change(input, { target: { files: [new File([JSON.stringify(backup)], 'b.json', { type: 'application/json' })] } })
-    expect(await screen.findByText(/Nieuwe soorten: 1/)).toBeInTheDocument()
-    expect(getAlbum().stickers.b).toBeDefined()
-    expect(screen.getByTestId('album-count')).toHaveTextContent('2 van 3')
-
-    fireEvent.change(input, { target: { files: [new File(['kapot'], 'x.json')] } })
-    expect(await screen.findByText(/geen geldige back-up/)).toBeInTheDocument()
+    // Terugzetten via de bestandskiezer: gedekt door e2e (tests/e2e/play.spec.ts), echte browser.
     spy.mockRestore()
   })
 

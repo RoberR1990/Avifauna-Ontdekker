@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
-import react from '@vitejs/plugin-react'
+import preact from '@preact/preset-vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { parkData } from './scripts/park-build/plugin.ts'
 
@@ -21,9 +21,19 @@ export default defineConfig(({ mode }) => {
 
   return {
     base,
-    resolve: { alias: { '@park': parkDir } },
+    resolve: {
+      alias: [
+        { find: '@park', replacement: parkDir },
+        { find: /^react-dom\/test-utils$/, replacement: 'preact/test-utils' },
+        { find: /^react-dom\/client$/, replacement: 'preact/compat/client' },
+        { find: /^react-dom$/, replacement: 'preact/compat' },
+        { find: /^react\/jsx-runtime$/, replacement: 'preact/jsx-runtime' },
+        { find: /^react\/jsx-dev-runtime$/, replacement: 'preact/jsx-dev-runtime' },
+        { find: /^react$/, replacement: 'preact/compat' },
+      ],
+    },
     plugins: [
-      react(),
+      preact(),
       parkData({ parkDir, languages: park.languages, defaultLanguage: park.default_language }),
       VitePWA({
         registerType: 'autoUpdate',
@@ -80,6 +90,15 @@ export default defineConfig(({ mode }) => {
       setupFiles: ['./src/test/setup.ts'],
       include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts'],
       globals: true,
+      alias: [
+        { find: /^@testing-library\/react$/, replacement: '@testing-library/preact' },
+        { find: /^react-dom\/test-utils$/, replacement: 'preact/test-utils' },
+        { find: /^react-dom\/client$/, replacement: 'preact/compat/client' },
+        { find: /^react-dom$/, replacement: 'preact/compat' },
+        { find: /^react\/jsx-runtime$/, replacement: 'preact/jsx-runtime' },
+        { find: /^react\/jsx-dev-runtime$/, replacement: 'preact/jsx-dev-runtime' },
+        { find: /^react$/, replacement: 'preact/compat' },
+      ],
     },
   }
 })
