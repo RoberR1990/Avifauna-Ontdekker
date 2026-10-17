@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { BundleAttribution, BundleSpecies, ParkBundle } from '../../data/types'
+import { _resetAlbumForTest, getAlbum } from '../../state/album'
 import { _reloadSettingsForTest, getSettings } from '../../state/settings'
 import { SpeciesPage } from './SpeciesPage'
 import { mass, range } from './format'
@@ -73,9 +74,10 @@ function renderAt(slug: string, level: 'kind' | 'b1' | 'kenner', lang: 'nl' | 'e
   )
 }
 
-beforeEach(() => {
+beforeEach(async () => {
   localStorage.clear()
   _reloadSettingsForTest()
+  await _resetAlbumForTest()
 })
 
 const sp = (v: string | null) => v?.replaceAll(String.fromCharCode(160), ' ') ?? null
@@ -178,5 +180,31 @@ describe('SpeciesPage', () => {
   it('voorleesknop alleen met speechSynthesis', () => {
     renderAt('pinguin', 'kind')
     expect(screen.queryByRole('button', { name: 'Lees voor' })).toBeNull()
+  })
+})
+
+describe('Gezien!-knop', () => {
+  it('zet een sticker en toont In je album', () => {
+    renderAt('pinguin', 'b1')
+    const btn = screen.getByRole('button', { name: 'Gezien!' })
+    expect(btn).toHaveAttribute('aria-pressed', 'false')
+    fireEvent.click(btn)
+    expect(getAlbum().stickers.pinguin?.count).toBe(1)
+    expect(getAlbum().badges['eerste-sticker']).toBeDefined()
+    const done = screen.getByRole('button', { name: 'In je album ✓' })
+    expect(done).toHaveAttribute('aria-pressed', 'true')
+    fireEvent.click(done)
+    expect(getAlbum().stickers.pinguin.count).toBe(1)
+  })
+
+  it('staat ook op kenner-niveau', () => {
+    renderAt('pinguin', 'kenner')
+    expect(screen.getByRole('button', { name: 'Gezien!' })).toBeInTheDocument()
+  })
+
+  it('niet in de peuterstand', () => {
+    getSettings().set({ toddler: true })
+    renderAt('pinguin', 'kind')
+    expect(screen.queryByRole('button', { name: 'Gezien!' })).toBeNull()
   })
 })

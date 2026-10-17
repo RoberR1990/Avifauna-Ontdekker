@@ -5,6 +5,10 @@ import type { BundleSpecies, Lang, Level, ParkBundle } from '../../data/types'
 import { useT } from '../../i18n'
 import { stop } from '../../lib/speech'
 import { useSettings } from '../../state/settings'
+import { useAlbum } from '../../state/album'
+import { syncBadges } from '../album/sync'
+import { stickerAdd } from '../album/track-stubs'
+import { useAlbumT } from '../album/i18n'
 import { BirdOMeter } from '../meter/BirdOMeter'
 import { OriginMap } from '../origin/OriginMap'
 import { days, mass, paragraphs, range, TREND_KEYS, years } from './format'
@@ -106,6 +110,9 @@ export function SpeciesPage() {
   const bundle = useBundle()
   const { slug } = useParams()
   const species = useSpecies(slug)
+  const at = useAlbumT()
+  const { album, addSticker } = useAlbum()
+  const toddler = useSettings().toddler
 
   useEffect(() => {
     if (slug) speciesView(slug)
@@ -149,6 +156,7 @@ export function SpeciesPage() {
   const iucnName = iucnLabel(sp, st)
   const trend = facts && facts.iucn_trend !== 'unknown' ? st(TREND_KEYS[facts.iucn_trend]) : null
   const wikiUrl = sp.links.wikipedia
+  const gotIt = !!album.stickers[sp.slug]
 
   const textNotes = hasAnyText && (
     <>
@@ -211,6 +219,22 @@ export function SpeciesPage() {
 
       <h1>{sp.name}</h1>
       <p className="latin">{sp.scientific_name}</p>
+      {!toddler && (
+        <button
+          type="button"
+          className={`btn got-it${gotIt ? ' btn--teal' : ''}`}
+          aria-pressed={gotIt}
+          onClick={() => {
+            if (!gotIt) {
+              addSticker(sp.slug)
+              stickerAdd(sp.slug)
+              syncBadges(bundle)
+            }
+          }}
+        >
+          {gotIt ? at('inAlbum') : at('gotIt')}
+        </button>
+      )}
       {sp.iucn && (
         <p className="sp-iucn">
           <span className="badge" data-iucn={sp.iucn}>

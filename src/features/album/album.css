@@ -1,0 +1,37 @@
+/* Album: stickerboek-stijl. Basis uit src/styles.css. */
+.album-page h1 { margin: 0.25rem 0 0.5rem; font-family: var(--head); }
+.album-warning { margin: 0.5rem 0; padding: 0.625rem 0.875rem; background: var(--lilac); border: 3px dashed var(--ink); border-radius: 14px; font-weight: 700; font-size: 0.9375rem; }
+.album-warning--bad { background: var(--pink); border-style: solid; }
+.album-count { margin: 0.75rem 0; font-family: var(--head); font-size: 1.75rem; }
+.album-sheet h2 { font-family: var(--head); margin: 1.25rem 0 0.75rem; }
+.album-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem 0.625rem; margin: 0; padding: 0; list-style: none; }
+.album-sticker { min-width: 0; }
+.album-sticker__link { display: block; color: var(--ink); text-decoration: none; min-height: 3rem; }
+.album-sticker__img { display: grid; place-items: center; aspect-ratio: 1; overflow: hidden; background: var(--white); border: 3px solid var(--ink); border-radius: 16px; box-shadow: 0 4px 0 var(--ink); font-size: 2rem; }
+.album-sticker__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.album-sticker--empty .album-sticker__img { background: #d9d4cc; color: #6b6676; font-family: var(--head); font-size: 2.5rem; border-style: dashed; box-shadow: none; }
+.album-sticker__name { display: block; margin-top: 0.375rem; font-family: var(--head); font-weight: 700; font-size: 0.9375rem; line-height: 1.15; overflow-wrap: anywhere; }
+.album-sticker__date { display: block; font-size: 0.8125rem; font-weight: 700; }
+.album-badges { display: grid; gap: 0.625rem; margin: 0; padding: 0; list-style: none; }
+.album-badge { display: flex; align-items: center; gap: 0.75rem; min-height: 3.5rem; padding: 0.5rem 0.75rem; border: 3px solid var(--ink); border-radius: 16px; background: #e4e0d8; color: #4f4a5c; }
+.album-badge .album-badge__icon { font-size: 2rem; filter: grayscale(1); opacity: 0.6; }
+.album-badge.is-earned { background: var(--sun); color: var(--ink); box-shadow: 0 3px 0 var(--ink); }
+.album-badge.is-earned .album-badge__icon { filter: none; opacity: 1; }
+.album-badge__text { display: grid; font-size: 0.9375rem; }
+.album-file { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.album-message { min-height: 1.5rem; margin: 0.75rem 0 0; font-weight: 700; }
+.album-tools .btn { min-height: 3.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .album-sticker { rotate: 0deg !important; }
+}
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body * { visibility: hidden; }
+  .album-sheet, .album-sheet * { visibility: visible; }
+  .album-sheet { position: absolute; inset: 0 auto auto 0; width: 100%; }
+  .album-grid { grid-template-columns: repeat(4, 1fr); }
+  .album-sticker--empty { display: none; }
+  .album-sticker { break-inside: avoid; }
+}

@@ -36,3 +36,6 @@ html[data-level='kenner'] .species-page .card .sp-note { color: var(--ink); }
 html[data-level='kenner'] .species-page .sp-all-sources a { color: var(--gold); }
 html[data-level='kenner'] .species-page .card .links a { color: var(--ink); }
 html[data-level='kenner'] .species-page .src { margin-left: 1.125rem; margin-right: 1.125rem; }
+
+.got-it { margin: 0.5rem 0 0.75rem; min-height: 3.5rem; }
+.got-it[aria-pressed='true'] { background: var(--teal); color: var(--white); }
