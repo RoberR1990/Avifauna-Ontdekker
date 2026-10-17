@@ -71,6 +71,8 @@ interface Ref {
   /** Mensen: tellen alleen als geheel aantal ("3 kinderen van 8"). Voorwerpen mogen ook half als `half`. */
   person?: boolean
   half?: boolean
+  /** Hoogste aantal dat we noemen (bv. niet "10 appels" maar pakken melk). */
+  maxCount?: number
   /** Pasgeborene: nooit tellen ("2 baby's" is een vreemde maat). */
   single?: boolean
   /** Lengte: mag "N keer zo lang als" worden (alleen de volwassene). */
@@ -82,8 +84,8 @@ const REFS: Ref[] = [
   ...CHILD_AGES.map((a): Ref => ({ id: `child-${a}` as RefId, cm: CHILD_LENGTH_CM[a], g: CHILD_MASS_G[a], person: true })),
   { id: 'adult', cm: ADULT_LENGTH_CM, g: ADULT_MASS_G, person: true, times: true },
   { id: 'milk', g: 1030, half: true },
-  { id: 'apple', g: 180, half: true },
-  { id: 'egg', g: 60, half: true },
+  { id: 'apple', g: 180, half: true, maxCount: 6 },
+  { id: 'egg', g: 60, half: true, maxCount: 6 },
   { id: 'coin', g: 7.5 },
   { id: 'paperclip', g: 1 },
   { id: 'match', cm: 4.5 },
@@ -139,7 +141,7 @@ function fit(ref: Ref, value: number, refValueNum: number, unit: 'cm' | 'g'): Fi
     if (unit === 'g' && !ref.single) {
       const n = ref.half ? roundHalf(ratio) : Math.round(ratio)
       const min = ref.half ? 1.5 : 2
-      return n >= min && n <= MAX_COUNT ? make('count', n) : null
+      return n >= min && n <= (ref.maxCount ?? MAX_COUNT) ? make('count', n) : null
     }
     return null
   }

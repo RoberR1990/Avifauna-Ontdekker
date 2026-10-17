@@ -87,6 +87,12 @@ describe('kleine vogel en randgevallen', () => {
     expect(c.length.ref).toBe('card')
     expect(c.mass.ref).toBe('paperclip')
   })
+  it('nooit meer dan 6 appels: brandgans (1,2–2,2 kg) in pakken melk', () => {
+    const m = by(species({ is_bird: true, mass_g: [1210, 2230] })).mass
+    expect(m.sentence).toMatch(/pak(ken)? melk/)
+    expect(m.sentence).not.toMatch(/appel/)
+  })
+
   it('half pak melk / halve appel', () => {
     expect(by(species({ mass_g: [450, 550] })).mass.sentence).toBe('Ongeveer zo zwaar als een half pak melk')
     expect(by(species({ mass_g: [90, 90] })).mass.sentence).toBe('Ongeveer zo zwaar als een halve appel')
