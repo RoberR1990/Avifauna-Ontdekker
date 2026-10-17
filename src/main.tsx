@@ -4,13 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import { registerSW } from 'virtual:pwa-register'
 import { App } from './App'
 import { park } from './park'
+import './fonts.css'
 import './styles.css'
+import './state/settings' // zet <html lang> en data-level voor de eerste render
 
-// Thema uit het parkpakket als CSS-variabelen
-const root = document.documentElement
-root.style.setProperty('--color-primary', park.theme.primary)
-root.style.setProperty('--color-bg', park.theme.background)
-root.style.setProperty('--color-text', park.theme.text)
 document.title = park.app_name
 
 registerSW({ immediate: true })

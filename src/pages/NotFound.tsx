@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import { defaultLang } from '../park'
-import { t } from '../i18n'
+import { useT } from '../i18n'
 
 export function NotFound() {
+  const t = useT()
   return (
     <>
-      <h1>{t('notfound.title', defaultLang)}</h1>
-      <Link className="button" to="/">
-        {t('notfound.back', defaultLang)}
+      <h1>{t('notfound.title')}</h1>
+      <Link className="btn" to="/">
+        {t('notfound.back')}
       </Link>
     </>
   )
