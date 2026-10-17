@@ -8,6 +8,15 @@ import { useToddlerT } from './i18n'
 import { soundPlay, toddlerMode } from './track-stubs'
 import './toddler.css'
 
+/** 0,01 s stilte (WAV), om het audio-element op iOS te ontgrendelen. */
+function playUrl(a: HTMLAudioElement, url: string) {
+  a.src = url
+  void a.play().catch(() => {})
+}
+
+const SILENT_WAV =
+  'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA='
+
 const HOLD_MS = 1000
 const SWIPE_PX = 50
 
@@ -91,13 +100,27 @@ export function ToddlerPage() {
     }
   }, [])
 
+  // iOS staat play() alleen toe binnen een tik. Het geluid start pas na het voorlezen,
+  // dus ontgrendelen we bij de eerste tik één gedeeld audio-element (stil fragment) en hergebruiken dat.
+  const sharedAudio = useRef<HTMLAudioElement | null>(null)
+  useEffect(() => {
+    const unlock = () => {
+      if (sharedAudio.current || typeof Audio === 'undefined') return
+      const a = new Audio(SILENT_WAV)
+      sharedAudio.current = a
+      void a.play().catch(() => {})
+    }
+    window.addEventListener('pointerdown', unlock, { capture: true })
+    return () => window.removeEventListener('pointerdown', unlock, { capture: true })
+  }, [])
+
   const playSound = useCallback((s: BundleSpecies) => {
     const url = pickAudioUrl(s.audio)
     if (!url) return
-    const a = new Audio(url)
+    const a = sharedAudio.current ?? new Audio()
     audioRef.current = a
     soundPlay(s.slug)
-    void a.play().catch(() => {})
+    playUrl(a, url)
   }, [])
 
   const hear = useCallback(
