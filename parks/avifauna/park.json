@@ -9,6 +9,7 @@
   "about": { "builder": "Robert Riteco", "nl": "Gebouwd door Robert Riteco als hobbyproject.", "en": "Built by Robert Riteco as a hobby project.", "source_code_url": "https://github.com/RoberR1990/Avifauna-Ontdekker", "personal_site_url": null },
   "links": { "official_site": "https://www.avifauna.nl/", "tickets": "https://www.avifauna.nl/tickets", "programme": "https://www.avifauna.nl/dagprogramma" },
   "theme": { "primary": "#E07A2F", "background": "#FFF8EE", "text": "#2B2118" },
-  "map_georef": null,
+  "center": { "lat": 52.1393, "lon": 4.6490 },
+  "map_georef": "map/georef.json",
   "noindex": true
 }

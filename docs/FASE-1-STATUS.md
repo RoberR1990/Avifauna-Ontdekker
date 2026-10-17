@@ -20,10 +20,14 @@ Lees bij hervatten alleen dit bestand + `docs/FASE-1.md` (ontwerp) + `src/data/t
 6. **Statistieken** `src/lib/track.ts` volgens FASE-1 §6 + aansluiten op alle events + Over-pagina (privacytekst, opt-out). Wacht op website-ID van Robert (zonder ID staat het uit).
 7. **Wave C:** Playwright (offline, atlas, soortpagina, kaart met nep-GPS, peuter, taal), Lighthouse-script (`pnpm lighthouse`, mobiel 4G, ≥ 90), review door het zware model, gate-1-rapport.
 
+## Besluiten na wave A
+- **EN-teksten: ja** (17-10-2026). Wave B: `texts/en/<slug>.md` voor alle 21 (kind, b1, kenner), eigen tekst, `reviewed: false`.
+- Voorlopige preview: `AtlasPage` (lijst) en `SpeciesPage` (foto, Vogel-o-meter, herkomstkaartje) zijn tijdelijk bedraad; `park.json` heeft nu `center` en `map_georef`. Bekijken: `pnpm build` + `pnpm exec vite preview --host --port 4173` (`.claude/launch.json` → preview).
+- Kleine bevinding: naam toont "Humboldt pinguïn" (uit proeflijst/csv); `name_nl` in species.csv opschonen naar de gangbare spelling.
+
 ## Wacht op Robert
 - Veldwerkfoto's in `D:\Avifauna\veldwerk\` (stap 0: `run` → controlelijst.html → correcties → `apply` → avipipe `--publish`).
 - Umami-website-ID (Cloud EU).
-- Besluit: ook EN-teksten schrijven, of EN-app toont NL-tekst met melding.
 - Review feiten/teksten (`reviewed: false`). Bekende twijfels: kroonkraanvogel (regulorum/pavonina), regenbooglori (1 bron), rode brulaap (identiteit), flamingo-soort, rode panda EN/VU, kroeskoppelikaan NT/VU, schildpadmaten zijn maxima; WHO/CBS-referentiewaarden in `compare.ts` nog tegen de tabellen controleren.
 - Concept-zones en soort→verblijf (preview `map/places.preview.png`); expeditiestop flamingo staat op `zone-grote-vijver`.
 
