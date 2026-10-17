@@ -33,3 +33,6 @@ tools/tessdata/
 Thumbs.db
 .vscode/
 .idea/
+
+# Vite/PWA
+*.local
