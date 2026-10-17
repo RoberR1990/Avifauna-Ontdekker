@@ -1,0 +1,35 @@
+# Node / build
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Geheimen
+.env
+.env.*
+!.env.example
+
+# Werkmateriaal: nooit publiceren
+veldwerk/
+PITCH-IDEEEN.md
+
+# Pipeline: ruwe dumps en build-cache (NC-audio komt NOOIT in git)
+pipeline/data/bronze/
+pipeline/data/cache/
+build-cache/
+tools/tessdata/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
