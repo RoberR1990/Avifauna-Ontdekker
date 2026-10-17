@@ -1,0 +1,58 @@
+/* Vandaag-gezien-kaartje. Eigen klassen met prefix ty-. */
+.ty-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ty-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.ty-thumb {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--white);
+}
+.ty-name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.ty-fav {
+  flex: none;
+  min-width: 3rem;
+  min-height: 3rem;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.ty-fav[aria-pressed='true'] {
+  background: var(--sun);
+}
+.ty-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1080 / 1350;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  background: var(--cream);
+}
+.ty-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,59 @@
+/* Strook "Straks in het park". Eigen klassen met prefix pg-. */
+.pg-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pg-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.pg-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+.pg-when {
+  font-family: var(--head);
+  font-weight: 700;
+  color: var(--violet);
+}
+.pg-what {
+  flex: 1 1 10rem;
+  min-width: 0;
+}
+.pg-remind {
+  min-height: 2.75rem;
+  padding: 0.25rem 0.875rem;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pg-remind[aria-pressed='true'] {
+  background: var(--teal);
+  color: #fff;
+}
+.pg-toast {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--sun);
+  font-weight: 700;
+}
+.pg-toast:empty {
+  display: none;
+}
+.pg-note {
+  margin: 0;
+  font-size: 0.875rem;
+}
