@@ -1,0 +1,27 @@
+slug: bubo-bubo
+reviewed: false
+is_bird: true
+length_cm: [56, 75]
+height_cm: null
+mass_g: [1200, 4600]
+wingspan_cm: [131, 188]
+lifespan_wild_y: [10, 20]
+lifespan_captivity_y: [20, 60]
+clutch: { nl: "2 tot 4 eieren", en: "2 to 4 eggs" }
+incubation_days: [34, 34]
+continents: [europe, asia, africa]
+range: { nl: "Europa en Azië, van Scandinavië en Frankrijk tot China en Korea; ook Noord-Afrika", en: "Europe and Asia, from Scandinavia and France to China and Korea; also North Africa" }
+range_center: { lat: 50, lon: 60 }
+habitat: { nl: "Rotsachtig en bergachtig gebied, bosranden, steppe; soms landbouwgrond", en: "Rocky and mountainous areas, forest edges, steppe; sometimes farmland" }
+diet: { nl: "Vooral kleine zoogdieren zoals knaagdieren en konijnen; ook vogels en soms grotere dieren", en: "Mostly small mammals such as rodents and rabbits; also birds and sometimes larger animals" }
+colors: [brown, black, orange]
+iucn_trend: decreasing
+threats: { nl: "Door mensen veroorzaakte sterfte en verlies van leefgebied", en: "Human-caused mortality and habitat loss" }
+wow: { nl: "Het is een van de grootste uilen ter wereld, met oorpluimen en oranje ogen.", en: "One of the largest owls in the world, with ear tufts and orange eyes." }
+sources:
+  - title: Wikipedia, Eurasian eagle-owl
+    url: https://en.wikipedia.org/wiki/Eurasian_eagle-owl
+  - title: Animal Diversity Web, Bubo bubo
+    url: https://animaldiversity.org/accounts/Bubo_bubo/
+  - title: Wikipedia NL, Oehoe
+    url: https://nl.wikipedia.org/wiki/Oehoe

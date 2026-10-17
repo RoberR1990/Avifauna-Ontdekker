@@ -1,0 +1,25 @@
+slug: casuarius-casuarius
+reviewed: false
+is_bird: true
+length_cm: null
+height_cm: [150, 180]
+mass_g: [29000, 76000]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: [20, 40]
+clutch: { nl: "3 tot 5 eieren (een andere bron noemt tot 8)", en: "3 to 5 eggs (another source mentions up to 8)" }
+incubation_days: [47, 61]
+continents: [oceania]
+range: { nl: "Nieuw-Guinea, Noordoost-Australië en enkele eilanden ertussen", en: "New Guinea, northeastern Australia and some islands in between" }
+range_center: { lat: -5, lon: 142 }
+habitat: { nl: "Tropisch regenwoud in laagland, tot ongeveer 1100 m hoogte", en: "Lowland tropical rainforest, up to about 1,100 m" }
+diet: { nl: "Vooral gevallen vruchten; ook zaden, paddenstoelen, insecten en kleine dieren", en: "Mostly fallen fruit; also seeds, fungi, insects and small animals" }
+colors: [black, blue, red]
+iucn_trend: decreasing
+threats: { nl: "Verlies van leefgebied, aanrijdingen, verwilderde honden en varkens, jacht", en: "Habitat loss, road strikes, feral dogs and pigs, hunting" }
+wow: { nl: "Hij kan niet vliegen, maar rent door het bos met bijna 50 km per uur.", en: "He cannot fly, but crashes through the forest at almost 50 km/h." }
+sources:
+  - title: Wikipedia, Southern cassowary
+    url: https://en.wikipedia.org/wiki/Southern_cassowary
+  - title: Animal Diversity Web, Casuarius casuarius
+    url: https://animaldiversity.org/accounts/Casuarius_casuarius/
