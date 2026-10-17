@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avifauna-ontdekker.local/schema/app-data.schema.json",
+  "title": "app-data.<taal>.json (goud)",
+  "description": "Ontbrekende waarden zijn null, nooit weggelaten. Op topniveau zijn extra velden toegestaan (bv. lang, attributions); per soort niet.",
+  "type": "object",
+  "required": ["park", "generated", "species"],
+  "properties": {
+    "park": {
+      "description": "Inhoud van park.json (zie park.schema.json); hier alleen de minimale kern afgedwongen.",
+      "type": "object",
+      "required": ["id", "app_name", "park_name", "languages", "default_language"]
+    },
+    "lang": { "type": "string", "pattern": "^[a-z]{2}$" },
+    "generated": { "type": "string", "format": "date-time" },
+    "species": { "type": "array", "items": { "$ref": "#/$defs/species" } },
+    "attributions": { "description": "Optioneel: kopie van media/attributions.json waar attribution_index naar verwijst.", "type": "array" }
+  },
+  "$defs": {
+    "mediaRef": {
+      "type": "object",
+      "required": ["file", "attribution_index"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "attribution_index": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "species": {
+      "type": "object",
+      "required": ["slug", "scientific_name", "name", "name_alt", "order", "family", "iucn", "wingspan_cm", "mass_g", "lifespan_y", "zone_id", "place_id", "last_seen", "photo", "audio", "links"],
+      "additionalProperties": false,
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" },
+        "scientific_name": { "type": "string", "minLength": 1 },
+        "name": { "type": ["string", "null"] },
+        "name_alt": { "type": ["array", "null"], "items": { "type": "string" } },
+        "order": { "type": ["string", "null"] },
+        "family": { "type": ["string", "null"] },
+        "iucn": { "enum": ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE", null] },
+        "wingspan_cm": { "type": ["number", "null"], "minimum": 0 },
+        "mass_g": { "type": ["number", "null"], "minimum": 0 },
+        "lifespan_y": { "type": ["number", "null"], "minimum": 0 },
+        "zone_id": { "type": ["string", "null"] },
+        "place_id": { "type": ["string", "null"] },
+        "last_seen": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "photo": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/mediaRef" }] },
+        "audio": { "type": "array", "items": { "$ref": "#/$defs/mediaRef" } },
+        "links": {
+          "type": "object",
+          "required": ["wikipedia", "xeno_canto", "wikidata"],
+          "additionalProperties": false,
+          "properties": {
+            "wikipedia": { "type": ["string", "null"] },
+            "xeno_canto": { "type": ["string", "null"] },
+            "wikidata": { "type": ["string", "null"] }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avifauna-ontdekker.local/schema/attributions.schema.json",
+  "title": "media/attributions.json",
+  "type": "array",
+  "items": { "$ref": "#/$defs/record" },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": ["file", "slug", "kind", "source", "source_url", "creator", "license", "title", "retrieved", "in_repo"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" },
+        "kind": { "enum": ["photo", "audio", "model"] },
+        "source": { "enum": ["wikimedia-commons", "xeno-canto", "own"] },
+        "source_url": { "type": "string", "format": "uri" },
+        "creator": { "type": "string", "minLength": 1 },
+        "license": {
+          "description": "Toegestaan: CC0-1.0, PDM / PDM-1.0 / LicenseRef-PD, CC-BY-x.y, CC-BY-SA-x.y. CC-BY-NC-SA-x.y alleen voor xeno-canto-audio buiten de repo (in_repo false, bestand onder build-cache/). Nooit ND.",
+          "type": "string",
+          "pattern": "^(CC0-1\\.0|PDM(-1\\.0)?|LicenseRef-PD|CC-BY-[0-9]\\.[0-9]|CC-BY-SA-[0-9]\\.[0-9]|CC-BY-NC-SA-[0-9]\\.[0-9])$"
+        },
+        "license_url": { "type": "string", "format": "uri" },
+        "title": { "type": "string", "minLength": 1 },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date" },
+        "modified": { "type": "string" },
+        "in_repo": { "type": "boolean" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "license": { "pattern": "^CC-BY-NC-SA-" } }, "required": ["license"] },
+          "then": {
+            "properties": {
+              "kind": { "const": "audio" },
+              "source": { "const": "xeno-canto" },
+              "in_repo": { "const": false },
+              "file": { "pattern": "^build-cache/" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "in_repo": { "const": true } }, "required": ["in_repo"] },
+          "then": { "properties": { "file": { "not": { "pattern": "^build-cache/" } } } },
+          "else": { "properties": { "file": { "pattern": "^build-cache/" } } }
+        }
+      ]
+    }
+  }
+}

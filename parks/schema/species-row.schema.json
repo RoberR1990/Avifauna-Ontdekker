@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avifauna-ontdekker.local/schema/species-row.schema.json",
+  "title": "Een rij van species.csv (na het parsen; lege cellen zijn null of ontbreken)",
+  "type": "object",
+  "required": ["scientific_name", "slug", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "scientific_name": { "type": "string", "pattern": "^[A-Z][a-z]+ [a-z][a-z-]+( [a-z][a-z-]+)?$" },
+    "slug": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" },
+    "name_nl": { "type": ["string", "null"] },
+    "zone_id": { "type": ["string", "null"], "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "place_id": { "type": ["string", "null"], "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "last_seen": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date" },
+    "wikidata_qid": { "type": ["string", "null"], "pattern": "^Q\\d+$" },
+    "status": { "enum": ["confirmed", "draft", "absent"] },
+    "notes": { "type": ["string", "null"] }
+  }
+}
