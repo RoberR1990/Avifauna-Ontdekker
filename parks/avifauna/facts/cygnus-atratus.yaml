@@ -1,0 +1,25 @@
+slug: cygnus-atratus
+reviewed: false
+is_bird: true
+length_cm: [110, 142]
+height_cm: null
+mass_g: [3700, 9000]
+wingspan_cm: [160, 200]
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: { nl: "Meestal 4 tot 8 eieren", en: "Usually 4 to 8 eggs" }
+incubation_days: [35, 48]
+continents: [oceania]
+range: { nl: "Zuidoost- en Zuidwest-Australië; uitgezet in onder meer Nieuw-Zeeland en Europa", en: "South-eastern and south-western Australia; introduced in places such as New Zealand and Europe" }
+range_center: { lat: -33, lon: 140 }
+habitat: { nl: "Zoet, brak en zout water: meren, moerassen en rivieren met waterplanten", en: "Fresh, brackish and salt water: lakes, swamps and rivers with water plants" }
+diet: { nl: "Bijna alleen planten: waterplanten, algen en gras", en: "Almost only plants: water plants, algae and grass" }
+colors: [black, white, red]
+iucn_trend: stable
+threats: { nl: "Weinig; af en toe illegaal afschot", en: "Few; occasional illegal shooting" }
+wow: { nl: "Een zwarte zwaan is niet helemaal zwart: zijn slagpennen zijn wit.", en: "A black swan is not completely black: its flight feathers are white." }
+sources:
+  - title: Wikipedia, Black swan
+    url: https://en.wikipedia.org/wiki/Black_swan
+  - title: Animal Diversity Web, Cygnus atratus
+    url: https://animaldiversity.org/accounts/Cygnus_atratus/

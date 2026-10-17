@@ -1,0 +1,25 @@
+slug: ciconia-ciconia
+reviewed: false
+is_bird: true
+length_cm: [100, 115]
+height_cm: [100, 125]
+mass_g: [2300, 4500]
+wingspan_cm: [155, 215]
+lifespan_wild_y: [20, 26]
+lifespan_captivity_y: [35, 48]
+clutch: { nl: "Meestal 3 tot 6 eieren", en: "Usually 3 to 6 eggs" }
+incubation_days: [30, 37]
+continents: [europe, africa, asia]
+range: { nl: "Broedt in Europa, Noordwest-Afrika en West-Azië, en in delen van zuidelijk Afrika; overwintert vooral in Afrika", en: "Breeds in Europe, north-west Africa and western Asia, and in parts of southern Africa; winters mainly in Africa" }
+range_center: { lat: 45, lon: 20 }
+habitat: { nl: "Graslanden, akkers en ondiepe wetlands", en: "Grassy meadows, farmland and shallow wetlands" }
+diet: { nl: "Insecten, regenwormen, kikkers, reptielen, vis en kleine zoogdieren", en: "Insects, earthworms, frogs, reptiles, fish and small mammals" }
+colors: [white, black, red]
+iucn_trend: increasing
+threats: { nl: "Sterke achteruitgang in de 19e en 20e eeuw; herstel mede dankzij herintroductieprogramma's", en: "Strong decline in the 19th and 20th centuries; recovery partly thanks to reintroduction programmes" }
+wow: { nl: "Zwevend vliegen kost een ooievaar 23 keer minder vet dan klapwieken, dus hij zoekt stijgende warme lucht.", en: "Soaring costs a stork 23 times less body fat than flapping, so it looks for rising warm air." }
+sources:
+  - title: Wikipedia, White stork
+    url: https://en.wikipedia.org/wiki/White_stork
+  - title: Animal Diversity Web, Ciconia ciconia
+    url: https://animaldiversity.org/accounts/Ciconia_ciconia/

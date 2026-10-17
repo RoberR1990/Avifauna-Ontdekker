@@ -1,0 +1,25 @@
+slug: branta-hutchinsii
+reviewed: false
+is_bird: true
+length_cm: [63, 65]
+height_cm: null
+mass_g: [1400, 2380]
+wingspan_cm: [108, 111]
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: null
+incubation_days: null
+continents: [north-america]
+range: { nl: "Broedt in Noord-Canada en Alaska; overwintert in grote delen van de VS, West-Canada en Noord-Mexico", en: "Breeds in northern Canada and Alaska; winters across much of the USA, western Canada and northern Mexico" }
+range_center: { lat: 62, lon: -120 }
+habitat: { nl: "Toendra in het broedseizoen; in de winter graslanden en akkers", en: "Tundra in the breeding season; grassland and fields in winter" }
+diet: { nl: "Vooral planten, ook graan van akkers; daarnaast insecten, weekdieren en kreeftachtigen", en: "Mostly plants, also grain from fields; plus insects, molluscs and crustaceans" }
+colors: [black, white, brown]
+iucn_trend: increasing
+threats: { nl: "Vroeger overbejaging en verlies van leefgebied; nu nestroof door vossen, coyotes en verwilderde dieren", en: "Past overhunting and habitat loss; now nest and gosling predation by foxes, coyotes and feral animals" }
+wow: { nl: "De kleinste ondersoort weegt maar ongeveer 1,4 kg en is kleiner dan elke Canadese gans.", en: "The smallest subspecies weighs only about 1.4 kg and is smaller than any Canada goose." }
+sources:
+  - title: Wikipedia, Cackling goose
+    url: https://en.wikipedia.org/wiki/Cackling_goose
+  - title: Wikipedia, Kleine Canadese gans
+    url: https://nl.wikipedia.org/wiki/Kleine_Canadese_gans

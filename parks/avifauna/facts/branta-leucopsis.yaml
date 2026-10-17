@@ -1,0 +1,25 @@
+slug: branta-leucopsis
+reviewed: false
+is_bird: true
+length_cm: [55, 70]
+height_cm: null
+mass_g: [1210, 2230]
+wingspan_cm: [120, 145]
+lifespan_wild_y: [18, 25]
+lifespan_captivity_y: [24, 30]
+clutch: { nl: "Meestal 3 tot 6 eieren", en: "Usually 3 to 6 eggs" }
+incubation_days: [24, 26]
+continents: [europe]
+range: { nl: "Broedt in het Arctisch gebied (Groenland, Spitsbergen, Noord-Rusland, Oostzee); overwintert onder meer op de Britse Eilanden en in Nederland", en: "Breeds in the Arctic (Greenland, Svalbard, northern Russia, Baltic); winters in places such as the British Isles and the Netherlands" }
+range_center: { lat: 65, lon: 15 }
+habitat: { nl: "Toendra, kleine eilanden en rotsklippen tot 200-300 m hoog; in de winter weilanden, kwelders en graslanden bij de kust", en: "Tundra, small islands and cliffs up to 200-300 m high; in winter pasture, salt marshes and grassland near the coast" }
+diet: { nl: "Planteneter: vooral gras en waterplanten, ook landbouwgewassen", en: "Herbivore: mostly grass and aquatic plants, also farm crops" }
+colors: [black, white, grey]
+iucn_trend: increasing
+threats: { nl: "Slechts de helft van de kuikens overleeft de eerste maand", en: "Only half of the chicks survive the first month" }
+wow: { nl: "Hun kuikens springen van een klif van wel 200 tot 300 m hoog en blijven heel.", en: "Their chicks jump off cliffs up to 200 to 300 m high and are not hurt." }
+sources:
+  - title: Wikipedia, Barnacle goose
+    url: https://en.wikipedia.org/wiki/Barnacle_goose
+  - title: Animal Diversity Web, Branta leucopsis
+    url: https://animaldiversity.org/accounts/Branta_leucopsis/

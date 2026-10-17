@@ -1,0 +1,25 @@
+slug: ardea-cinerea
+reviewed: false
+is_bird: true
+length_cm: [84, 102]
+height_cm: null
+mass_g: [1020, 2080]
+wingspan_cm: [155, 195]
+lifespan_wild_y: [5, 23]
+lifespan_captivity_y: null
+clutch: { nl: "Meestal 3 tot 5 eieren", en: "Usually 3 to 5 eggs" }
+incubation_days: [25, 26]
+continents: [europe, asia, africa]
+range: { nl: "Heel Europa, Azië en het grootste deel van Afrika", en: "Throughout Europe, Asia and most of Africa" }
+range_center: { lat: 40, lon: 35 }
+habitat: { nl: "Meren, rivieren, vijvers, moerassen, lagunes, estuaria en zeekusten", en: "Lakes, rivers, ponds, marshes, lagoons, estuaries and sea coasts" }
+diet: { nl: "Vooral vis; ook amfibieën, kreeftachtigen, insecten en soms kleine vogels en zoogdieren", en: "Mostly fish; also amphibians, crustaceans, insects and sometimes small birds and mammals" }
+colors: [grey, white, black]
+iucn_trend: stable
+threats: { nl: "Roofdieren bij het nest, parasieten en verlies van nestplaatsen", en: "Predators at the nest, parasites and loss of nest sites" }
+wow: { nl: "Een blauwe reiger kan een paling van 57 cm lang eten.", en: "A grey heron can eat an eel 57 cm long." }
+sources:
+  - title: Wikipedia, Grey heron
+    url: https://en.wikipedia.org/wiki/Grey_heron
+  - title: Animal Diversity Web, Ardea cinerea
+    url: https://animaldiversity.org/accounts/Ardea_cinerea/

@@ -1,0 +1,25 @@
+slug: anseranas-semipalmata
+reviewed: false
+is_bird: true
+length_cm: [70, 90]
+height_cm: null
+mass_g: [2000, 3000]
+wingspan_cm: [130, 180]
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: { nl: "Meestal 3 tot 9 eieren", en: "Usually 3 to 9 eggs" }
+incubation_days: [24, 35]
+continents: [oceania]
+range: { nl: "Noord-Australië en het zuiden van Nieuw-Guinea", en: "Northern Australia and southern New Guinea" }
+range_center: { lat: -15, lon: 133 }
+habitat: { nl: "Open moerasgebieden, overstroomde graslanden en kustmoerassen", en: "Open wetlands, floodplains and coastal swamps" }
+diet: { nl: "Vooral gras, graszaden, knolletjes van moerasplanten en wilde rijst", en: "Mostly grass, grass seeds, bulbs of wetland plants and wild rice" }
+colors: [black, white, orange]
+iucn_trend: stable
+threats: { nl: "Zout water dat zoete overstromingsvlakten binnendringt door klimaatverandering; vroeger verlies van leefgebied en overbejaging", en: "Salt water creeping into freshwater floodplains because of climate change; in the past habitat loss and overhunting" }
+wow: { nl: "Een mannetje paart vaak met twee wijfjes, en alle drie zorgen ze voor de jongen.", en: "A male often pairs with two females, and all three help raise the young." }
+sources:
+  - title: Wikipedia, Magpie goose
+    url: https://en.wikipedia.org/wiki/Magpie_goose
+  - title: Animal Diversity Web, Anseranas semipalmata
+    url: https://animaldiversity.org/accounts/Anseranas_semipalmata/
