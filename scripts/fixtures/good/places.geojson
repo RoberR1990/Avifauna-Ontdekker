@@ -1,0 +1,11 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "id": "zone-voorbeeld", "kind": "zone", "name_nl": "Voorbeeldzone", "source": "manual" },
+      "geometry": { "type": "Polygon", "coordinates": [[[4.6486, 52.1391], [4.6494, 52.1391], [4.6494, 52.1396], [4.6486, 52.1396], [4.6486, 52.1391]]] } },
+    { "type": "Feature", "properties": { "id": "verblijf-voorbeeld", "kind": "enclosure", "name_nl": "Verblijf", "zone_id": "zone-voorbeeld", "source": "veldwerk", "last_seen": "2026-10-17" },
+      "geometry": { "type": "Point", "coordinates": [4.649, 52.1394] } },
+    { "type": "Feature", "properties": { "id": "toilet-voorbeeld", "kind": "facility", "name_nl": "Toilet", "zone_id": "zone-voorbeeld", "facility_type": "toilet", "indoor": false, "source": "osm" },
+      "geometry": { "type": "Point", "coordinates": [4.649, 52.1393] } }
+  ]
+}

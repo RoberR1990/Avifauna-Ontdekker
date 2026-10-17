@@ -1,0 +1,8 @@
+[
+  { "file": "media/photos/spheniscus-humboldti.webp", "slug": "spheniscus-humboldti", "kind": "photo", "source": "wikimedia-commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Example.jpg", "creator": "Voorbeeld", "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/", "title": "Example.jpg", "retrieved": "2026-10-17", "in_repo": true },
+  { "file": "build-cache/audio/spheniscus-humboldti-1.opus", "slug": "spheniscus-humboldti", "kind": "audio", "source": "xeno-canto",
+    "source_url": "https://xeno-canto.org/1", "creator": "Voorbeeld", "license": "CC-BY-NC-SA-4.0",
+    "title": "XC1", "retrieved": "2026-10-17", "modified": "trimmed to 8 s, mono, Opus 32 kbps", "in_repo": false }
+]

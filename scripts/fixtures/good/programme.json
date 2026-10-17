@@ -1,0 +1,7 @@
+{
+  "last_checked": "2026-10-17",
+  "source_url": "https://www.avifauna.nl/dagprogramma",
+  "items": [
+    { "time": "14:30", "days": ["sat", "sun"], "season": { "from": "04-01", "to": "10-31" }, "title": { "nl": "Voorbeeldvoedering" }, "place_id": "verblijf-voorbeeld", "species": ["spheniscus-humboldti"] }
+  ]
+}

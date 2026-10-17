@@ -1,0 +1,14 @@
+{
+  "id": "avifauna",
+  "app_name": "Avifauna Ontdekker",
+  "park_name": "Vogelpark Avifauna",
+  "languages": ["nl", "en"],
+  "default_language": "nl",
+  "disclaimer_bar": { "nl": "Onofficieel prototype · gemaakt als voorstel voor Stichting Avifauna", "en": "Unofficial prototype · made as a proposal for Stichting Avifauna" },
+  "footer": { "nl": "Onofficiële gids · niet verbonden aan Stichting Avifauna", "en": "Unofficial guide · not affiliated with Stichting Avifauna" },
+  "about": { "builder": "Robert Riteco", "nl": "Gebouwd door Robert Riteco als hobbyproject.", "en": "Built by Robert Riteco as a hobby project.", "source_code_url": "https://github.com/RoberR1990/Avifauna-Ontdekker", "personal_site_url": null },
+  "links": { "official_site": "https://www.avifauna.nl/", "tickets": "https://www.avifauna.nl/tickets", "programme": "https://www.avifauna.nl/dagprogramma" },
+  "theme": { "primary": "#E07A2F", "background": "#FFF8EE", "text": "#2B2118" },
+  "map_georef": null,
+  "noindex": true
+}
