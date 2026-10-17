@@ -1,0 +1,38 @@
+import { makeT } from '../../i18n'
+
+export const usePlayT = makeT({
+  nl: {
+    title: 'Spelen',
+    lead: 'Ga op ontdekking in het park.',
+    expeditions: 'Expedities',
+    none: 'Er zijn nu geen expedities. Kom later terug!',
+    done: 'Klaar ✓',
+    minutes: 'min',
+    age_all: 'Alle leeftijden',
+    years: 'jaar',
+    stops: 'stops',
+    bingo: 'Vogelbingo',
+    bingo_sub: 'Zoek de dieren op je kaart',
+    routes: 'Routes',
+    routes_sub: 'Wandelingen door het park',
+    album: 'Album',
+    album_sub: 'Jouw stickers en badges',
+  },
+  en: {
+    title: 'Play',
+    lead: 'Go exploring in the park.',
+    expeditions: 'Expeditions',
+    none: 'There are no expeditions right now. Come back later!',
+    done: 'Done ✓',
+    minutes: 'min',
+    age_all: 'All ages',
+    years: 'years',
+    stops: 'stops',
+    bingo: 'Bird bingo',
+    bingo_sub: 'Find the animals on your card',
+    routes: 'Routes',
+    routes_sub: 'Walks through the park',
+    album: 'Album',
+    album_sub: 'Your stickers and badges',
+  },
+})

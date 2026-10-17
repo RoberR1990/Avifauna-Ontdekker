@@ -1,0 +1,214 @@
+/* Expeditie-pagina: eigen klassen met prefix ex-. Hergebruikt .card, .btn, .chip, .input uit styles.css. */
+.ex-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ex-progress {
+  font-family: var(--head);
+  font-weight: 700;
+}
+
+.ex-stops {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.ex-stop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.5rem 0.875rem;
+  background: var(--white);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: 0 3px 0 var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ex-stop[aria-current='step'] {
+  background: var(--sun);
+}
+
+.ex-stop[data-status='locked'] {
+  background: var(--lilac);
+}
+
+.ex-stop[data-status='done'] {
+  background: var(--bg);
+}
+
+.ex-stop__nr {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--violet);
+  color: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  font-family: var(--head);
+  font-weight: 700;
+}
+
+.ex-stop__title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.ex-stop__status {
+  flex: none;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.ex-prompt {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.ex-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.ex-count__btn {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--sun);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 0 4px 0 var(--ink);
+  font-family: var(--head);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ex-count__btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.ex-count__value {
+  min-width: 4.5rem;
+  text-align: center;
+  font-family: var(--head);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.ex-textarea {
+  display: block;
+  width: 100%;
+  min-height: 6rem;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  font: inherit;
+}
+
+.ex-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ex-options .btn {
+  margin: 0;
+  min-height: 4.5rem;
+  font-size: 1.25rem;
+}
+
+.ex-feedback {
+  min-height: 1.5rem;
+  margin: 0.75rem 0 0;
+  font-weight: 800;
+}
+
+.ex-feedback[data-kind='ok'] {
+  color: var(--teal);
+}
+
+.ex-feedback[data-kind='wrong'] {
+  color: var(--red);
+}
+
+.ex-species {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 4.5rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ex-species img {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--lilac);
+}
+
+.ex-party {
+  text-align: center;
+}
+
+.ex-party__badge {
+  display: block;
+  margin: 0 auto 0.5rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  animation: ex-pop 0.8s ease-out both;
+}
+
+@keyframes ex-pop {
+  0% {
+    transform: scale(0.2) rotate(-20deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2) rotate(8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ex-party__badge {
+    animation: none;
+  }
+
+  .ex-count__btn:active {
+    transform: none;
+  }
+}

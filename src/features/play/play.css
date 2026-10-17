@@ -1,0 +1,72 @@
+/* Spelen-hub: eigen klassen met prefix play-. Hergebruikt .card, .tiles, .tile uit styles.css. */
+.play-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.play-exp {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 4.5rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 0 4px 0 var(--ink);
+  text-decoration: none;
+}
+
+.play-exp:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.play-exp[data-done] {
+  background: var(--lilac);
+}
+
+.play-exp__icon {
+  flex: none;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.play-exp__body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 0.125rem;
+}
+
+.play-exp__title {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+
+.play-exp__meta {
+  font-size: 0.9375rem;
+}
+
+.play-exp__prog {
+  flex: none;
+  min-width: 3rem;
+  padding: 0.25rem 0.625rem;
+  background: var(--sun);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font-family: var(--head);
+  font-weight: 700;
+  text-align: center;
+}
+
+.play-exp[data-done] .play-exp__prog {
+  background: var(--teal);
+  color: #fff;
+}
