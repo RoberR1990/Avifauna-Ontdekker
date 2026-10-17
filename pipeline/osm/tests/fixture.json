@@ -1,0 +1,228 @@
+{
+ "elements": [
+  {
+   "type": "way",
+   "id": 1,
+   "tags": {
+    "tourism": "zoo",
+    "name": "Avifauna"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 2,
+   "tags": {
+    "building": "yes"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 3,
+   "tags": {
+    "natural": "water"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 4,
+   "tags": {
+    "highway": "footway"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 5,
+   "tags": {
+    "barrier": "fence"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 6,
+   "tags": {
+    "landuse": "grass"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "node",
+   "id": 7,
+   "lat": 52.0,
+   "lon": 4.0,
+   "tags": {
+    "amenity": "toilets"
+   }
+  },
+  {
+   "type": "node",
+   "id": 8,
+   "lat": 52.0,
+   "lon": 4.0,
+   "tags": {
+    "tourism": "attraction",
+    "attraction": "animal",
+    "name": "Mara"
+   }
+  },
+  {
+   "type": "node",
+   "id": 9,
+   "lat": 52.0,
+   "lon": 4.0,
+   "tags": {
+    "natural": "tree"
+   }
+  },
+  {
+   "type": "way",
+   "id": 10,
+   "tags": {
+    "landuse": "industrial"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "way",
+   "id": 11,
+   "tags": {
+    "natural": "scrub"
+   },
+   "geometry": [
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.001,
+     "lon": 4.001
+    },
+    {
+     "lat": 52.0,
+     "lon": 4.0
+    }
+   ]
+  },
+  {
+   "type": "node",
+   "id": 12,
+   "lat": 52.0,
+   "lon": 4.0,
+   "tags": {
+    "barrier": "gate",
+    "name": "CADO 2"
+   }
+  }
+ ]
+}
