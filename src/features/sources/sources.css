@@ -1,0 +1,7 @@
+.src-list { margin: 0; padding: 0; list-style: none; }
+.src-list li { padding: 0.625rem 0; border-bottom: 3px dotted #cbbf9f; overflow-wrap: anywhere; }
+.src-list li:last-child { border: 0; }
+.src-meta { display: grid; gap: 0.125rem; margin: 0.375rem 0 0; font-size: 0.875rem; }
+.src-meta div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem; }
+.src-meta dt { font-family: var(--head); font-weight: 700; color: var(--violet); }
+.src-meta dd { margin: 0; font-weight: 700; }
