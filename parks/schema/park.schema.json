@@ -62,7 +62,23 @@
       }
     },
     "map_georef": { "type": ["string", "null"], "minLength": 1 },
-    "noindex": { "type": "boolean" }
+    "noindex": { "type": "boolean" },
+    "analytics": {
+      "description": "Optioneel: cookieloze statistieken (Umami). Env VITE_UMAMI_HOST / VITE_UMAMI_WEBSITE_ID gaan voor. Geen website_id = uit.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "umami": {
+          "type": "object",
+          "required": ["host_url", "website_id"],
+          "additionalProperties": false,
+          "properties": {
+            "host_url": { "type": "string", "format": "uri" },
+            "website_id": { "type": ["string", "null"], "minLength": 1 }
+          }
+        }
+      }
+    }
   },
   "$defs": {
     "lang": { "type": "string", "pattern": "^[a-z]{2}$" },

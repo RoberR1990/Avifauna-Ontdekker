@@ -14,6 +14,7 @@
     "last_seen": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date" },
     "wikidata_qid": { "type": ["string", "null"], "pattern": "^Q\\d+$" },
     "status": { "enum": ["confirmed", "draft", "absent"] },
-    "notes": { "type": ["string", "null"] }
+    "notes": { "type": ["string", "null"] },
+    "park_url": { "type": ["string", "null"], "format": "uri" }
   }
 }

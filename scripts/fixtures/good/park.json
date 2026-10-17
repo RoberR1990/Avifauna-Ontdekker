@@ -10,5 +10,6 @@
   "links": { "official_site": "https://www.avifauna.nl/", "tickets": "https://www.avifauna.nl/tickets", "programme": "https://www.avifauna.nl/dagprogramma" },
   "theme": { "primary": "#E07A2F", "background": "#FFF8EE", "text": "#2B2118" },
   "map_georef": null,
-  "noindex": true
+  "noindex": true,
+  "analytics": { "umami": { "host_url": "https://cloud.umami.is", "website_id": null } }
 }

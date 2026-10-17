@@ -1,0 +1,23 @@
+slug: pica-pica
+reviewed: false
+is_bird: true
+length_cm: [56, 70]
+height_cm: null
+mass_g: [3600, 5900]
+wingspan_cm: null
+lifespan_wild_y: [15, 20]
+lifespan_captivity_y: [25, 30]
+clutch: { nl: "1 tot 2 eieren", en: "1 to 2 eggs" }
+incubation_days: [40, 42]
+continents: [south-america]
+range: { nl: "Kust van Peru en Chili", en: null }
+range_center: { lat: -20, lon: -72 }
+habitat: null
+diet: { nl: "Vis" }
+colors: [black, white]
+iucn_trend: decreasing
+threats: null
+wow: { nl: "Hij kan tot 150 meter diep duiken." }
+sources:
+  - title: Voorbeeldbron
+    url: https://example.org/humboldtpinguin

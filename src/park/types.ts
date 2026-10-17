@@ -39,6 +39,8 @@ export interface ParkJson {
   /** Pad (relatief aan de parkmap) naar het georef-bestand, bv. "map/georef.json", of null. */
   map_georef?: string | null
   noindex?: boolean
+  /** Cookieloze statistieken; env VITE_UMAMI_* gaat voor. Geen website_id = uit. */
+  analytics?: { umami?: { host_url: string; website_id: string | null } }
 }
 
 // ---- species.csv ----
@@ -54,6 +56,8 @@ export interface SpeciesRow {
   wikidata_qid?: string | null
   status: SpeciesStatus
   notes?: string | null
+  /** Pagina van deze soort op de site van het park (optioneel). */
+  park_url?: string | null
 }
 
 // ---- places.geojson ----

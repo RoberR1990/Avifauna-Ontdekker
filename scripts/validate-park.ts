@@ -168,7 +168,7 @@ function walk(dir: string): string[] {
   return out
 }
 
-const CSV_COLUMNS = ['scientific_name', 'slug', 'name_nl', 'zone_id', 'place_id', 'last_seen', 'wikidata_qid', 'status', 'notes']
+const CSV_COLUMNS = ['scientific_name', 'slug', 'name_nl', 'zone_id', 'place_id', 'last_seen', 'wikidata_qid', 'status', 'notes', 'park_url']
 const CSV_REQUIRED = ['scientific_name', 'slug', 'status']
 
 // ---------- hoofdfunctie ----------
@@ -393,6 +393,46 @@ export function validatePark(parkDirArg: string): Report {
       covered.get(dirLang)!.add(nameSlug)
     }
     for (const [l, set] of covered) c.info.push(`teksten ${l}: ${set.size} van ${slugs.size} soorten`)
+  }
+
+  // ----- facts/<slug>.yaml -----
+  const factsDir = path.join(parkDir, 'facts')
+  c.touch('facts/')
+  if (!existsSync(factsDir)) c.warn('facts/', 'map ontbreekt (optioneel)')
+  else {
+    const RANGE_KEYS = ['length_cm', 'height_cm', 'mass_g', 'wingspan_cm', 'lifespan_wild_y', 'lifespan_captivity_y', 'incubation_days']
+    let n = 0
+    for (const abs of walk(factsDir).filter((p) => /\.ya?ml$/.test(p))) {
+      const file = rel(abs)
+      const parts = file.split('/') // facts/<slug>.yaml
+      c.touch(file)
+      if (parts.length !== 2) {
+        c.error(file, 'verwacht pad facts/<slug>.yaml')
+        continue
+      }
+      const nameSlug = parts[1].replace(/\.ya?ml$/, '')
+      if (!SLUG_RE.test(nameSlug)) c.error(file, `bestandsnaam "${parts[1]}" is geen geldige slug`)
+      else if (!slugs.has(nameSlug)) c.error(file, `soort "${nameSlug}" bestaat niet in species.csv`)
+      let data: unknown
+      try {
+        data = parseYaml(readText(abs))
+      } catch (e) {
+        c.error(file, `ongeldige YAML: ${(e as Error).message}`)
+        continue
+      }
+      n++
+      for (const m of schemaErrors('facts', data)) c.error(file, m)
+      if (data && typeof data === 'object') {
+        const f = data as Record<string, unknown>
+        if (typeof f.slug === 'string' && f.slug !== nameSlug) c.error(file, `slug "${f.slug}" komt niet overeen met bestandsnaam "${nameSlug}"`)
+        for (const k of RANGE_KEYS) {
+          const r = f[k]
+          if (Array.isArray(r) && r.length === 2 && typeof r[0] === 'number' && typeof r[1] === 'number' && r[0] > r[1])
+            c.error(file, `${k}: minimum ${r[0]} is groter dan maximum ${r[1]}`)
+        }
+      }
+    }
+    c.info.push(`feiten: ${n} bestand(en)`)
   }
 
   // ----- media/attributions.json -----

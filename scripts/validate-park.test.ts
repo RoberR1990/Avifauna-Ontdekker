@@ -48,6 +48,11 @@ describe('validatePark', () => {
     ['duplicate-slug', 'species.csv', /dubbele slug/],
     ['bad-slug', 'species.csv', /slug "Spheniscus_Humboldti" hoort bij "spheniscus-humboldti"/],
     ['text-unknown-species', 'texts/nl/pica-pica.md', /soort "pica-pica" bestaat niet in species.csv/],
+    ['facts-unknown-slug', 'facts/pica-pica.yaml', /soort "pica-pica" bestaat niet in species.csv/],
+    ['facts-bad-range', 'facts/spheniscus-humboldti.yaml', /length_cm: minimum 70 is groter dan maximum 56/],
+    ['facts-bad-enum', 'facts/spheniscus-humboldti.yaml', /continents\[0\]: waarde "atlantis" niet toegestaan/],
+    ['facts-no-sources', 'facts/spheniscus-humboldti.yaml', /sources: moet minstens 1 element/],
+    ['park-url-invalid', 'species.csv', /park_url: waarde "niet-een-url" is geen geldige uri/],
     ['bad-time', 'programme.json', /time: waarde "25:61" heeft een ongeldig formaat/],
   ]
   for (const [name, file, re] of cases) {
