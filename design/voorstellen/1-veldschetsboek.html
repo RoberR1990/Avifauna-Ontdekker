@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Voorstel 1 · Veldschetsboek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}
+body[data-level=kind] [data-for]:not([data-for~=kind]),body[data-level=iedereen] [data-for]:not([data-for~=iedereen]),body[data-level=kenner] [data-for]:not([data-for~=kenner]){display:none!important}
+.burst{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;pointer-events:none;animation:burst .85s ease-out forwards;z-index:5}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy)) scale(.3);opacity:0}}
+.soon[hidden]{display:none}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+
+:root{--paper:#f1e3c1;--card:#f8efd8;--ink:#2b2118;--ink2:#51402e;--red:#9c2f1c;--green:#3f6244;--blue:#3d5a73;--line:#cdb98d;--hand:'Caveat','Segoe Script','Bradley Hand',cursive;--serif:'Lora',Georgia,'Times New Roman',serif}
+body{background:#d8c69c;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55}
+.bar{position:sticky;top:0;z-index:20;background:var(--ink);color:#f6ead0;text-align:center;font-size:13px;line-height:1.3;padding:7px 14px;font-weight:600;letter-spacing:.01em}
+.phone{max-width:430px;margin:0 auto;min-height:100vh;padding:14px 16px 28px;background:
+ radial-gradient(circle at 12% 8%,rgba(170,120,50,.14),transparent 30%),radial-gradient(circle at 90% 60%,rgba(170,120,50,.12),transparent 35%),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .15 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"),var(--paper);
+ box-shadow:0 0 40px rgba(60,40,10,.35)}
+.about{margin:0 0 10px;font-size:15px;border:1px dashed var(--ink2);border-radius:6px;background:rgba(255,255,255,.35)}
+.about summary{min-height:44px;display:flex;align-items:center;padding:0 12px;font-weight:600;cursor:pointer}
+.about ul{margin:0;padding:0 14px 10px 30px}.about li{margin:4px 0}.about a{display:inline-block;padding:10px 12px;color:var(--red);font-weight:600}
+.appname{font-family:var(--hand);font-size:40px;line-height:1;font-weight:700;text-align:center;margin:6px 0 2px;color:var(--ink)}
+.appname small{display:block;font-family:var(--serif);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink2);margin-top:4px}
+.levels{display:flex;gap:6px;margin:12px 0 16px;border-bottom:3px solid var(--ink)}
+.levels button{flex:1;min-height:48px;border:2px solid var(--ink);border-bottom:0;border-radius:10px 10px 0 0;background:#e3d1a6;color:var(--ink);font-family:var(--hand);font-size:25px;font-weight:700;line-height:1;transition:transform .15s}
+.levels button[aria-pressed=true]{background:var(--ink);color:#f6ead0;transform:translateY(-3px)}
+.levels button:focus-visible,.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.plate{position:relative;text-align:center;margin:0 0 6px}
+.plate svg{width:min(78%,300px);height:auto;display:block;margin:0 auto}
+body[data-level=kind] .plate svg{width:min(92%,360px)}
+.plate .fig{font-family:var(--hand);font-size:22px;color:var(--ink2);margin-top:-4px}
+.title{text-align:center;margin:4px 0 14px}
+.title h1{font-family:var(--hand);font-size:50px;line-height:1;margin:0;font-weight:700}
+body[data-level=kind] .title h1{font-size:62px}
+.latin{font-style:italic;color:var(--ink2);font-size:18px;margin-top:4px}
+.stamp{display:inline-block;margin-top:12px;transform:rotate(-5deg);border:3px double var(--red);color:var(--red);padding:5px 14px;border-radius:8px;font-family:var(--hand);font-size:25px;line-height:1.05;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:rgba(156,47,28,.05)}
+.stamp small{display:block;font-family:var(--serif);font-size:13px;font-weight:600;letter-spacing:.03em;text-transform:none}
+.page{position:relative;background:var(--card);border:1px solid var(--line);border-radius:3px 7px 4px 8px;padding:26px 16px 16px;margin:24px 0;box-shadow:2px 3px 0 rgba(90,60,20,.18)}
+.tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);background:rgba(232,190,80,.85);border-left:2px dotted rgba(0,0,0,.2);border-right:2px dotted rgba(0,0,0,.2);padding:3px 16px;font-family:var(--hand);font-size:25px;font-weight:700;line-height:1.1;white-space:nowrap;color:var(--ink)}
+.readable p{margin:0 0 .7em}
+.kidtext{font-family:var(--hand);font-size:32px;line-height:1.2;font-weight:500}
+.kidtext p{margin:0 0 .5em}
+.wow{margin:16px 0 4px;padding:12px 14px;background:#f9e7a7;border:2px solid var(--ink);border-radius:6px 14px 8px 12px;transform:rotate(-1deg)}
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;margin:12px 0 0;padding:6px 16px;border:2px solid var(--ink);border-radius:8px 14px 9px 13px;background:#fff9e6;color:var(--ink);font-family:var(--hand);font-size:27px;font-weight:700;line-height:1;box-shadow:2px 3px 0 var(--ink)}
+body[data-level=kind] .btn{min-height:68px;font-size:34px}
+.btn:active{transform:translate(2px,3px);box-shadow:none}
+.btn.on{background:var(--blue);color:#fff}
+.btn svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.seen-btn{background:var(--green);color:#fff}
+.seen-btn[aria-pressed=true]{background:#e9f0d4;color:var(--ink)}
+.seen-btn.pop{animation:stampin .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes stampin{0%{transform:scale(1.5) rotate(-12deg);opacity:.4}60%{transform:scale(.94) rotate(2deg)}100%{transform:scale(1) rotate(0)}}
+.meter{display:grid;gap:14px}
+.mrow{display:flex;align-items:flex-end;gap:14px}
+.mfig{flex:none;width:130px;display:flex;align-items:flex-end;justify-content:center;gap:8px;min-height:104px;border-bottom:2px dashed var(--ink2);padding-bottom:2px}
+.mfig svg{fill:var(--ink);opacity:.85;display:block}
+.mfig .k{width:45px;height:90px}.mfig .p{width:46px;height:74px;fill:var(--blue)}
+.mfig .m{width:24px;height:42px;fill:var(--blue)}.mfig .m.half{opacity:.35}
+.mrow p{margin:0 0 6px;font-family:var(--hand);font-size:27px;line-height:1.1;font-weight:700}
+.mrow p small{display:block;font-family:var(--serif);font-size:14px;font-weight:400;color:var(--ink2);margin-top:3px}
+.map{width:100%;height:auto;display:block;background:#e6edda;border:2px solid var(--ink);border-radius:4px}
+.map .land{fill:#d8c28f;stroke:var(--ink);stroke-width:1;stroke-linejoin:round}
+.map .coast{fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.map .arc{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-dasharray:3 3}
+.map .pin{fill:var(--red)}
+.map .lbl{font-family:var(--hand);font-size:13px;font-weight:700;fill:var(--ink)}.map .km{font-size:14px}
+.cap{font-size:15px;color:var(--ink2);margin:8px 0 0}
+.park{display:grid;gap:8px}
+.park .row{display:flex;gap:10px;align-items:flex-start}
+.park .ico{flex:none;width:34px;height:34px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--hand);font-size:22px;font-weight:700;background:#fff9e6}
+.park a{color:var(--red);font-weight:600;display:inline-block;padding:10px 0}
+details.more summary{min-height:48px;display:flex;align-items:center;cursor:pointer;font-family:var(--hand);font-size:29px;font-weight:700;list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:after{content:"+";margin-left:auto;font-size:34px;line-height:1}
+details.more[open] summary:after{content:"–"}
+details.more ul{margin:0 0 8px;padding-left:20px}details.more li{margin:6px 0}
+.inl{display:inline-block;padding:10px 0;color:var(--red);font-weight:600}
+.links{display:grid;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.links a{display:flex;align-items:center;min-height:48px;padding:6px 14px;border:2px solid var(--ink);border-radius:6px;background:#fff9e6;text-decoration:none;font-weight:600}
+.links a:after{content:"↗";margin-left:auto;color:var(--red)}
+.soon{margin:8px 0 0;padding:8px 12px;border-left:4px solid var(--red);background:#f4dfb3;font-size:15px}
+dl.facts{margin:0}
+dl.facts div{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:8px 0;border-bottom:1px dotted var(--ink2)}
+dl.facts dt{font-family:var(--hand);font-size:22px;font-weight:700;line-height:1.1;color:var(--ink2)}
+dl.facts dd{margin:0;font-size:16px}
+.src{font-size:14px;color:var(--ink2);border-top:2px solid var(--ink);margin-top:16px;padding-top:10px}
+.foot{max-width:430px;margin:0 auto;padding:16px;text-align:center;font-size:14px;font-weight:600;background:var(--ink);color:#f6ead0}
+.seen-mark{display:none}
+body.seen .seen-mark{display:inline}
+</style>
+</head>
+<body data-level="iedereen" data-burst="#9c2f1c,#3d5a73,#3f6244,#e0a526">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="sil-kid" viewBox="0 0 60 120"><circle cx="30" cy="16" r="13"/><path d="M18 34Q30 29 42 34L50 66 44 68 39 48 40 76 38 116H32L30 84 28 116H22L20 76 21 48 16 68 10 66Z"/></symbol>
+<symbol id="sil-milk" viewBox="0 0 30 52"><path d="M4 17 15 5 26 17V50H4Z"/><path d="M9 14 15 2 21 14Z"/><circle cx="15" cy="32" r="6" fill="#fff" fill-opacity=".6"/></symbol>
+<symbol id="sil-peng" viewBox="0 0 50 80"><path d="M25 3C33 3 36 10 35 17C42 27 46 50 42 66C40 74 35 77 30 77H20C15 77 10 74 8 66C4 50 8 27 15 17C14 10 17 3 25 3Z"/><path d="M8 30C2 40 1 52 4 60L9 52Z"/><path d="M42 30C48 40 49 52 46 60L41 52Z"/></symbol>
+</svg>
+<div class="bar">Onofficieel prototype · gemaakt als voorstel voor Stichting Avifauna</div>
+<main class="phone">
+<details class="about"><summary>Over dit voorstel</summary>
+<ul><li><b>Idee:</b> het park als ontdekkingsreis: de app is jouw veldschetsboek en elke soort is een bladzijde die je zelf invult.</li>
+<li><b>Sterk:</b> rustig, warm en geloofwaardig voor ouders en liefhebbers; de tekeningen voelen eigen en niet als een huisstijl van het park.</li>
+<li><b>Risico:</b> handschrift-lettertype leest moeilijk bij lange teksten, en de papiertextuur kost wat laadtijd en batterij.</li></ul>
+<a href="index.html">← Alle voorstellen</a></details>
+
+<div class="appname">Avifauna Ontdekker<small>Veldschetsboek</small></div>
+<nav class="levels" aria-label="Leesniveau">
+<button type="button" data-lv="kind" aria-pressed="false">Kind</button>
+<button type="button" data-lv="iedereen" aria-pressed="true">Iedereen</button>
+<button type="button" data-lv="kenner" aria-pressed="false">Kenner</button>
+</nav>
+
+<section class="plate" aria-label="Tekening van een Humboldtpinguïn">
+<svg viewBox="0 0 240 270" role="img" aria-label="Getekende Humboldtpinguïn met donkere rug, witte buik en een zwarte band over de borst">
+<defs>
+<filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/></filter>
+<filter id="wash" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9" result="d"/><feGaussianBlur in="d" stdDeviation=".7"/></filter>
+</defs>
+<g transform="translate(10 6)">
+<g filter="url(#wash)" style="mix-blend-mode:multiply" opacity=".9">
+<ellipse cx="90" cy="244" rx="22" ry="9" fill="#e58a4a"/><ellipse cx="130" cy="244" rx="22" ry="9" fill="#e58a4a"/>
+<path d="M110 52C140 52 152 78 150 104C158 140 160 190 148 218C142 232 128 238 110 238C92 238 78 232 72 218C60 190 62 140 70 104C68 78 80 52 110 52Z" fill="#40566d"/>
+<path d="M72 112C52 130 42 160 48 190C50 196 58 192 62 184C66 160 70 140 76 126Z" fill="#33485d"/><path d="M148 112C168 130 178 160 172 190C170 196 162 192 158 184C154 160 150 140 144 126Z" fill="#33485d"/>
+<path d="M110 100C132 100 138 140 136 178C134 206 124 224 110 224C96 224 86 206 84 178C82 140 88 100 110 100Z" fill="#fffaf0"/>
+<ellipse cx="110" cy="88" rx="15" ry="8" fill="#e9857f"/>
+<ellipse cx="110" cy="250" rx="60" ry="5" fill="#8ba66f" opacity=".6"/>
+</g>
+<g filter="url(#wob)" fill="none" stroke="#2b2118" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M110 52C140 52 152 78 150 104C158 140 160 190 148 218C142 232 128 238 110 238C92 238 78 232 72 218C60 190 62 140 70 104C68 78 80 52 110 52Z"/>
+<path d="M72 112C52 130 42 160 48 190C50 196 58 192 62 184C66 160 70 140 76 126"/><path d="M148 112C168 130 178 160 172 190C170 196 162 192 158 184C154 160 150 140 144 126"/>
+<path d="M110 100C132 100 138 140 136 178C134 206 124 224 110 224C96 224 86 206 84 178C82 140 88 100 110 100Z" stroke-width="1.6"/>
+<path d="M86 216C80 170 84 128 110 128C136 128 140 170 134 216" stroke-width="7"/>
+<path d="M86 78C84 98 96 110 110 110C124 110 136 98 134 78" stroke="#fffaf0" stroke-width="3"/>
+<path d="M100 84L120 84L110 106Z" fill="#2b2118" stroke-width="2"/>
+<circle cx="93" cy="74" r="5" fill="#fff" stroke-width="1.6"/><circle cx="127" cy="74" r="5" fill="#fff" stroke-width="1.6"/>
+<circle cx="94" cy="75" r="2.4" fill="#2b2118" stroke="none"/><circle cx="128" cy="75" r="2.4" fill="#2b2118" stroke="none"/>
+<path d="M78 244C84 236 96 236 102 244M118 244C124 236 136 236 142 244" stroke-width="2"/>
+<g stroke-width="1.2" opacity=".7"><path d="M152 130l8 -2M153 142l9 -2M154 154l9 -1M64 130l-8 -2M63 142l-9 -2M62 154l-9 -1"/><path d="M96 60l6 4M124 60l-6 4M104 56l3 4"/></g>
+<path d="M20 252C34 246 46 256 60 250M160 254C176 248 190 256 206 250" stroke="#3f6244" stroke-width="2"/>
+<path d="M196 52V240M190 52h12M190 240h12" stroke-width="1.4"/>
+</g>
+<text x="213" y="150" font-family="Caveat,cursive" font-size="20" font-weight="700" fill="#2b2118" transform="rotate(90 213 150)" text-anchor="middle">± 60 cm</text>
+</g>
+</svg>
+<div class="fig">Fig. 1 · schets van de Humboldtpinguïn <span class="seen-mark">· gezien!</span></div>
+</section>
+
+<header class="title">
+<h1>Humboldtpinguïn</h1>
+<div class="latin" data-for="iedereen kenner"><i>Spheniscus humboldti</i></div>
+<div class="stamp" data-for="iedereen kenner" role="img" aria-label="IUCN-status: kwetsbaar, aantal neemt af">Kwetsbaar<small>IUCN · VU · aantal neemt af</small></div>
+</header>
+
+<!-- KIND -->
+<section class="page" data-for="kind">
+<div class="tape">Mijn aantekening</div>
+<div class="kidtext readable" id="t-kind">
+<p>Ik ben een Humboldtpinguïn.</p>
+<p>Vliegen kan ik niet, maar onder water zwem ik zo snel dat het bijna lijkt of ik vlieg!</p>
+<p>Mijn thuis ligt wel 11.000 kilometer hiervandaan.</p>
+<p><b>Wist je dat?</b> Ik graaf mijn nest in een berg oude vogelpoep. Gek hè?</p>
+</div>
+<button class="btn" type="button" data-speak="t-kind"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span class="lbl">Lees voor</span></button>
+<button class="btn seen-btn" type="button" data-seen aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l6 6L21 6"/></svg><span class="lbl">Gezien!</span></button>
+</section>
+
+<!-- IEDEREEN -->
+<section class="page" data-for="iedereen">
+<div class="tape">Vogel-o-meter</div>
+<div class="meter">
+<div class="mrow"><div class="mfig"><svg class="k" aria-hidden="true"><use href="#sil-kid"/></svg><svg class="p" aria-hidden="true"><use href="#sil-peng"/></svg></div><p>Zo groot als een kind van 2–3 jaar<small>Lengte ongeveer 56–70 cm</small></p></div>
+<div class="mrow"><div class="mfig"><svg class="m" aria-hidden="true"><use href="#sil-milk"/></svg><svg class="m" aria-hidden="true"><use href="#sil-milk"/></svg><svg class="m" aria-hidden="true"><use href="#sil-milk"/></svg><svg class="m" aria-hidden="true"><use href="#sil-milk"/></svg><svg class="m half" aria-hidden="true"><use href="#sil-milk"/></svg></div><p>Zo zwaar als 4–5 pakken melk<small>Gewicht ongeveer 3,6–5,9 kg</small></p></div>
+</div></section>
+
+<section class="page" data-for="iedereen">
+<div class="tape">Wat ik zag</div>
+<div class="readable" id="t-b1">
+<p>De Humboldtpinguïn leeft aan de kust van Peru en Chili. Daar stroomt koud water langs het land, met veel vis. Hij eet vooral ansjovis en sardines. Vliegen kan hij niet, maar hij zwemt heel snel. Zijn nest is een hol in oude vogelpoep (guano) of een plek tussen de rotsen. Meestal legt het vrouwtje twee eieren. Er zijn steeds minder van deze pinguïns, vooral omdat er te veel vis wordt gevangen.</p>
+</div>
+<button class="btn" type="button" data-speak="t-b1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span class="lbl">Lees voor</span></button>
+</section>
+
+<section class="page" data-for="iedereen">
+<div class="tape">Waar woont hij?</div>
+<svg class="map" viewBox="0 0 304 165" role="img" aria-labelledby="mapt"><title id="mapt">Wereldkaartje: de Humboldtpinguïn leeft aan de westkust van Zuid-Amerika, in Peru en Chili. Alphen ligt in Nederland.</title>
+<g class="land"><polygon points="0,19.6 3.8,33.6 15.2,42 28.5,53.2 38,58.8 53.2,61.6 62.7,61.6 72.2,57.4 77.9,65.8 79.8,72.8 87.4,75.6 91.2,75.6 85.5,72.8 76,63 66.5,56 53.2,49 66.5,44.8 81.7,51.8 85.5,42 95,33.6 104.5,26.6 123.5,21 133,14 119.7,5.6 95,0 57,2.8 28.5,0 0,2.8"/><polygon points="91.2,75.6 100.7,70 119.7,72.1 138.7,79.8 142.5,86.8 171,93.8 171,99.4 163.4,107.8 159.6,117.6 146.3,123.2 136.8,134.4 127.3,135.8 129.2,140 119.7,141.4 114,145.6 112.1,152.6 106.4,158.2 108.3,162.4 100.7,162.4 95,154 98.8,142.8 100.7,133 102.6,124.6 104.5,112 93.1,106.4 83.6,93.8 85.5,86.8 89.3,82.6"/><polygon points="205.2,65.8 218.5,79.8 254.6,81.2 260.3,93.8 264.1,114.8 271.7,134.4 290.7,133 304,114.8 313.5,93.8 334.4,71.4 319.2,70 304,47.6 298.3,43.4 256.5,35 226.1,36.4 212.8,47.6"/><polygon points="220.4,35 220.4,26.6 233.7,19.6 228,18.9 241.3,15.4 252.7,11.2 252.7,7 260.3,8.4 264.1,11.2 285,2.8 302.1,0 302.1,23.8 290.7,29.4 283.1,33.6 267.9,33.6 260.3,25.2 243.2,26.6 235.6,35"/><polygon points="228,16.8 239.4,15.4 241.3,12.6 233.7,7 228,5.6 226.1,11.2"/></g>
+<polyline class="coast" points="83.6,93.8 93.1,106.4 104.5,112 102.6,124.6 100.7,133 98.8,142.8"/>
+<path class="arc" d="M91.2 103.6 Q168.8 -8 246.4 14"/>
+<circle class="pin" cx="246.4" cy="14" r="4"/>
+<text class="lbl" x="62.7" y="119" text-anchor="end">Peru</text><text class="lbl" x="66.5" y="140" text-anchor="end">Chili</text>
+<text class="lbl" x="270.4" y="7" text-anchor="end">Alphen</text>
+<text class="lbl km" x="168.8" y="16" text-anchor="middle">± 11.000 km</text></svg>
+<p class="cap">De rode lijn is de kust waar hij leeft, langs de koude Humboldtstroom. Schematisch kaartje.</p>
+</section>
+
+<section class="page" data-for="iedereen">
+<div class="tape">Hoor hem</div>
+<button class="btn" type="button" data-soon="s-geluid" aria-expanded="false" style="margin-top:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2M7 8v8M11 5v14M15 8v8M19 10v4"/></svg><span>Hoor hem</span></button>
+<p class="soon" id="s-geluid" role="status" hidden>Geluid volgt. Opnames komen alleen uit bronnen met een open licentie.</p>
+</section>
+
+<section class="page" data-for="iedereen">
+<div class="tape">Hier in het park</div>
+<div class="park">
+<div class="row"><span class="ico" aria-hidden="true">⌖</span><div><b>Zone: Kustvogels (voorbeeld)</b></div></div>
+<div class="row"><span class="ico" aria-hidden="true">◷</span><div><b>Volgende voedering 14:30 (voorbeeld)</b><br>Check altijd <a href="https://www.avifauna.nl" rel="noopener">avifauna.nl</a> voor de echte tijden.</div></div>
+</div></section>
+
+<section class="page" data-for="iedereen">
+<button class="btn seen-btn" type="button" data-seen aria-pressed="false" style="margin-top:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l6 6L21 6"/></svg><span class="lbl">Gezien!</span></button>
+</section>
+
+<section class="page" data-for="iedereen">
+<details class="more"><summary>Meer weten</summary>
+<ul><li>Een volwassen dier wordt ongeveer 56–70 cm lang.</li><li>In het wild wordt hij zo’n 20 jaar, in een dierentuin vaak ouder dan 30.</li><li>Het broeden duurt ongeveer 40 dagen.</li><li>Gevaren: te veel vissen, El Niño (een warm jaar met weinig vis) en vroeger het wegscheppen van guano, waar hij in nestelt.</li></ul>
+<a class="inl" href="https://nl.wikipedia.org/wiki/Humboldtpinguïn" rel="noopener">Lees verder op Wikipedia ↗</a>
+</details></section>
+
+<!-- KENNER -->
+<section class="page" data-for="kenner">
+<div class="tape">Feitenblok</div>
+<dl class="facts">
+<div><dt>Orde</dt><dd>Sphenisciformes</dd></div>
+<div><dt>Familie</dt><dd>Spheniscidae</dd></div>
+<div><dt>IUCN</dt><dd>Kwetsbaar (VU) · trend: afnemend</dd></div>
+<div><dt>Verspreiding</dt><dd>Pacifische kust van Peru en Chili, in de koude Humboldtstroom</dd></div>
+<div><dt>Lengte</dt><dd>ca. 56–70 cm</dd></div>
+<div><dt>Gewicht</dt><dd>ca. 3,6–5,9 kg</dd></div>
+<div><dt>Legsel</dt><dd>meestal 2 eieren</dd></div>
+<div><dt>Broedduur</dt><dd>ca. 40 dagen</dd></div>
+<div><dt>Nest</dt><dd>holen in guano of rotsspleten</dd></div>
+<div><dt>Voedsel</dt><dd>ansjovis, sardines</dd></div>
+<div><dt>Leeftijd</dt><dd>ca. 20 jaar in het wild, 30+ in dierentuinen</dd></div>
+<div><dt>Gevaren</dt><dd>overbevissing, El Niño, historische guanowinning</dd></div>
+</dl></section>
+
+<section class="page" data-for="kenner">
+<div class="tape">Notitie</div>
+<div class="readable" id="t-k"><p>Deze pinguïn broedt langs de Pacifische kust van Peru en Noord-Chili, waar de Humboldtstroom koud en voedselrijk water omhoog brengt. Dat ondersteunt scholen ansjovis en sardine, zijn belangrijkste prooi. Nesten worden uitgegraven in guano-afzettingen of verstopt in rotsspleten; het legsel is doorgaans twee eieren. De populatie loopt terug door overbevissing van prooivis, door El Niño-jaren waarin het voedsel instort, en door het historische afgraven van guano, waardoor nestgelegenheid verdween.</p></div>
+<ul class="links">
+<li><a href="https://xeno-canto.org/species/Spheniscus-humboldti" rel="noopener">xeno-canto: opnames</a></li>
+<li><a href="https://nl.wikipedia.org/wiki/Humboldtpinguïn" rel="noopener">Wikipedia (nl)</a></li>
+<li><a href="https://www.wikidata.org/w/index.php?search=Spheniscus+humboldti" rel="noopener">Wikidata</a></li>
+</ul>
+<p class="src">Bronnen: IUCN-status en trend, soortgegevens uit Wikidata, losse feiten uit vakliteratuur. De tekst is eigen werk. Voorbeeldgegevens voor dit prototype, nog niet gecontroleerd.</p>
+</section>
+</main>
+<footer class="foot">Onofficiële gids · niet verbonden aan Stichting Avifauna</footer>
+<script>
+
+(function(){
+var B=document.body,voices=[];
+function lv(l){B.dataset.level=l;[].forEach.call(document.querySelectorAll('[data-lv]'),function(b){b.setAttribute('aria-pressed',b.dataset.lv===l)});stop();try{history.replaceState(null,'','#'+l)}catch(e){}}
+[].forEach.call(document.querySelectorAll('[data-lv]'),function(b){b.addEventListener('click',function(){lv(b.dataset.lv)})});
+var h=(location.hash||'').slice(1);lv(/^(kind|iedereen|kenner)$/.test(h)?h:'iedereen');
+function stop(){try{speechSynthesis.cancel()}catch(e){}[].forEach.call(document.querySelectorAll('[data-speak]'),function(b){b.classList.remove('on');var l=b.querySelector('.lbl');if(l)l.textContent='Lees voor'})}
+function load(){try{voices=speechSynthesis.getVoices()}catch(e){}}
+if('speechSynthesis' in window){load();speechSynthesis.onvoiceschanged=load}
+[].forEach.call(document.querySelectorAll('[data-speak]'),function(b){b.addEventListener('click',function(){
+ var l=b.querySelector('.lbl');
+ if(!('speechSynthesis' in window)){l.textContent='Voorlezen werkt hier niet';return}
+ if(b.classList.contains('on')){stop();return}
+ stop();var t=document.getElementById(b.dataset.speak);
+ var u=new SpeechSynthesisUtterance(t.innerText.replace(/s+/g,' '));u.lang='nl-NL';
+ var v=voices.filter(function(x){return /^nl/i.test(x.lang)})[0];if(v)u.voice=v;
+ u.rate=B.dataset.level==='kind'?0.85:0.95;
+ u.onend=u.onerror=function(){b.classList.remove('on');l.textContent='Lees voor'};
+ b.classList.add('on');l.textContent='Stop';speechSynthesis.speak(u)})});
+var cols=(B.dataset.burst||'#f44,#fc3,#2b9,#74d').split(',');
+[].forEach.call(document.querySelectorAll('[data-seen]'),function(b){b.addEventListener('click',function(){
+ var on=B.classList.toggle('seen');
+ [].forEach.call(document.querySelectorAll('[data-seen]'),function(x){x.setAttribute('aria-pressed',on);x.classList.remove('pop');void x.offsetWidth;x.classList.add('pop');var l=x.querySelector('.lbl');if(l)l.textContent=on?'Gezien! In je album':'Gezien!'});
+ if(on){for(var i=0;i<12;i++){var s=document.createElement('i');s.className='burst';var a=i/12*6.283,d=50+Math.random()*30;s.style.setProperty('--dx',Math.cos(a)*d+'px');s.style.setProperty('--dy',Math.sin(a)*d+'px');s.style.background=cols[i%cols.length];b.appendChild(s);setTimeout(function(e){e.remove()},900,s)}}
+})});
+[].forEach.call(document.querySelectorAll('[data-soon]'),function(b){b.addEventListener('click',function(){var n=document.getElementById(b.dataset.soon);n.hidden=!n.hidden;b.setAttribute('aria-expanded',!n.hidden)})});
+})();
+</script>
+</body>
+</html>
