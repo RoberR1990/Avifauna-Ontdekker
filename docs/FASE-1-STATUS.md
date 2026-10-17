@@ -1,5 +1,8 @@
 # Fase 1: stand van zaken (17-10-2026, overdracht naar volgende sessie)
 
+> **Update eind 17-10:** wave B en C klaar; veldwerk 17-10 toegepast (35 soorten). Actuele stand, open punten en veldtestplan: **`docs/GATE-1.md`**. Wacht op: Umami-ID, hostingbesluit, review teksten, tweede veldwerkbezoek.
+> Nieuw veldwerk verwerken: (1) `python -m veldwerk run --input D:\Avifauna\veldwerk --output D:\Avifauna\veldwerk\uitvoer`; (2) bordjes visueel laten lezen door een agent → `controlelijst-voorstel.csv`; (3) na akkoord `python -m veldwerk apply --csv ...\controlelijst.csv --park ../parks/avifauna`; (4) avipipe `--publish` (pipeline/README.md); (5) facts + teksten nl/en voor nieuwe soorten.
+
 Lees bij hervatten alleen dit bestand + `docs/FASE-1.md` (ontwerp) + `src/data/types.ts`. Alles hieronder staat op `main`.
 
 ## Klaar (wave A, alles groen: typecheck, 94 tests, validate:park, build, kern 1,4 MB / 5 MB)
