@@ -1,0 +1,227 @@
+/* Parkkaart: eigen stijl, tokens uit src/styles.css. */
+.pm-concept {
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border: 2px dashed var(--ink);
+  border-radius: 0.75rem;
+  background: var(--white);
+  font-size: 0.9rem;
+}
+
+.pm-holder {
+  position: relative;
+  width: 100%;
+  height: min(58dvh, 38rem);
+  min-height: 18rem;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  border-radius: 1rem;
+  box-shadow: 0 4px 0 var(--ink);
+  background: #cfe0b0;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pm-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pm-zone {
+  fill-opacity: 0.3;
+  stroke: var(--ink);
+  stroke-opacity: 0.55;
+  cursor: pointer;
+}
+.pm-zone.indoor {
+  stroke-dasharray: 6 4;
+}
+.pm-zone.sel {
+  fill-opacity: 0.5;
+  stroke-opacity: 1;
+}
+
+.pm-zone-label {
+  fill: var(--ink);
+  stroke: var(--white);
+  paint-order: stroke;
+  font-family: var(--head);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.pm-enc {
+  cursor: pointer;
+  outline: none;
+}
+.pm-dot {
+  fill: var(--red);
+  stroke: var(--white);
+  stroke-width: 2.5;
+}
+.pm-enc:focus-visible .pm-dot,
+.pm-fac:focus-visible circle {
+  stroke: var(--violet);
+  stroke-width: 4;
+}
+.pm-ring {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-dasharray: 5 3;
+}
+.pm-fac {
+  cursor: pointer;
+  outline: none;
+}
+
+.pm-acc {
+  fill: rgb(40 110 255 / 0.16);
+  stroke: rgb(40 110 255 / 0.5);
+  stroke-width: 1;
+}
+.pm-you-dot {
+  fill: #2878ff;
+  stroke: #fff;
+}
+
+.pm-zoom {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.pm-zbtn {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 3px solid var(--ink);
+  border-radius: 0.75rem;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--head);
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 3px 0 var(--ink);
+}
+.pm-zbtn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.pm-gps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+.pm-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+}
+.pm-check input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--violet);
+}
+.pm-private {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+.pm-geo {
+  margin: 0.25rem 0 0;
+  min-height: 1.5rem;
+  font-weight: 700;
+}
+.pm-geo:empty {
+  min-height: 0;
+}
+
+.pm-panel {
+  position: relative;
+  margin-top: 1rem;
+}
+.pm-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.pm-kind {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pm-sub {
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 800;
+}
+.pm-species {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pm-species a {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.pm-legend {
+  margin-top: 1.25rem;
+}
+.pm-legend h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+.pm-legend ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.4rem 0.75rem;
+}
+.pm-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.pm-sw {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.3rem;
+}
+.pm-sw-zone {
+  background: color-mix(in srgb, var(--teal) 35%, transparent);
+}
