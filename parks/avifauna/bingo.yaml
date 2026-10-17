@@ -1,0 +1,29 @@
+# CONCEPT (fase 2): door Robert te controleren in het park.
+sizes: [9, 16]
+species_share: 0.6
+exclude: [platanus-hispanica]
+behaviours:
+  - { id: one-leg, icon: "🦩", label: { nl: "Vogel op één poot", en: "Bird on one leg" }, indoor_ok: true }
+  - { id: swimming, icon: "🏊", label: { nl: "Vogel die zwemt", en: "Bird that swims" } }
+  - { id: feather-ground, icon: "🪶", label: { nl: "Veer op de grond", en: "Feather on the ground" }, indoor_ok: true }
+  - { id: eating, icon: "🍽️", label: { nl: "Vogel die eet", en: "Bird that is eating" }, indoor_ok: true }
+  - { id: sleeping, icon: "😴", label: { nl: "Vogel die slaapt", en: "Bird that is sleeping" }, indoor_ok: true }
+  - { id: calling, icon: "📣", label: { nl: "Vogel die roept", en: "Bird that calls out" }, indoor_ok: true }
+  - { id: nest, icon: "🪹", label: { nl: "Een nest", en: "A nest" }, indoor_ok: true }
+  - { id: egg-shape, icon: "🥚", label: { nl: "Iets in de vorm van een ei", en: "Something shaped like an egg" }, indoor_ok: true }
+  - { id: something-red, icon: "🔴", label: { nl: "Iets roods", en: "Something red" }, indoor_ok: true }
+  - { id: something-blue, icon: "🔵", label: { nl: "Iets blauws", en: "Something blue" }, indoor_ok: true }
+  - { id: something-yellow, icon: "🟡", label: { nl: "Iets geels", en: "Something yellow" }, indoor_ok: true }
+  - { id: flying, icon: "🕊️", label: { nl: "Vogel die vliegt", en: "Bird that is flying" } }
+  - { id: preening, icon: "✨", label: { nl: "Vogel die zijn veren poetst", en: "Bird preening its feathers" }, indoor_ok: true }
+  - { id: long-legs, icon: "🦵", label: { nl: "Vogel met hele lange poten", en: "Bird with very long legs" } }
+  - { id: big-beak, icon: "🪈", label: { nl: "Vogel met een grote snavel", en: "Bird with a big beak" }, indoor_ok: true }
+  - { id: walking, icon: "🚶", label: { nl: "Vogel die loopt", en: "Bird that is walking" } }
+  - { id: pair, icon: "👫", label: { nl: "Twee vogels samen", en: "Two birds together" }, indoor_ok: true }
+  - { id: baby-bird, icon: "🐥", label: { nl: "Een jong vogeltje", en: "A baby bird" }, indoor_ok: true }
+  - { id: flapping, icon: "👏", label: { nl: "Vogel die met de vleugels klapt", en: "Bird flapping its wings" } }
+  - { id: black-white, icon: "⚫", label: { nl: "Vogel die zwart en wit is", en: "Bird that is black and white" }, indoor_ok: true }
+  - { id: water-splash, icon: "💦", label: { nl: "Een plons in het water", en: "A splash in the water" } }
+  - { id: bird-song, icon: "🎶", label: { nl: "Een vogelgeluid dat je niet kent", en: "A bird sound you do not know" }, indoor_ok: true }
+  - { id: sign-reading, icon: "🪧", label: { nl: "Een bordje over een vogel lezen", en: "Read a sign about a bird" }, indoor_ok: true }
+  - { id: flying-overhead, icon: "🌤️", label: { nl: "Een wilde vogel in de lucht", en: "A wild bird in the sky" } }

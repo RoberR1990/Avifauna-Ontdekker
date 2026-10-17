@@ -1,0 +1,61 @@
+# CONCEPT (fase 2): door Robert te controleren in het park. Routes zijn getekend op de kaart, nog niet gelopen.
+routes:
+  - id: kinderwagen
+    profile: stroller
+    title:
+      nl: Rustige ronde met kinderwagen
+      en: Easy loop with a pushchair
+    intro:
+      nl: "Een ronde langs toiletten, de speeltuin en het restaurant, zo veel mogelijk over brede, vlakke paden."
+      en: "A loop past toilets, the playground and the restaurant, kept on wide, flat paths as much as possible."
+    waypoints:
+      - voorziening-entrance-1
+      - voorziening-toilet-2
+      - verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel
+      - voorziening-playground-1
+      - voorziening-food-1
+      - voorziening-show-1
+      - verblijf-humboldtpinguin
+      - verblijf-gierenvallei-umvikeli
+      - voorziening-toilet-1
+      - voorziening-entrance-1
+    note:
+      nl: "Nog niet gelopen. Check altijd de borden in het park voor een babyverzorgingsruimte en voor drukke of smalle stukken."
+      en: "Not walked yet. Always check the signs in the park for a baby changing room and for busy or narrow stretches."
+  - id: regen
+    profile: rain
+    title:
+      nl: Droog door de regen
+      en: Staying dry in the rain
+    intro:
+      nl: "Een route langs de Tropenhal en plekken waar je kunt schuilen en iets warms kunt drinken."
+      en: "A route past the Tropical Hall and places where you can shelter and get something warm to drink."
+    waypoints:
+      - voorziening-entrance-1
+      - anker-tropenhal-1
+      - anker-tropenhal-3
+      - verblijf-cuba-voliere
+      - voorziening-food-1
+      - voorziening-food-2
+      - voorziening-entrance-1
+    note:
+      nl: "Nog niet gelopen. Niet elk stuk pad is overdekt; neem een regenjas mee."
+      en: "Not walked yet. Not every stretch of path is covered; bring a rain jacket."
+  - id: kort-met-peuter
+    profile: short
+    title:
+      nl: Kort met een peuter
+      en: Short with a toddler
+    intro:
+      nl: "Een korte wandeling dichtbij de ingang: vijf stops, met de speeltuin als beloning."
+      en: "A short walk close to the entrance: five stops, with the playground as a reward."
+    waypoints:
+      - voorziening-entrance-1
+      - voorziening-toilet-2
+      - verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel
+      - voorziening-playground-1
+      - voorziening-picnic-1
+      - voorziening-entrance-1
+    note:
+      nl: "Nog niet gelopen. Rustig aan; volg waar je kind zin in heeft."
+      en: "Not walked yet. Take it easy; follow what your child enjoys."

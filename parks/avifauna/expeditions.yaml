@@ -1,36 +1,342 @@
-# CONCEPT: voorbeeldexpeditie om het formaat te tonen; echte expedities komen na het veldwerk.
+# CONCEPT (fase 2): door Robert te controleren in het park.
+# Alleen soorten met status "confirmed". Zones bepaald met punt-in-polygoon op places.geojson.
+# Buiten: count zonder answer (dieren bewegen); choose alleen over vaste kenmerken (kleur) uit facts/<slug>.yaml.
 expeditions:
-  - id: kleurenjacht-voorbeeld
+  # ------------------------------------------------------------------ a
+  - id: vogels-uit-afrika
+    age: 6-10
+    minutes: 30
     title:
-      nl: Kleurenjacht (voorbeeld)
-      en: Colour hunt (example)
+      nl: Vogels uit Afrika
+      en: Birds from Africa
     intro:
-      nl: Zoek vogels met opvallende kleuren en tel wat je ziet.
-      en: Look for brightly coloured birds and count what you see.
+      nl: "Deze vogels komen uit Afrika. Zoek ze op, kijk goed en ontdek wat ze bijzonder maakt."
+      en: "These birds come from Africa. Find them, look closely and discover what makes them special."
     badge:
-      id: badge-kleurenjager-voorbeeld
+      id: badge-afrika-ontdekker
+      icon: "🌍"
       name:
-        nl: Kleurenjager
-        en: Colour hunter
-      icon: rainbow
+        nl: Afrika-ontdekker
+        en: Africa explorer
     stops:
-      - id: stop-rode-vogel
-        zone_id: zone-grote-vijver
-        species: phoenicopterus-ruber
+      # struisvogel, kroonkraanvogel, helmparelhoen: verblijf-001 ligt net buiten de zone-polygonen;
+      # de bijbehorende benoemde OSM-verblijfplek ligt in zone-ingang. CONTROLEREN bij veldwerk.
+      - id: stop-struisvogel
+        zone_id: zone-ingang
+        species: struthio-camelus
+        title:
+          nl: Bij de struisvogel
+          en: At the ostrich
         task:
-          type: find
+          type: choose
           prompt:
-            nl: Zoek een vogel met roze veren.
-            en: Find a bird with pink feathers.
+            nl: "Zoek een struisvogelhaan. Welke kleuren heeft hij?"
+            en: "Find a male ostrich. Which colours does he have?"
+          options:
+            - { nl: "Zwart en wit", en: "Black and white" }
+            - { nl: "Blauw en geel", en: "Blue and yellow" }
+            - { nl: "Roze en paars", en: "Pink and purple" }
+          answer: 0
           hint:
-            nl: Kijk bij het water.
-            en: Look near the water.
-      - id: stop-tel-pinguins
-        zone_id: zone-grote-vijver
-        species: spheniscus-humboldti
+            nl: "Kijk naar zijn grote lijf en zijn vleugels."
+            en: "Look at his big body and his wings."
+      - id: stop-helmparelhoen
+        zone_id: zone-ingang
+        species: numida-meleagris
+        title:
+          nl: Bij het helmparelhoen
+          en: At the guineafowl
         task:
           type: count
           prompt:
-            nl: Hoeveel pinguïns zie je op het land?
-            en: How many penguins can you see on land?
-          answer: 3
+            nl: "Hoeveel helmparelhoenders zie je nu?"
+            en: "How many helmeted guineafowl can you see right now?"
+          hint:
+            nl: "Ze bewegen veel. Tel nog een keer."
+            en: "They move a lot. Count again."
+      - id: stop-kroonkraanvogel
+        zone_id: zone-ingang
+        species: balearica-regulorum
+        title:
+          nl: Bij de kroonkraanvogel
+          en: At the crowned crane
+        task:
+          type: find
+          prompt:
+            nl: "Zoek de grote grijze vogel met een kroon van veren op zijn kop."
+            en: "Find the big grey bird with a crown of feathers on its head."
+          hint:
+            nl: "Hij heeft lange poten en loopt rustig rond."
+            en: "He has long legs and walks around calmly."
+      # Gierenverblijf: verblijf-009 ligt volgens punt-in-polygoon in zone-zuidoost (zone-gierenvallei
+      # ligt er vlak naast). CONTROLEREN bij veldwerk.
+      - id: stop-ruppells-gier
+        zone_id: zone-zuidoost
+        place_id: verblijf-009
+        species: gyps-rueppelli
+        title:
+          nl: Bij de gieren
+          en: At the vultures
+        task:
+          type: choose
+          prompt:
+            nl: "Welke kleur heeft de Rüppells gier vooral?"
+            en: "Which colour is the Rüppell's vulture mostly?"
+          options:
+            - { nl: "Bruin", en: "Brown" }
+            - { nl: "Blauw", en: "Blue" }
+            - { nl: "Roze", en: "Pink" }
+          answer: 0
+          hint:
+            nl: "Denk aan de kleur van een koekje."
+            en: "Think of the colour of a biscuit."
+      - id: stop-aasgier
+        zone_id: zone-zuidoost
+        place_id: verblijf-009
+        species: neophron-percnopterus
+        title:
+          nl: Bij de aasgier
+          en: At the Egyptian vulture
+        task:
+          type: choose
+          prompt:
+            nl: "De aasgier is een andere gier. Welke kleur heeft hij vooral?"
+            en: "The Egyptian vulture is another kind of vulture. Which colour is he mostly?"
+          options:
+            - { nl: "Vooral wit", en: "Mostly white" }
+            - { nl: "Vooral rood", en: "Mostly red" }
+            - { nl: "Vooral groen", en: "Mostly green" }
+          answer: 0
+          hint:
+            nl: "Zoek de gier met het lichtste verenpak."
+            en: "Look for the vulture with the lightest feathers."
+      - id: stop-secretarisvogel
+        zone_id: zone-zuidoost
+        place_id: verblijf-009
+        species: sagittarius-serpentarius
+        title:
+          nl: Bij de secretarisvogel
+          en: At the secretarybird
+        task:
+          type: look
+          prompt:
+            nl: "Zoek de secretarisvogel. Hij jaagt te voet. Zie je hem lopen?"
+            en: "Find the secretarybird. He hunts on foot. Can you see him walking?"
+          hint:
+            nl: "Let op de lange poten."
+            en: "Look at the long legs."
+  # ------------------------------------------------------------------ b
+  - id: trekvogels-en-ganzen
+    age: all
+    minutes: 30
+    season: { from: "10-01", to: "11-30" }
+    title:
+      nl: Trekvogels en ganzen
+      en: Migrating birds and geese
+    intro:
+      nl: "In de herfst vliegen veel vogels naar warmere plekken. Ontmoet ganzen, ooievaars en kraanvogels."
+      en: "In autumn many birds fly to warmer places. Meet geese, storks and cranes."
+    badge:
+      id: badge-trekvogelspeurder
+      icon: "🪿"
+      name:
+        nl: Trekvogelspeurder
+        en: Migration tracker
+    stops:
+      - id: stop-roodhalsgans
+        zone_id: zone-parkrestaurant
+        place_id: verblijf-003
+        species: branta-ruficollis
+        title:
+          nl: Bij de roodhalsgans
+          en: At the red-breasted goose
+        task:
+          type: choose
+          prompt:
+            nl: "Welke kleur heeft de roodhalsgans op zijn hals en borst?"
+            en: "Which colour is the red-breasted goose on his neck and chest?"
+          options:
+            - { nl: "Rood", en: "Red" }
+            - { nl: "Blauw", en: "Blue" }
+            - { nl: "Groen", en: "Green" }
+          answer: 0
+          hint:
+            nl: "De naam verklapt het."
+            en: "The name gives it away."
+      - id: stop-ooievaar
+        zone_id: zone-parkrestaurant
+        place_id: verblijf-003
+        species: ciconia-ciconia
+        title:
+          nl: Bij de ooievaar
+          en: At the white stork
+        task:
+          type: find
+          prompt:
+            nl: "Zoek de ooievaar. Zie je zijn rode snavel en rode poten?"
+            en: "Find the white stork. Can you see his red beak and red legs?"
+          hint:
+            nl: "Hij is wit met zwarte vleugelpunten."
+            en: "He is white with black wing tips."
+      - id: stop-saruskraanvogel
+        zone_id: zone-parkrestaurant
+        place_id: verblijf-004
+        species: grus-antigone
+        title:
+          nl: Bij de saruskraanvogel
+          en: At the sarus crane
+        task:
+          type: choose
+          prompt:
+            nl: "Hoe hoog wordt een saruskraanvogel? Dat is de langste vogel ter wereld die kan vliegen."
+            en: "How tall does a sarus crane get? It is the tallest flying bird in the world."
+          options:
+            - { nl: "Zo hoog als een konijn (40 cm)", en: "As tall as a rabbit (40 cm)" }
+            - { nl: "Tot 1,8 meter, zo groot als een volwassene", en: "Up to 1.8 metres, as tall as an adult" }
+            - { nl: "Drie meter, zo hoog als een bus", en: "Three metres, as tall as a bus" }
+          answer: 1
+          hint:
+            nl: "Hij kan bijna oog in oog staan met een volwassene."
+            en: "He can almost look an adult in the eye."
+      - id: stop-kwak
+        zone_id: zone-noordpad
+        place_id: verblijf-002
+        species: nycticorax-nycticorax
+        title:
+          nl: Bij de kwak
+          en: At the night heron
+        task:
+          type: find
+          prompt:
+            nl: "Zoek de kwak: een kleine reiger met zwart, wit en grijs. Hij jaagt vooral 's avonds en slaapt overdag."
+            en: "Find the night heron: a small heron with black, white and grey. He hunts mostly in the evening and sleeps by day."
+          hint:
+            nl: "Overdag zit hij vaak stil."
+            en: "By day he often sits still."
+      # Kleinste Canadese gans: verblijf-006 heeft geen zone en ligt op ~60 m van zone-parkrestaurant
+      # (zelfde GPS-punt als het panda-meetingpoint). CONTROLEREN bij veldwerk.
+      - id: stop-ganzen-tellen
+        zone_id: zone-parkrestaurant
+        species: branta-hutchinsii
+        title:
+          nl: Ganzen tellen
+          en: Counting geese
+        task:
+          type: count
+          prompt:
+            nl: "Hoeveel ganzen zie je nu in totaal?"
+            en: "How many geese can you see in total right now?"
+          hint:
+            nl: "Tel rustig. Ze lopen door elkaar."
+            en: "Count slowly. They walk all mixed up."
+  # ------------------------------------------------------------------ c
+  - id: kleurenjacht
+    age: 4-6
+    minutes: 25
+    title:
+      nl: Kleurenjacht
+      en: Colour hunt
+    intro:
+      nl: "Veel vogels en dieren hebben mooie kleuren. Zoek ze op, ook in de warme Tropenhal!"
+      en: "Many birds and animals have beautiful colours. Find them, even in the warm Tropical Hall!"
+    badge:
+      id: badge-kleurenjager
+      icon: "🌈"
+      name:
+        nl: Kleurenjager
+        en: Colour hunter
+    stops:
+      - id: stop-blauwe-kop
+        zone_id: zone-ingang
+        species: numida-meleagris
+        title:
+          nl: Blauw bij de ingang
+          en: Blue near the entrance
+        task:
+          type: choose
+          prompt:
+            nl: "Zoek het helmparelhoen. Welke kleur heeft zijn kop?"
+            en: "Find the helmeted guineafowl. Which colour is his head?"
+          options:
+            - { nl: "Blauw", en: "Blue" }
+            - { nl: "Oranje", en: "Orange" }
+            - { nl: "Roze", en: "Pink" }
+          answer: 0
+          hint:
+            nl: "Denk aan de lucht."
+            en: "Think of the sky."
+      - id: stop-zwart-wit-grijs
+        zone_id: zone-noordpad
+        place_id: verblijf-002
+        species: nycticorax-nycticorax
+        title:
+          nl: Zwart, wit en grijs
+          en: Black, white and grey
+        task:
+          type: find
+          prompt:
+            nl: "Zoek de kwak: een reiger met zwart, wit en grijs. Zie je alle drie de kleuren?"
+            en: "Find the night heron: a heron with black, white and grey. Can you see all three colours?"
+          hint:
+            nl: "Zijn pet is donker."
+            en: "His cap is dark."
+      # Rode panda: verblijf-007 heeft geen zone; de benoemde OSM-plek "Rode panda, Mantsjoerijse
+      # kraanvogel" ligt in zone-parkrestaurant. CONTROLEREN bij veldwerk.
+      - id: stop-rode-panda
+        zone_id: zone-parkrestaurant
+        species: ailurus-fulgens
+        title:
+          nl: Rood bij de rode panda
+          en: Red at the red panda
+        task:
+          type: choose
+          prompt:
+            nl: "Zoek de rode panda. Welke kleur is zijn vacht vooral?"
+            en: "Find the red panda. Which colour is his fur mostly?"
+          options:
+            - { nl: "Roodbruin", en: "Reddish-brown" }
+            - { nl: "Blauw", en: "Blue" }
+            - { nl: "Groen", en: "Green" }
+          answer: 0
+          hint:
+            nl: "Kijk naar zijn pluizige staart."
+            en: "Look at his fluffy tail."
+      - id: stop-gele-gier
+        zone_id: zone-zuidoost
+        place_id: verblijf-009
+        species: neophron-percnopterus
+        title:
+          nl: Geel bij de aasgier
+          en: Yellow at the Egyptian vulture
+        task:
+          type: find
+          prompt:
+            nl: "Zoek de witte gier met een geel gezicht."
+            en: "Find the white vulture with a yellow face."
+          hint:
+            nl: "Hij zit bij de andere gieren."
+            en: "He is with the other vultures."
+      # CONTROLEREN bij veldwerk: er zijn geen confirmed soorten in de Tropenhal en in het veldwerk
+      # (controlelijst.csv, foto's) is niets uit de hal vastgelegd. Daarom een vraag over iets wat bij
+      # elke tropische kas onmiskenbaar is: de warme, vochtige lucht. Vervang door een vraag over een
+      # bordje of de inrichting zodra Robert in de hal is geweest.
+      - id: stop-tropenhal-lucht
+        zone_id: zone-tropenhal
+        place_id: anker-tropenhal-1
+        indoor: true
+        title:
+          nl: In de Tropenhal
+          en: In the Tropical Hall
+        task:
+          type: choose
+          prompt:
+            nl: "Je bent in de Tropenhal. Hoe voelt de lucht hier?"
+            en: "You are in the Tropical Hall. How does the air feel here?"
+          options:
+            - { nl: "Warm en vochtig", en: "Warm and humid" }
+            - { nl: "Ijskoud", en: "Freezing cold" }
+            - { nl: "Droog en winderig", en: "Dry and windy" }
+          answer: 0
+          hint:
+            nl: "Trek je jas maar uit."
+            en: "You can take off your jacket."
