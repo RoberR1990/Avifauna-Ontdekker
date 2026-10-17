@@ -14,7 +14,8 @@
     "test:e2e": "playwright test",
     "validate:park": "tsx scripts/validate-park.ts",
     "build:park": "tsx scripts/park-build/cli.ts",
-    "check:core": "tsx scripts/check-core-size.ts"
+    "check:core": "tsx scripts/check-core-size.ts",
+    "lighthouse": "node scripts/lighthouse.mjs"
   },
   "dependencies": {
     "@fontsource-variable/fredoka": "^5.3.0",
@@ -38,11 +39,13 @@
     "@vitejs/plugin-react": "^6.1.2",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "chrome-launcher": "^1.2.2",
     "eslint": "^10.12.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
     "gray-matter": "^4.0.3",
     "jsdom": "^30.1.3",
+    "lighthouse": "^13.5.0",
     "papaparse": "^5.7.0",
     "sharp": "^0.35.5",
     "tsx": "^4.23.15",
