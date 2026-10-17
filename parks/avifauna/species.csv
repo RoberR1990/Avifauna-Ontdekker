@@ -2,21 +2,21 @@ scientific_name,slug,name_nl,zone_id,place_id,last_seen,wikidata_qid,status,note
 Neophron percnopterus,neophron-percnopterus,Aasgier,,,,Q33504,draft,,https://avifauna.nl/onze-dieren/aasgier/
 Buceros bicornis,buceros-bicornis,Dubbele neushoornvogel,,,,Q232768,draft,,https://avifauna.nl/onze-dieren/dubbele-neushoornvogel/
 Bubo bubo,bubo-bubo,Europese oehoe,,,,Q130933,draft,,https://avifauna.nl/onze-dieren/europese-oehoe/
-Casuarius casuarius,casuarius-casuarius,Helmkasuaris,,,,Q375790,draft,,https://avifauna.nl/onze-dieren/helmkasuaris/
-Spheniscus humboldti,spheniscus-humboldti,Humboldt pinguïn,,,,Q224151,draft,,https://avifauna.nl/onze-dieren/humboldt-pinguin/
-Saguinus imperator,saguinus-imperator,Keizertamarin,,,,Q114937,draft,,https://avifauna.nl/onze-dieren/keizertamarin/
-Pelecanus crispus,pelecanus-crispus,Kroeskoppelikaan,,,,Q184751,draft,,https://avifauna.nl/onze-dieren/kroeskoppelikaan/
-Balearica regulorum,balearica-regulorum,Kroonkraanvogel,,,,Q335992,draft,onzeker: kan ook B. pavonina zijn (zwarte kroonkraanvogel); controleren,https://avifauna.nl/onze-dieren/kroonkraanvogel/
+Casuarius casuarius,casuarius-casuarius,Helmkasuaris,zone-parkrestaurant,,,Q375790,draft,"plek: concept uit OSM (osm-naam, meerdere verblijven (place_id leeg): Helmkasuaris [verblijf-helmkasuaris] | Helmkasuaris [verblijf-helmkasuaris-2])",https://avifauna.nl/onze-dieren/helmkasuaris/
+Spheniscus humboldti,spheniscus-humboldti,Humboldt pinguïn,zone-grote-vijver,verblijf-humboldtpinguin,,Q224151,draft,plek: concept uit OSM (osm-naam: Humboldtpinguïn),https://avifauna.nl/onze-dieren/humboldt-pinguin/
+Saguinus imperator,saguinus-imperator,Keizertamarin,zone-noordpad,verblijf-rode-brulaap-witgezichtsaki,,Q114937,draft,"plek: concept uit OSM (osm-naam: Rode brulaap, witgezichtsaki, rode titi, keizertamarin)",https://avifauna.nl/onze-dieren/keizertamarin/
+Pelecanus crispus,pelecanus-crispus,Kroeskoppelikaan,zone-zuidwest,verblijf-grote-vijver-kroeskoppelikaan,,Q184751,draft,plek: concept uit OSM (osm-naam: Grote Vijver - Kroeskoppelikaan),https://avifauna.nl/onze-dieren/kroeskoppelikaan/
+Balearica regulorum,balearica-regulorum,Kroonkraanvogel,zone-ingang,verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel,,Q335992,draft,"onzeker: kan ook B. pavonina zijn (zwarte kroonkraanvogel); controleren; plek: concept uit OSM (osm-naam: Noord-Afrikaanse struisvogel, kroonkraanvogel, helmparelhoen)",https://avifauna.nl/onze-dieren/kroonkraanvogel/
 Trichoglossus moluccanus,trichoglossus-moluccanus,Regenbooglori,,,,Q1809222,draft,onzeker: ook T. haematodus (groene-nek-lori) in omloop als 'regenbooglori'; controleren,https://avifauna.nl/onze-dieren/regenbooglori/
-Myrmecophaga tridactyla,myrmecophaga-tridactyla,Reuzenmiereneter,,,,Q203033,draft,,https://avifauna.nl/onze-dieren/reuzenmiereneter/
-Lemur catta,lemur-catta,Ringstaartmaki,,,,Q185385,draft,,https://avifauna.nl/onze-dieren/ringstaartmaki/
-Alouatta seniculus,alouatta-seniculus,Rode brulaap,,,,Q583362,draft,onzeker: 'rode brulaap' kan ook A. macconnelli/A. arctoidea zijn; controleren,https://avifauna.nl/onze-dieren/rode-brulaap/
+Myrmecophaga tridactyla,myrmecophaga-tridactyla,Reuzenmiereneter,zone-noordpad,,,Q203033,draft,"plek: concept uit OSM (osm-naam, meerdere verblijven (place_id leeg): Reuzenmiereneter, zwartmaskeribis, witwangfluiteend [verblijf-reuzenmiereneter-zwartmaskeribis] | Vicuña, reuzenmiereneter, Darwin's nandoe, kuihoenderkoet, zwarthalszwaan, peposaka-eend [verblijf-vicuna-reuzenmiereneter])",https://avifauna.nl/onze-dieren/reuzenmiereneter/
+Lemur catta,lemur-catta,Ringstaartmaki,zone-zuidwest,verblijf-ringstaartmaki-rode-vari,,Q185385,draft,"plek: concept uit OSM (osm-naam: Ringstaartmaki, rode vari, roodbuikmaki, zwarte kroonkraanvogel, zwarte ooievaar, kuifparelhoender, gierparelhoender)",https://avifauna.nl/onze-dieren/ringstaartmaki/
+Alouatta seniculus,alouatta-seniculus,Rode brulaap,zone-noordpad,verblijf-rode-brulaap-witgezichtsaki,,Q583362,draft,"onzeker: 'rode brulaap' kan ook A. macconnelli/A. arctoidea zijn; controleren; plek: concept uit OSM (osm-naam: Rode brulaap, witgezichtsaki, rode titi, keizertamarin)",https://avifauna.nl/onze-dieren/rode-brulaap/
 Phoenicopterus ruber,phoenicopterus-ruber,Rode flamingo,,,,Q208004,draft,,https://avifauna.nl/onze-dieren/rode-flamingo/
-Ailurus fulgens,ailurus-fulgens,Rode panda,,,,Q41960,draft,,https://avifauna.nl/onze-dieren/rode-panda/
-Varecia rubra,varecia-rubra,Rode vari,,,,Q516703,draft,,https://avifauna.nl/onze-dieren/rode-vari/
+Ailurus fulgens,ailurus-fulgens,Rode panda,zone-parkrestaurant,verblijf-rode-panda-mantsjoerijse-kraanvogel,,Q41960,draft,"plek: concept uit OSM (osm-naam: Rode panda, Mantsjoerijse kraanvogel)",https://avifauna.nl/onze-dieren/rode-panda/
+Varecia rubra,varecia-rubra,Rode vari,zone-zuidwest,verblijf-ringstaartmaki-rode-vari,,Q516703,draft,"plek: concept uit OSM (osm-naam: Ringstaartmaki, rode vari, roodbuikmaki, zwarte kroonkraanvogel, zwarte ooievaar, kuifparelhoender, gierparelhoender)",https://avifauna.nl/onze-dieren/rode-vari/
 Gyps rueppelli,gyps-rueppelli,Rüppells gier,,,,Q55111925,draft,,https://avifauna.nl/onze-dieren/ruppells-gier/
 Ara militaris,ara-militaris,Soldatenara,,,,Q838924,draft,,https://avifauna.nl/onze-dieren/soldatenara/
-Haliaeetus pelagicus,haliaeetus-pelagicus,Stellers zeearend,,,,Q269896,draft,,https://avifauna.nl/onze-dieren/stellers-zeearend/
-Struthio camelus,struthio-camelus,Struisvogel,,,,Q17592,draft,,https://avifauna.nl/onze-dieren/struisvogel/
+Haliaeetus pelagicus,haliaeetus-pelagicus,Stellers zeearend,zone-zuidoost,verblijf-stellers-zeearend-zwarte-wouw,,Q269896,draft,"plek: concept uit OSM (osm-naam: Stellers zeearend, zwarte wouw, raaf)",https://avifauna.nl/onze-dieren/stellers-zeearend/
+Struthio camelus,struthio-camelus,Struisvogel,zone-ingang,verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel,,Q17592,draft,"plek: concept uit OSM (osm-naam: Noord-Afrikaanse struisvogel, kroonkraanvogel, helmparelhoen)",https://avifauna.nl/onze-dieren/struisvogel/
 Podocnemis unifilis,podocnemis-unifilis,Terekayschildpad,,,,Q863041,draft,,https://avifauna.nl/onze-dieren/terekayschildpad/
 Goura victoria,goura-victoria,Victoria kroonduif,,,,Q579213,draft,,https://avifauna.nl/onze-dieren/victoria-kroonduif/
