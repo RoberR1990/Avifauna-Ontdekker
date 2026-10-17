@@ -1,0 +1,975 @@
+[
+  {
+    "scientific_name": "Neophron percnopterus",
+    "slug": "neophron-percnopterus",
+    "name_nl": "Aasgier",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q33504",
+    "match": "exact",
+    "matched_name": "Neophron percnopterus",
+    "label_nl": "aasgier",
+    "label_en": "Egyptian Vulture",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Vultures%20-%20Immature%28L%29%20and%20Adult%20%28R%29.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Vulture%2C%20Socotra.jpg"
+    ],
+    "commons_category": "Neophron percnopterus",
+    "gbif_id": "2480696",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Aasgier",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Egyptian_vulture",
+    "iucn": null,
+    "order": "Accipitriformes",
+    "family": "Accipitridae",
+    "wingspan_cm": {
+      "mean": 167.6,
+      "min": 167.6,
+      "max": 167.6,
+      "n": 1
+    },
+    "mass_g": {
+      "mean": 1036,
+      "min": 94.0,
+      "max": 1977.0,
+      "n": 2
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/neophron-percnopterus.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Egyptian Vultures - Immature(L) and Adult (R).jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/neophron-percnopterus.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/neophron-percnopterus.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Buceros bicornis",
+    "slug": "buceros-bicornis",
+    "name_nl": "Dubbele neushoornvogel",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q232768",
+    "match": "exact",
+    "matched_name": "Buceros bicornis",
+    "label_nl": "dubbelhoornige neushoornvogel",
+    "label_en": "Great Hornbill",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20hornbill%20Photograph%20by%20Shantanu%20Kuveskar.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Hornbill%20Goa.jpg"
+    ],
+    "commons_category": "Buceros bicornis",
+    "gbif_id": "2476012",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Dubbelhoornige_neushoornvogel",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Great_hornbill",
+    "iucn": "VU",
+    "order": "Bucerotiformes",
+    "family": "Bucerotidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/buceros-bicornis.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Great hornbill Photograph by Shantanu Kuveskar.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/buceros-bicornis.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/buceros-bicornis.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Bubo bubo",
+    "slug": "bubo-bubo",
+    "name_nl": "Europese oehoe",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q130933",
+    "match": "exact",
+    "matched_name": "Bubo bubo",
+    "label_nl": "Oehoe",
+    "label_en": "Eurasian Eagle-owl",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Hubro%20%28Bubo%20bubo%29.JPG"
+    ],
+    "commons_category": "Bubo bubo",
+    "gbif_id": "5959092",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Oehoe",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Eurasian_eagle-owl",
+    "iucn": "LC",
+    "order": "Strigiformes",
+    "family": "Strigidae",
+    "wingspan_cm": {
+      "mean": 174.0,
+      "min": 174.0,
+      "max": 174.0,
+      "n": 1
+    },
+    "mass_g": {
+      "mean": 1817,
+      "min": 80.0,
+      "max": 2992.0,
+      "n": 3
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/bubo-bubo.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Hubro (Bubo bubo).JPG"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/bubo-bubo.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/bubo-bubo.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Casuarius casuarius",
+    "slug": "casuarius-casuarius",
+    "name_nl": "Helmkasuaris",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q375790",
+    "match": "exact",
+    "matched_name": "Casuarius casuarius",
+    "label_nl": "Helmkasuaris",
+    "label_en": "Southern Cassowary",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Double-wattled%20Cassowary.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Wild%20cassowary%20walking%20at%20Mission%20Beach%20IMG%203933.jpg"
+    ],
+    "commons_category": "Casuarius casuarius",
+    "gbif_id": "5231783",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Helmkasuaris",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Southern_cassowary",
+    "iucn": "LC",
+    "order": "Casuariiformes",
+    "family": "Casuariidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/casuarius-casuarius.webp",
+      "license": "CC-BY-SA-3.0",
+      "title": "Double-wattled Cassowary.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/casuarius-casuarius.opus",
+        "license": "CC-BY-NC-SA-3.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/casuarius-casuarius.m4a",
+        "license": "CC-BY-NC-SA-3.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Spheniscus humboldti",
+    "slug": "spheniscus-humboldti",
+    "name_nl": "Humboldt pinguïn",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q224151",
+    "match": "exact",
+    "matched_name": "Spheniscus humboldti",
+    "label_nl": "Humboldtpinguïn",
+    "label_en": "Humboldt Penguin",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Spheniscus%20humboldti%20%2854905367722%29.jpg"
+    ],
+    "commons_category": "Spheniscus humboldti",
+    "gbif_id": "5229386",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Humboldtpingu%C3%AFn",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Humboldt_penguin",
+    "iucn": "VU",
+    "order": "Sphenisciformes",
+    "family": "Spheniscidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/spheniscus-humboldti.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Spheniscus humboldti (54905367722).jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/spheniscus-humboldti.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/spheniscus-humboldti.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Saguinus imperator",
+    "slug": "saguinus-imperator",
+    "name_nl": "Keizertamarin",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q114937",
+    "match": "exact",
+    "matched_name": "Saguinus imperator",
+    "label_nl": "keizertamarin",
+    "label_en": "emperor tamarin",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Black-chinned%20emperor%20tamarin%20%28S.%20i.%20imperator%29.jpg"
+    ],
+    "commons_category": "Saguinus imperator",
+    "gbif_id": "2436471",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Keizertamarin",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Emperor_tamarin",
+    "iucn": "LC",
+    "order": "Primates",
+    "family": "Callitrichidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/saguinus-imperator.webp",
+      "license": "CC-BY-SA-2.0",
+      "title": "Black-chinned emperor tamarin (S. i. imperator).jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/saguinus-imperator.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/saguinus-imperator.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Pelecanus crispus",
+    "slug": "pelecanus-crispus",
+    "name_nl": "Kroeskoppelikaan",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q184751",
+    "match": "exact",
+    "matched_name": "Pelecanus crispus",
+    "label_nl": "Kroeskoppelikaan",
+    "label_en": "Dalmatian Pelican",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Pelicans%20Kerkini%2020111227%20IMG%205165.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Dalmatian%20Pelican%20Pelecanus%20crispus%20by%20Dr.%20Raju%20Kasambe%20DSCN6899%20%283%29.jpg"
+    ],
+    "commons_category": "Pelecanus crispus",
+    "gbif_id": "2480353",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Kroeskoppelikaan",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Dalmatian_pelican",
+    "iucn": "NT",
+    "order": "Pelecaniformes",
+    "family": "Pelecanidae",
+    "wingspan_cm": {
+      "mean": 320.0,
+      "min": 320.0,
+      "max": 320.0,
+      "n": 1
+    },
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/pelecanus-crispus.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Pelicans Kerkini 20111227 IMG 5165.jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Balearica regulorum",
+    "slug": "balearica-regulorum",
+    "name_nl": "Kroonkraanvogel",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": "onzeker: kan ook B. pavonina zijn (zwarte kroonkraanvogel); controleren",
+    "qid": "Q335992",
+    "match": "exact",
+    "matched_name": "Balearica regulorum",
+    "label_nl": "grijze kroonkraan",
+    "label_en": "Grey Crowned Crane",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Balearica%20regulorum%20regulorum%2C%20South%20Africa.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Crowned%20crane%2C%20Masai%20Mara%20%2852447146442%29.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Grulla%20coronada%20cuelligr%C3%ADs%20%28Balearica%20regulorum%29%2C%20parque%20nacional%20de%20Tarangire%2C%20Tanzania%2C%202024-05-24%2C%20DD%2015.jpg"
+    ],
+    "commons_category": "Balearica regulorum",
+    "gbif_id": "5228229",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Grijze_kroonkraanvogel",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Grey_crowned_crane",
+    "iucn": null,
+    "order": "Gruiformes",
+    "family": "Gruidae",
+    "wingspan_cm": null,
+    "mass_g": {
+      "mean": 152,
+      "min": 152.0,
+      "max": 152.0,
+      "n": 1
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/balearica-regulorum.webp",
+      "license": "CC-BY-2.0",
+      "title": "Balearica regulorum regulorum, South Africa.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/balearica-regulorum.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/balearica-regulorum.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Trichoglossus moluccanus",
+    "slug": "trichoglossus-moluccanus",
+    "name_nl": "Regenbooglori",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": "onzeker: ook T. haematodus (groene-nek-lori) in omloop als 'regenbooglori'; controleren",
+    "qid": "Q1809222",
+    "match": "exact",
+    "matched_name": "Trichoglossus moluccanus",
+    "label_nl": "lori van de Blauwe Bergen",
+    "label_en": "Rainbow Lorikeet",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20Lorikeet%20-%20AndrewMercer%20IMG08212.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20Lorikeet%2C%20Bramble%20Bay%2C%20Queensland%20%28328617162%29.jpg"
+    ],
+    "commons_category": "Trichoglossus moluccanus",
+    "gbif_id": "2479694",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Lori_van_de_Blauwe_Bergen",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Rainbow_lorikeet",
+    "iucn": "LC",
+    "order": "Psittaciformes",
+    "family": "Psittacidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/trichoglossus-moluccanus.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "Rainbow Lorikeet - AndrewMercer IMG08212.jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Myrmecophaga tridactyla",
+    "slug": "myrmecophaga-tridactyla",
+    "name_nl": "Reuzenmiereneter",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q203033",
+    "match": "exact",
+    "matched_name": "Myrmecophaga tridactyla",
+    "label_nl": "reuzenmiereneter",
+    "label_en": "giant anteater",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Myresluger2.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Giant%20anteater%20at%20MAV-USP.jpg"
+    ],
+    "commons_category": "Myrmecophaga tridactyla",
+    "gbif_id": "2436346",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Reuzenmiereneter",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Giant_anteater",
+    "iucn": "VU",
+    "order": "Pilosa",
+    "family": "Myrmecophagidae",
+    "wingspan_cm": null,
+    "mass_g": {
+      "mean": 1350,
+      "min": 1350.0,
+      "max": 1350.0,
+      "n": 1
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/myrmecophaga-tridactyla.webp",
+      "license": "CC-BY-SA-3.0",
+      "title": "Myresluger2.jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Lemur catta",
+    "slug": "lemur-catta",
+    "name_nl": "Ringstaartmaki",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q185385",
+    "match": "exact",
+    "matched_name": "Lemur catta",
+    "label_nl": "ringstaartmaki",
+    "label_en": "ring-tailed lemur",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Lemur%20catta%20001.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Lemur%20walking-2.jpg"
+    ],
+    "commons_category": "Lemur catta",
+    "gbif_id": "2436412",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Ringstaartmaki",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Ring-tailed_lemur",
+    "iucn": null,
+    "order": "Primates",
+    "family": "Lemuridae",
+    "wingspan_cm": null,
+    "mass_g": {
+      "mean": 60,
+      "min": 60.0,
+      "max": 60.0,
+      "n": 1
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/lemur-catta.webp",
+      "license": "CC-BY-3.0",
+      "title": "Lemur catta 001.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/lemur-catta.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/lemur-catta.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Alouatta seniculus",
+    "slug": "alouatta-seniculus",
+    "name_nl": "Rode brulaap",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": "onzeker: 'rode brulaap' kan ook A. macconnelli/A. arctoidea zijn; controleren",
+    "qid": "Q583362",
+    "match": "exact",
+    "matched_name": "Alouatta seniculus",
+    "label_nl": "Rode brulaap",
+    "label_en": "Venezuelan red howler",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Alouatta%20seniculus.jpg"
+    ],
+    "commons_category": "Alouatta seniculus",
+    "gbif_id": "2436648",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Rode_brulaap",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Colombian_red_howler",
+    "iucn": "LC",
+    "order": "Primates",
+    "family": "Atelidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/alouatta-seniculus.webp",
+      "license": "CC-BY-SA-2.5",
+      "title": "Alouatta seniculus.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/alouatta-seniculus.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/alouatta-seniculus.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Phoenicopterus ruber",
+    "slug": "phoenicopterus-ruber",
+    "name_nl": "Rode flamingo",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q208004",
+    "match": "exact",
+    "matched_name": "Phoenicopterus ruber",
+    "label_nl": "rode flamingo",
+    "label_en": "American Flamingo",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Caribbean%20Flamingo.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Phoenicopterus%20ruber%20Bonaire%201.jpg"
+    ],
+    "commons_category": "Phoenicopterus ruber",
+    "gbif_id": "9691034",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Rode_flamingo",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/American_flamingo",
+    "iucn": "LC",
+    "order": "Phoenicopteriformes",
+    "family": "Phoenicopteridae",
+    "wingspan_cm": {
+      "mean": 153.0,
+      "min": 153.0,
+      "max": 153.0,
+      "n": 1
+    },
+    "mass_g": {
+      "mean": 2082,
+      "min": 142.0,
+      "max": 3579.0,
+      "n": 3
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/phoenicopterus-ruber.webp",
+      "license": "PDM",
+      "title": "Caribbean Flamingo.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "media/audio/phoenicopterus-ruber.opus",
+        "license": "CC-BY-SA-4.0",
+        "in_repo": true
+      },
+      {
+        "file": "media/audio/phoenicopterus-ruber.m4a",
+        "license": "CC-BY-SA-4.0",
+        "in_repo": true
+      }
+    ]
+  },
+  {
+    "scientific_name": "Ailurus fulgens",
+    "slug": "ailurus-fulgens",
+    "name_nl": "Rode panda",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q41960",
+    "match": "exact",
+    "matched_name": "Ailurus fulgens",
+    "label_nl": "kleine panda",
+    "label_en": "Red Panda",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/RedPanda%20SingalilaNationalPark%20DFrame.jpg"
+    ],
+    "commons_category": "Ailurus fulgens",
+    "gbif_id": "5219446",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Kleine_panda",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Red_panda",
+    "iucn": null,
+    "order": "Carnivora",
+    "family": "Ailuridae",
+    "wingspan_cm": null,
+    "mass_g": {
+      "mean": 2535,
+      "min": 120.0,
+      "max": 4950.0,
+      "n": 2
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/ailurus-fulgens.webp",
+      "license": "CC-BY-SA-4.0",
+      "title": "RedPanda SingalilaNationalPark DFrame.jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Varecia rubra",
+    "slug": "varecia-rubra",
+    "name_nl": "Rode vari",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q516703",
+    "match": "exact",
+    "matched_name": "Varecia rubra",
+    "label_nl": "Rode vari",
+    "label_en": "red ruffed lemur",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Red.ruffed.lemur.ontree.arp.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Varecia%20rubra%20%28habitus%29.jpg"
+    ],
+    "commons_category": "Varecia rubra",
+    "gbif_id": "4266945",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Rode_vari",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Red_ruffed_lemur",
+    "iucn": "CR",
+    "order": "Primates",
+    "family": "Lemuridae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/varecia-rubra.webp",
+      "license": "PDM",
+      "title": "Red.ruffed.lemur.ontree.arp.jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Gyps rueppelli",
+    "slug": "gyps-rueppelli",
+    "name_nl": "Rüppells gier",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q55111925",
+    "match": "exact",
+    "matched_name": "Gyps rueppelli",
+    "label_nl": "Gyps rueppelli",
+    "label_en": "Rüppell's Vulture",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/R%C3%BCppell%27s%20Vulture%20%28Gyps%20rueppelli%29%20%2821160089681%29.jpg"
+    ],
+    "commons_category": "Gyps rueppellii",
+    "gbif_id": "2480384",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/R%C3%BCppells_gier",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/R%C3%BCppell%27s_vulture",
+    "iucn": "CR",
+    "order": "Accipitriformes",
+    "family": "Accipitridae",
+    "wingspan_cm": {
+      "mean": 240.8,
+      "min": 240.79999999999998,
+      "max": 240.79999999999998,
+      "n": 1
+    },
+    "mass_g": {
+      "mean": 3898,
+      "min": 225.0,
+      "max": 7570.0,
+      "n": 2
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/gyps-rueppelli.webp",
+      "license": "CC-BY-SA-2.0",
+      "title": "Rüppell's Vulture (Gyps rueppelli) (21160089681).jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/gyps-rueppelli.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/gyps-rueppelli.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Ara militaris",
+    "slug": "ara-militaris",
+    "name_nl": "Soldatenara",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q838924",
+    "match": "exact",
+    "matched_name": "Ara militaris",
+    "label_nl": "Soldatenara",
+    "label_en": "Military Macaw",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Ara%20militaris%20-London%20Zoo-8a.jpg"
+    ],
+    "commons_category": "Ara militaris",
+    "gbif_id": "5959230",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Soldatenara",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Military_macaw",
+    "iucn": "VU",
+    "order": "Psittaciformes",
+    "family": "Psittacidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/ara-militaris.webp",
+      "license": "CC-BY-2.0",
+      "title": "Ara militaris -London Zoo-8a.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/ara-militaris.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/ara-militaris.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Haliaeetus pelagicus",
+    "slug": "haliaeetus-pelagicus",
+    "name_nl": "Stellers zeearend",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q269896",
+    "match": "exact",
+    "matched_name": "Haliaeetus pelagicus",
+    "label_nl": "Stellers zeearend",
+    "label_en": "Steller’s Sea Eagle",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Haliaeetus%20pelagicus%20%28Rausu%2C%20Japan%29.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Haliaeetus%20pelagicus%20with%20fish.jpg"
+    ],
+    "commons_category": "Haliaeetus pelagicus",
+    "gbif_id": "2480445",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Stellers_zeearend",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Steller%27s_sea_eagle",
+    "iucn": "VU",
+    "order": "Accipitriformes",
+    "family": "Accipitridae",
+    "wingspan_cm": {
+      "mean": 220.0,
+      "min": 220.0,
+      "max": 220.0,
+      "n": 1
+    },
+    "mass_g": {
+      "mean": 6675,
+      "min": 5450.0,
+      "max": 7900.0,
+      "n": 2
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/haliaeetus-pelagicus.webp",
+      "license": "CC-BY-2.0",
+      "title": "Haliaeetus pelagicus (Rausu, Japan).jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/haliaeetus-pelagicus.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/haliaeetus-pelagicus.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Struthio camelus",
+    "slug": "struthio-camelus",
+    "name_nl": "Struisvogel",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q17592",
+    "match": "exact",
+    "matched_name": "Struthio camelus",
+    "label_nl": "struisvogel",
+    "label_en": "common ostrich",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/North%20African%20Ostrich%20-%20Masai%20Ostrich%20%28Struthio%20camelus%20massaicus%29%20-%20Flickr%20-%20Lip%20Kee.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/North%20African%20Ostrich%20-%20Masai%20Ostrich%20-%20female%20non-breeding%20%28Struthio%20camelus%29%20-%20Flickr%20-%20Lip%20Kee%20%281%29.jpg",
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Ostrich%20in%20a%20garden.jpg"
+    ],
+    "commons_category": "Struthio camelus",
+    "gbif_id": "2495150",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Struisvogel",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Common_ostrich",
+    "iucn": "LC",
+    "order": "Struthioniformes",
+    "family": "Struthionidae",
+    "wingspan_cm": null,
+    "mass_g": {
+      "mean": 72167,
+      "min": 1500.0,
+      "max": 115000.0,
+      "n": 3
+    },
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/struthio-camelus.webp",
+      "license": "CC-BY-SA-2.0",
+      "title": "North African Ostrich - Masai Ostrich (Struthio camelus massaicus) - Flickr - Lip Kee.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/struthio-camelus.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/struthio-camelus.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  },
+  {
+    "scientific_name": "Podocnemis unifilis",
+    "slug": "podocnemis-unifilis",
+    "name_nl": "Terekayschildpad",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q863041",
+    "match": "exact",
+    "matched_name": "Podocnemis unifilis",
+    "label_nl": "Terekayschildpad",
+    "label_en": "Yellow-spotted river turtle",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Podocnemis%20unifilis%20%28Yellow%20spotted%20river%20turtle%29.jpg"
+    ],
+    "commons_category": "Podocnemis unifilis",
+    "gbif_id": "2442782",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Terekayschildpad",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Yellow-spotted_river_turtle",
+    "iucn": "VU",
+    "order": "Testudines",
+    "family": "Podocnemididae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/podocnemis-unifilis.webp",
+      "license": "CC-BY-SA-2.5",
+      "title": "Podocnemis unifilis (Yellow spotted river turtle).jpg"
+    },
+    "photo_rejected": [],
+    "audio": []
+  },
+  {
+    "scientific_name": "Goura victoria",
+    "slug": "goura-victoria",
+    "name_nl": "Victoria kroonduif",
+    "zone_id": null,
+    "place_id": null,
+    "last_seen": null,
+    "notes": null,
+    "qid": "Q579213",
+    "match": "exact",
+    "matched_name": "Goura victoria",
+    "label_nl": "Waaierduif",
+    "label_en": "Victoria Crowned Pigeon",
+    "image_files": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.victoria.crowned.pigeon.arp.jpg"
+    ],
+    "commons_category": "Goura victoria",
+    "gbif_id": "2495204",
+    "wikipedia_nl": "https://nl.wikipedia.org/wiki/Waaierduif",
+    "wikipedia_en": "https://en.wikipedia.org/wiki/Victoria_crowned_pigeon",
+    "iucn": "NT",
+    "order": "Columbiformes",
+    "family": "Columbidae",
+    "wingspan_cm": null,
+    "mass_g": null,
+    "lifespan_y": null,
+    "photo": {
+      "file": "media/photos/goura-victoria.webp",
+      "license": "PDM",
+      "title": "Bristol.zoo.victoria.crowned.pigeon.arp.jpg"
+    },
+    "photo_rejected": [],
+    "audio": [
+      {
+        "file": "build-cache/audio/goura-victoria.opus",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      },
+      {
+        "file": "build-cache/audio/goura-victoria.m4a",
+        "license": "CC-BY-NC-SA-4.0",
+        "in_repo": false
+      }
+    ]
+  }
+]
