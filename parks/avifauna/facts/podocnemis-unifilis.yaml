@@ -1,0 +1,37 @@
+slug: podocnemis-unifilis
+reviewed: false
+is_bird: false
+length_cm: [45, 46.5]
+height_cm: null
+mass_g: [8000, 8000]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch:
+  nl: "Meerdere legsels per seizoen met tientallen eieren (4 tot 52 gemeld)"
+  en: "Several clutches per season with up to dozens of eggs (4 to 52 reported)"
+incubation_days: [60, 159]
+continents: [south-america]
+range:
+  nl: "Amazone- en Orinocobekken en de rivieren van de Guyana's"
+  en: "Amazon and Orinoco basins and the rivers of the Guianas"
+range_center: { lat: 0, lon: -65 }
+habitat:
+  nl: "Rustige rivieren, grote meren en overstroomde bossen"
+  en: "Calm rivers, large lakes and flooded forest"
+diet:
+  nl: "Vooral planten, vruchten en zaden; in gevangenschap ook vis en vlees"
+  en: "Mostly plants, fruit and seeds; in captivity also fish and meat"
+colors: [brown, black, yellow]
+iucn_trend: decreasing
+threats:
+  nl: "Jacht op vlees en eieren en druk op de nestplekken"
+  en: "Hunting for meat and eggs and pressure on nesting sites"
+wow:
+  nl: "Of een jong mannetje of vrouwtje wordt, hangt af van de temperatuur van het nest: onder 32 graden mannetje, erboven vrouwtje."
+  en: "Whether a hatchling becomes male or female depends on nest temperature: below 32 degrees male, above female."
+sources:
+  - title: Wikipedia, Yellow-spotted river turtle
+    url: https://en.wikipedia.org/wiki/Yellow-spotted_river_turtle
+  - title: Naturalis (Linnaeus), Podocnemis unifilis
+    url: https://turtles.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=7921

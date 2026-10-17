@@ -1,0 +1,39 @@
+slug: struthio-camelus
+reviewed: false
+is_bird: true
+length_cm: null
+height_cm: [175, 275]
+mass_g: [90000, 130000]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: [50, 62]
+clutch:
+  nl: "15 tot 60 eieren in een gezamenlijk nest"
+  en: "15 to 60 eggs in a communal nest"
+incubation_days: [35, 45]
+continents: [africa]
+range:
+  nl: "Savannes en droge streken van Afrika, ten noorden en zuiden van het regenwoud"
+  en: "Savannas and dry regions of Africa, north and south of the equatorial forest"
+range_center: { lat: 0, lon: 25 }
+habitat:
+  nl: "Open land: savanne, Sahel en halfwoestijn"
+  en: "Open country: savanna, Sahel and semi-desert"
+diet:
+  nl: "Zaden, gras, vruchten, bloemen en insecten; soms kleine dieren"
+  en: "Seeds, grass, fruit, flowers and insects; sometimes small animals"
+colors: [black, white, grey]
+iucn_trend: decreasing
+threats:
+  nl: "Verlies van leefgebied en vroeger zware jacht op veren en huid"
+  en: "Habitat loss and, in the past, heavy hunting for feathers and hides"
+wow:
+  nl: "Hij kan korte stukken wel 70 kilometer per uur rennen en zijn ei weegt zo'n 1,4 kilo."
+  en: "He can sprint up to 70 km/h and his egg weighs about 1.4 kg."
+sources:
+  - title: Wikipedia, Common ostrich
+    url: https://en.wikipedia.org/wiki/Common_ostrich
+  - title: Animal Diversity Web, Struthio camelus
+    url: https://animaldiversity.org/accounts/Struthio_camelus/
+  - title: BirdLife DataZone, Common ostrich (status en trend)
+    url: https://datazone.birdlife.org/species/factsheet/common-ostrich-struthio-camelus/text

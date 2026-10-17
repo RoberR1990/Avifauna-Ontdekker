@@ -1,0 +1,37 @@
+slug: goura-victoria
+reviewed: false
+is_bird: true
+length_cm: [73, 80]
+height_cm: null
+mass_g: [2400, 3500]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch:
+  nl: "1 ei"
+  en: "1 egg"
+incubation_days: [30, 30]
+continents: [oceania]
+range:
+  nl: "Laagland- en moerasbossen van noord-Nieuw-Guinea en nabije eilanden"
+  en: "Lowland and swamp forests of northern New Guinea and nearby islands"
+range_center: { lat: -3.5, lon: 141 }
+habitat:
+  nl: "Laagland- en moerasbos, van zeeniveau tot ongeveer 900 meter"
+  en: "Lowland and swamp forest, from sea level to about 900 m"
+diet:
+  nl: "Vooral gevallen vruchten; soms zaden en ongewervelden"
+  en: "Mainly fallen fruit; sometimes seeds and invertebrates"
+colors: [blue, purple, white]
+iucn_trend: decreasing
+threats:
+  nl: "Verlies van bos door houtkap en jacht op veren en vlees"
+  en: "Forest loss through logging and hunting for plumes and meat"
+wow:
+  nl: "Dit is de grootste duivensoort ter wereld, met een waaier van kantachtige veren op zijn kop."
+  en: "This is the largest pigeon species in the world, with a lacy fan of feathers on its head."
+sources:
+  - title: Wikipedia, Victoria crowned pigeon
+    url: https://en.wikipedia.org/wiki/Victoria_crowned_pigeon
+  - title: ARTIS, Victoria crowned pigeon
+    url: https://www.artis.nl/en/artis-zoo/what-to-explore-in-artis-zoo/victoria-crowned-pigeon

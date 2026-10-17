@@ -1,0 +1,37 @@
+slug: haliaeetus-pelagicus
+reviewed: false
+is_bird: true
+length_cm: [85, 105]
+height_cm: null
+mass_g: [4900, 9500]
+wingspan_cm: [195, 250]
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch:
+  nl: "1 tot 3 eieren (gemiddeld 2)"
+  en: "1 to 3 eggs (average 2)"
+incubation_days: [38, 45]
+continents: [asia]
+range:
+  nl: "Broedt in het Russische Verre Oosten (Kamtsjatka, Zee van Ochotsk, Amoer); overwintert in Japan, Korea en China"
+  en: "Breeds in the Russian Far East (Kamchatka, Sea of Okhotsk, Amur); winters in Japan, Korea and China"
+range_center: { lat: 55, lon: 150 }
+habitat:
+  nl: "Kusten en grote rivieren met grote bomen om in te nestelen"
+  en: "Coasts and large rivers with big trees for nesting"
+diet:
+  nl: "Vooral vis (zalm, forel, kabeljauw); ook watervogels"
+  en: "Mainly fish (salmon, trout, cod); also waterbirds"
+colors: [black, white, yellow]
+iucn_trend: decreasing
+threats:
+  nl: "Verlies van leefgebied, vervuiling, overbevissing, loodvergiftiging en vervolging"
+  en: "Habitat loss, pollution, overfishing, lead poisoning and persecution"
+wow:
+  nl: "Zijn vleugels kunnen tot 2,5 meter wijd zijn en vrouwtjes wegen tot 9,5 kilo."
+  en: "His wings can span up to 2.5 m and females weigh up to 9.5 kg."
+sources:
+  - title: Wikipedia, Steller's sea eagle
+    url: https://en.wikipedia.org/wiki/Steller%27s_sea_eagle
+  - title: Animal Diversity Web, Haliaeetus pelagicus
+    url: https://animaldiversity.org/accounts/Haliaeetus_pelagicus/
