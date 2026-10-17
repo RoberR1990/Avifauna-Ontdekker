@@ -17,7 +17,7 @@
 
 ## Wat (nog) niet
 - **Statistieken (Umami)**: events zijn stubs; wacht op website-ID. Privacytekst nog niet bijgewerkt.
-- **Hosting**: live op https://vogel-ontdekker-proto.pages.dev (Cloudflare Pages, `noindex`; neutrale naam tot toestemming). Opnieuw publiceren: `pnpm deploy` (wrangler-login nodig).
+- **Hosting**: live op https://vogel-ontdekker-proto.pages.dev (Cloudflare Pages, `noindex`; neutrale naam tot toestemming). Opnieuw publiceren: `pnpm deploy:pages` (wrangler-login nodig).
 - **Soortenlijst**: 35 van ~200 soorten (veldwerk dekte ~1 uur). Atlas-LCP heeft weinig marge (2,9 s).
 - **Zones** zijn grove concepten uit OSM; veldwerkplekken liggen soms samen door GPS-onnauwkeurigheid (bv. rode panda, emoe, ekstergans, plataan op één plek).
 - Gewone plataan heeft geen foto en geen Vogel-o-meter.
