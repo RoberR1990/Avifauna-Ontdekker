@@ -1,0 +1,25 @@
+slug: balearica-regulorum
+reviewed: false
+is_bird: true
+length_cm: null
+height_cm: [100, 110]
+mass_g: [3000, 4000]
+wingspan_cm: [180, 200]
+lifespan_wild_y: [22, 22]
+lifespan_captivity_y: [25, 25]
+clutch: { nl: "2 tot 5 eieren", en: "2 to 5 eggs" }
+incubation_days: [28, 31]
+continents: [africa]
+range: { nl: "Oost- en zuidelijk Afrika, van Oeganda en Kenia tot Zuid-Afrika", en: "Eastern and southern Africa, from Uganda and Kenya to South Africa" }
+range_center: { lat: -8, lon: 30 }
+habitat: { nl: "Graslanden en savanne bij water, moerassen en akkers", en: "Grasslands and savanna near water, marshes and farmland" }
+diet: { nl: "Zaden, gras, insecten, kikkers, wormen en kleine vis", en: "Seeds, grass, insects, frogs, worms and small fish" }
+colors: [grey, white, yellow, red]
+iucn_trend: decreasing
+threats: { nl: "Droogleggen van wetlands, overbegrazing, bestrijdingsmiddelen", en: "Wetland drainage, overgrazing, pesticides" }
+wow: { nl: "Het is een van de weinige kraanvogels die in bomen kan slapen.", en: "It is one of the few cranes that can roost in trees." }
+sources:
+  - title: Wikipedia, Grey crowned crane
+    url: https://en.wikipedia.org/wiki/Grey_crowned_crane
+  - title: Animal Diversity Web, Balearica regulorum
+    url: https://animaldiversity.org/accounts/Balearica_regulorum/

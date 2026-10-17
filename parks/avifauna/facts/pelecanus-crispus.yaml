@@ -1,0 +1,25 @@
+slug: pelecanus-crispus
+reviewed: false
+is_bird: true
+length_cm: [160, 180]
+height_cm: null
+mass_g: null
+wingspan_cm: [270, 320]
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: { nl: "1 tot 6 eieren, meestal 2", en: "1 to 6 eggs, usually 2" }
+incubation_days: [30, 34]
+continents: [europe, asia]
+range: { nl: "Van Zuidoost-Europa en Turkije via Centraal-Azië tot India en China", en: "From southeastern Europe and Turkey through Central Asia to India and China" }
+range_center: { lat: 42, lon: 60 }
+habitat: { nl: "Grote open wetlands: meren, rivierdelta's, lagunes en overstromingsvlakten", en: "Large open wetlands: lakes, river deltas, lagoons and floodplains" }
+diet: { nl: "Vis, zoals karper, snoek, baars en harder", en: "Fish, such as carp, pike, perch and mullet" }
+colors: [white, grey, orange]
+iucn_trend: unknown
+threats: { nl: "Droogleggen van wetlands, aanvaringen met hoogspanningslijnen, jacht, visserijconflicten, verstoring", en: "Wetland drainage, power-line collisions, hunting, fishery conflicts, disturbance" }
+wow: { nl: "Het is de grootste pelikaan ter wereld en eet per dag ruim een kilo vis.", en: "It is the largest pelican in the world and eats over a kilo of fish a day." }
+sources:
+  - title: Wikipedia, Dalmatian pelican
+    url: https://en.wikipedia.org/wiki/Dalmatian_pelican
+  - title: Wikipedia NL, Kroeskoppelikaan
+    url: https://nl.wikipedia.org/wiki/Kroeskoppelikaan
