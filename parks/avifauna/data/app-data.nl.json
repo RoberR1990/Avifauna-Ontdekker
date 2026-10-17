@@ -177,7 +177,7 @@
     {
       "slug": "spheniscus-humboldti",
       "scientific_name": "Spheniscus humboldti",
-      "name": "Humboldt pinguïn",
+      "name": "Humboldtpinguïn",
       "name_alt": "Humboldt Penguin",
       "order": "Sphenisciformes",
       "family": "Spheniscidae",
@@ -667,7 +667,7 @@
     {
       "slug": "goura-victoria",
       "scientific_name": "Goura victoria",
-      "name": "Victoria kroonduif",
+      "name": "Victoria-kroonduif",
       "name_alt": "Victoria Crowned Pigeon",
       "order": "Columbiformes",
       "family": "Columbidae",
