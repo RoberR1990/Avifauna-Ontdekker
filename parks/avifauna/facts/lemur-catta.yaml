@@ -1,0 +1,25 @@
+slug: lemur-catta
+reviewed: false
+is_bird: false
+length_cm: [39, 46]
+height_cm: null
+mass_g: [2200, 2200]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: [27, 33]
+clutch: { nl: "Meestal 1 jong (soms 2); draagtijd 130 tot 144 dagen", en: "Usually 1 young (sometimes 2); gestation 130 to 144 days" }
+incubation_days: null
+continents: [africa]
+range: { nl: "Zuid- en zuidwest-Madagaskar", en: "Southern and southwestern Madagascar" }
+range_center: { lat: -24.5, lon: 45.5 }
+habitat: { nl: "Droog bos, galerijbos langs rivieren, struikgebied en bergbos", en: "Dry forest, gallery forest along rivers, scrub and montane forest" }
+diet: { nl: "Vruchten en bladeren (vooral tamarinde); ook bloemen, insecten en kleine dieren", en: "Fruit and leaves (especially tamarind); also flowers, insects and small animals" }
+colors: [grey, white, black]
+iucn_trend: decreasing
+threats: { nl: "Verlies van leefgebied, jacht en handel in huisdieren", en: "Habitat loss, hunting and the pet trade" }
+wow: { nl: "Mannetjes smeren hun staart in met geurstof en zwaaien ermee naar rivalen: een stinkgevecht.", en: "Males scent their tails and wave them at rivals in a stink fight." }
+sources:
+  - title: Wikipedia, Ring-tailed lemur
+    url: https://en.wikipedia.org/wiki/Ring-tailed_lemur
+  - title: Animal Diversity Web, Lemur catta
+    url: https://animaldiversity.org/accounts/Lemur_catta/
