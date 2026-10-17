@@ -1,0 +1,25 @@
+slug: trichoglossus-moluccanus
+reviewed: false
+is_bird: true
+length_cm: [25, 30]
+height_cm: null
+mass_g: [75, 157]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: { nl: "1 tot 3 eieren", en: "1 to 3 eggs" }
+incubation_days: [25, 25]
+continents: [oceania]
+range: { nl: "Oostkust van Australië, van Noord-Queensland tot Zuid-Australië", en: "East coast of Australia, from northern Queensland to South Australia" }
+range_center: { lat: -28, lon: 151 }
+habitat: { nl: "Bos, struikgewas, wetlands en ook parken en tuinen", en: "Forest, shrubland, wetlands and also parks and gardens" }
+diet: { nl: "Nectar, stuifmeel en vruchten", en: "Nectar, pollen and fruit" }
+colors: [blue, green, orange, yellow]
+iucn_trend: unknown
+threats: null
+wow: { nl: "Zijn tong heeft een borsteltje aan de punt om stuifmeel en nectar uit bloemen te vegen.", en: "His tongue has a brush-like tip for gathering pollen and nectar from flowers." }
+sources:
+  - title: Wikipedia, Rainbow lorikeet
+    url: https://en.wikipedia.org/wiki/Rainbow_lorikeet
+  - title: Wikispecies, Trichoglossus moluccanus
+    url: https://species.wikimedia.org/wiki/Trichoglossus_moluccanus

@@ -1,0 +1,25 @@
+slug: myrmecophaga-tridactyla
+reviewed: false
+is_bird: false
+length_cm: [100, 120]
+height_cm: null
+mass_g: [27000, 50000]
+wingspan_cm: null
+lifespan_wild_y: [15, 15]
+lifespan_captivity_y: [25, 30]
+clutch: { nl: "1 jong per keer; draagtijd 170 tot 190 dagen", en: "1 young at a time; gestation 170 to 190 days" }
+incubation_days: null
+continents: [north-america, south-america]
+range: { nl: "Van Midden-Amerika (Honduras, Belize) tot Noord-Argentinië", en: "From Central America (Honduras, Belize) to northern Argentina" }
+range_center: { lat: -8, lon: -58 }
+habitat: { nl: "Graslanden, savanne, moerassen en bos", en: "Grasslands, savanna, swamps and forest" }
+diet: { nl: "Mieren en termieten; soms larven en fruit", en: "Ants and termites; sometimes larvae and fruit" }
+colors: [grey, black, white]
+iucn_trend: decreasing
+threats: { nl: "Verlies van leefgebied, aanrijdingen, branden, jacht", en: "Habitat loss, road collisions, fires, hunting" }
+wow: { nl: "Zijn tong is ongeveer 60 cm lang en hij eet tot wel 35.000 insecten per dag.", en: "His tongue is about 60 cm long and he eats up to 35,000 insects a day." }
+sources:
+  - title: Wikipedia, Giant anteater
+    url: https://en.wikipedia.org/wiki/Giant_anteater
+  - title: Animal Diversity Web, Myrmecophaga tridactyla
+    url: https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/
