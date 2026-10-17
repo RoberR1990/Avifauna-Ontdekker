@@ -73,6 +73,13 @@ export function buildExpeditions(ctx: Ctx): BundleExpedition[] {
         const n = Number(t.answer)
         answer = Number.isFinite(n) ? n : null
       }
+      // Keuzes vast door elkaar (per stop-id), zodat het goede antwoord niet altijd bovenaan staat.
+      let options = t.options ? t.options.map((o) => localize(o, lang)) : null
+      if (options && t.type === 'choose') {
+        const order = shuffledOrder(options.length, st.id)
+        options = order.map((i) => options![i])
+        if (answer !== null) answer = order.indexOf(answer)
+      }
       stops.push({
         id: st.id,
         title: st.title ? localize(st.title, lang) : (placeName(zone, lang) ?? st.zone_id),
@@ -83,7 +90,7 @@ export function buildExpeditions(ctx: Ctx): BundleExpedition[] {
         task: {
           type: t.type,
           prompt: localize(t.prompt, lang),
-          options: t.options ? t.options.map((o) => localize(o, lang)) : null,
+          options,
           answer,
           hint: t.hint ? localize(t.hint, lang) : null,
         },
@@ -182,3 +189,23 @@ export function buildRoutes(ctx: Ctx, georef: Georef | null): BundleRoute[] {
 }
 
 export type { Ctx as ContentCtx }
+
+/** Deterministische volgorde 0..n-1 uit een tekst (FNV-1a + mulberry32); gelijk voor alle talen. */
+export function shuffledOrder(n: number, key: string): number[] {
+  let h = 2166136261
+  for (let i = 0; i < key.length; i++) h = Math.imul(h ^ key.charCodeAt(i), 16777619)
+  let a = h >>> 0
+  const rnd = () => {
+    a = (a + 0x6d2b79f5) >>> 0
+    let t = a
+    t = Math.imul(t ^ (t >>> 15), t | 1)
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61)
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+  const order = Array.from({ length: n }, (_, i) => i)
+  for (let i = n - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1))
+    ;[order[i], order[j]] = [order[j], order[i]]
+  }
+  return order
+}

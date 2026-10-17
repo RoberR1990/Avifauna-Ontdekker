@@ -139,7 +139,8 @@ img {
 .app-name {
   font-family: var(--head);
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 6vw, 1.75rem);
+  white-space: nowrap;
   line-height: 1;
   text-align: center;
   text-decoration: none;

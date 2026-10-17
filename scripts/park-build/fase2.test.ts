@@ -1,5 +1,6 @@
 // @vitest-environment node
 // Fase 2: expedities, bingo, routes en zone-afleiding in de bundel (docs/FASE-2.md §3, §4).
+import { shuffledOrder } from './content.ts'
 import { cpSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
@@ -458,5 +459,17 @@ describe('buildBundle: routes', () => {
     const r = buildBundle(parkWith({ ...files, 'map/osm-extract.json': '{"elements":[]}' }), 'nl', { buildCacheDirs: [], now })
     expect(r.bundle.routes[0].length_m).toBeGreaterThan(60)
     expect(r.bundle.routes[0].length_m).toBeLessThan(75)
+  })
+})
+
+describe('shuffledOrder (keuzes door elkaar)', () => {
+  it('is een deterministische permutatie', () => {
+    const a = shuffledOrder(4, 'stop-x')
+    expect([...a].sort()).toEqual([0, 1, 2, 3])
+    expect(shuffledOrder(4, 'stop-x')).toEqual(a)
+  })
+  it('zet het goede antwoord niet altijd op plek 0', () => {
+    const firsts = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].map((k) => shuffledOrder(3, k).indexOf(0))
+    expect(new Set(firsts).size).toBeGreaterThan(1)
   })
 })
