@@ -38,3 +38,6 @@ Thumbs.db
 # Vite/PWA
 *.local
 dist-park/
+
+# Lighthouse-rapporten
+lighthouse-reports/
