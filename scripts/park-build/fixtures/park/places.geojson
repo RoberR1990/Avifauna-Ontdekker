@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zone-a",
+        "kind": "zone",
+        "name_nl": "Zone A",
+        "source": "manual"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.64,
+              52.13
+            ],
+            [
+              4.65,
+              52.13
+            ],
+            [
+              4.65,
+              52.14
+            ],
+            [
+              4.64,
+              52.13
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "verblijf-pinguins",
+        "kind": "enclosure",
+        "name_nl": "Pinguïns",
+        "zone_id": "zone-a",
+        "source": "manual"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.645,
+          52.135
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "park": {
+    "id": "testpark",
+    "app_name": "Testpark Gids",
+    "park_name": "Testpark",
+    "languages": [
+      "nl",
+      "en"
+    ],
+    "default_language": "nl"
+  },
+  "lang": "nl",
+  "generated": "2026-10-17T10:00:00Z",
+  "species": [
+    {
+      "slug": "spheniscus-humboldti",
+      "scientific_name": "Spheniscus humboldti",
+      "name": "Humboldtpinguïn",
+      "name_alt": "Humboldt penguin",
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": 4500,
+      "lifespan_y": 20,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/spheniscus-humboldti.webp",
+        "attribution_index": 0
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/spheniscus-humboldti.opus",
+          "attribution_index": 1
+        }
+      ],
+      "links": {
+        "wikipedia": "https://nl.wikipedia.org/wiki/Humboldtpinguïn",
+        "xeno_canto": null,
+        "wikidata": "https://www.wikidata.org/wiki/Q224151"
+      }
+    },
+    {
+      "slug": "struthio-camelus",
+      "scientific_name": "Struthio camelus",
+      "name": "Struisvogel",
+      "name_alt": null,
+      "order": "Struthioniformes",
+      "family": "Struthionidae",
+      "iucn": "LC",
+      "wingspan_cm": 200,
+      "mass_g": 110000,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/struthio-camelus.webp",
+        "attribution_index": 3
+      },
+      "audio": [
+        {
+          "file": "media/audio/struthio-camelus.opus",
+          "attribution_index": 2
+        }
+      ],
+      "links": {
+        "wikipedia": null,
+        "xeno_canto": null,
+        "wikidata": null
+      }
+    }
+  ]
+}

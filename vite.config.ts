@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { parkData } from './scripts/park-build/plugin.ts'
 
 const root = fileURLToPath(new URL('.', import.meta.url))
 
@@ -13,6 +14,7 @@ export default defineConfig(({ mode }) => {
   const parkDir = `${root}parks/${env.VITE_PARK || 'avifauna'}`
   const park = JSON.parse(readFileSync(`${parkDir}/park.json`, 'utf8')) as {
     app_name: string
+    languages: ('nl' | 'en')[]
     default_language: string
     theme: { primary: string; background: string }
   }
@@ -22,16 +24,38 @@ export default defineConfig(({ mode }) => {
     resolve: { alias: { '@park': parkDir } },
     plugins: [
       react(),
+      parkData({ parkDir, languages: park.languages }),
       VitePWA({
         registerType: 'autoUpdate',
         injectRegister: false, // we registreren zelf in src/main.tsx
         includeAssets: ['icon.svg', 'robots.txt'],
         workbox: {
-          globPatterns: ['**/*.{js,css,html,svg,png,webp,json,woff2}'],
+          // Kern (FASE-1 §2): shell, lettertypen, iconen, bundels, thumbs, kaart-SVG.
+          // Grote foto's en audio gaan NIET in de precache maar in runtime-cache "park-media".
+          globPatterns: [
+            '**/*.{js,css,html,woff2,ico,png}',
+            'icon.svg',
+            'park/data.*.json',
+            'park/media/photos/*-thumb.webp',
+            'park/map/*.svg',
+          ],
+          maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
           navigateFallback: `${base}index.html`,
           cleanupOutdatedCaches: true,
           clientsClaim: true,
           skipWaiting: true,
+          runtimeCaching: [
+            {
+              urlPattern: ({ url }: { url: URL }) => url.pathname.startsWith(`${base}park/media/`),
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'park-media',
+                expiration: { maxEntries: 2000 },
+                cacheableResponse: { statuses: [0, 200] },
+                rangeRequests: true,
+              },
+            },
+          ],
         },
         manifest: {
           name: park.app_name,

@@ -1,0 +1,5 @@
+scientific_name,slug,name_nl,zone_id,place_id,last_seen,wikidata_qid,status,notes,park_url
+Spheniscus humboldti,spheniscus-humboldti,Humboldtpinguïn,zone-a,verblijf-pinguins,2026-10-01,Q224151,confirmed,,https://example.org/pinguin
+Struthio camelus,struthio-camelus,Struisvogel,zone-a,,,Q5,draft,,
+Aptenodytes forsteri,aptenodytes-forsteri,Keizerspinguïn,,,,,absent,,
+Casuarius casuarius,casuarius-casuarius,,,,,,draft,,

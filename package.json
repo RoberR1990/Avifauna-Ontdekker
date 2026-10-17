@@ -12,9 +12,15 @@
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "validate:park": "tsx scripts/validate-park.ts"
+    "validate:park": "tsx scripts/validate-park.ts",
+    "build:park": "tsx scripts/park-build/cli.ts",
+    "check:core": "tsx scripts/check-core-size.ts"
   },
   "dependencies": {
+    "@fontsource-variable/fredoka": "^5.3.0",
+    "@fontsource-variable/josefin-sans": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "@fontsource/abril-fatface": "^5.3.0",
     "idb-keyval": "^6.3.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

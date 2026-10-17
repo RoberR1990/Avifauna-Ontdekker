@@ -1,0 +1,22 @@
+slug: struthio-camelus
+reviewed: true
+is_bird: true
+length_cm: [180, 200]
+height_cm: [210, 275]
+mass_g: [100000, 130000]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: null
+incubation_days: null
+continents: [africa]
+range: null
+range_center: null
+habitat: null
+diet: null
+colors: []
+iucn_trend: stable
+threats: null
+wow: null
+sources:
+  - { title: Test, url: "https://example.org/" }

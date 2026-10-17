@@ -1,0 +1,54 @@
+[
+  {
+    "file": "media/photos/spheniscus-humboldti.webp",
+    "slug": "spheniscus-humboldti",
+    "kind": "photo",
+    "source": "wikimedia-commons",
+    "source_url": "https://example.org/spheniscus-humboldti",
+    "creator": "A. Maker",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "title": "Penguin",
+    "retrieved": "2026-10-17",
+    "in_repo": true
+  },
+  {
+    "file": "build-cache/audio/spheniscus-humboldti.opus",
+    "slug": "spheniscus-humboldti",
+    "kind": "audio",
+    "source": "xeno-canto",
+    "source_url": "https://example.org/spheniscus-humboldti",
+    "creator": "B. Maker",
+    "license": "CC-BY-NC-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "title": "Call",
+    "retrieved": "2026-10-17",
+    "modified": "trimmed to 8 s",
+    "in_repo": false
+  },
+  {
+    "file": "media/audio/struthio-camelus.opus",
+    "slug": "struthio-camelus",
+    "kind": "audio",
+    "source": "own",
+    "source_url": "https://example.org/struthio-camelus",
+    "creator": "Test",
+    "license": "CC0-1.0",
+    "title": "Boom",
+    "retrieved": "2026-10-17",
+    "in_repo": true
+  },
+  {
+    "file": "media/photos/struthio-camelus.webp",
+    "slug": "struthio-camelus",
+    "kind": "photo",
+    "source": "wikimedia-commons",
+    "source_url": "https://example.org/struthio-camelus",
+    "creator": "C. Maker",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "title": "Ostrich",
+    "retrieved": "2026-10-17",
+    "in_repo": true
+  }
+]

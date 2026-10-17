@@ -37,3 +37,4 @@ Thumbs.db
 
 # Vite/PWA
 *.local
+dist-park/

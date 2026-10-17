@@ -1,0 +1,41 @@
+{
+  "park": {
+    "id": "testpark",
+    "app_name": "Testpark Gids",
+    "park_name": "Testpark",
+    "languages": [
+      "nl",
+      "en"
+    ],
+    "default_language": "nl"
+  },
+  "lang": "en",
+  "generated": "2026-10-17T10:00:00Z",
+  "species": [
+    {
+      "slug": "spheniscus-humboldti",
+      "scientific_name": "Spheniscus humboldti",
+      "name": "Humboldt penguin",
+      "name_alt": "Humboldtpinguïn",
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": 4500,
+      "lifespan_y": 20,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/spheniscus-humboldti.webp",
+        "attribution_index": 0
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://nl.wikipedia.org/wiki/Humboldtpinguïn",
+        "xeno_canto": null,
+        "wikidata": "https://www.wikidata.org/wiki/Q224151"
+      }
+    }
+  ]
+}

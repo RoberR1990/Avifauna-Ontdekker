@@ -1,0 +1,22 @@
+slug: spheniscus-humboldti
+reviewed: false
+is_bird: true
+length_cm: [56, 70]
+height_cm: null
+mass_g: [3600, 5900]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: null
+clutch: null
+incubation_days: null
+continents: [south-america]
+range: null
+range_center: null
+habitat: null
+diet: { nl: "Vis" }
+colors: []
+iucn_trend: stable
+threats: null
+wow: null
+sources:
+  - { title: Test, url: "https://example.org/" }

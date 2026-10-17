@@ -1,0 +1,35 @@
+{
+  "id": "testpark",
+  "app_name": "Testpark Gids",
+  "park_name": "Testpark",
+  "languages": [
+    "nl",
+    "en"
+  ],
+  "default_language": "nl",
+  "disclaimer_bar": {
+    "nl": "Onofficieel",
+    "en": "Unofficial"
+  },
+  "footer": {
+    "nl": "Onofficiële gids",
+    "en": "Unofficial guide"
+  },
+  "about": {
+    "builder": "Test",
+    "nl": "Test",
+    "en": "Test",
+    "source_code_url": null,
+    "personal_site_url": null
+  },
+  "links": {
+    "official_site": "https://example.org/"
+  },
+  "theme": {
+    "primary": "#E07A2F",
+    "background": "#FFF8EE",
+    "text": "#2B2118"
+  },
+  "map_georef": "map/georef.json",
+  "noindex": true
+}
