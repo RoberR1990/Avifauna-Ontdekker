@@ -1,0 +1,25 @@
+slug: buceros-bicornis
+reviewed: false
+is_bird: true
+length_cm: [95, 130]
+height_cm: null
+mass_g: [2000, 4000]
+wingspan_cm: [151, 178]
+lifespan_wild_y: [35, 40]
+lifespan_captivity_y: [50, 50]
+clutch: { nl: "1 tot 2 eieren", en: "1 to 2 eggs" }
+incubation_days: [38, 40]
+continents: [asia]
+range: { nl: "India, Nepal, Bhutan, Zuidoost-Azië en Sumatra", en: "India, Nepal, Bhutan, Southeast Asia and Sumatra" }
+range_center: { lat: 18, lon: 95 }
+habitat: { nl: "Oude, hoge regenwouden, vooral in heuvelland", en: "Tall old-growth evergreen forest, mostly in hilly country" }
+diet: { nl: "Vooral vruchten (zoals vijgen); ook insecten, reptielen en kleine zoogdieren", en: "Mostly fruit (such as figs); also insects, reptiles and small mammals" }
+colors: [black, white, yellow]
+iucn_trend: decreasing
+threats: { nl: "Kap van oud bos (nestbomen), jacht op vlees, veren en helm", en: "Loss of old trees for nesting, hunting for meat, feathers and casque" }
+wow: { nl: "Het vrouwtje broedt ingemetseld in een boomholte; het mannetje voert haar door een smalle spleet.", en: "The female nests walled into a tree hollow; the male feeds her through a narrow slit." }
+sources:
+  - title: Wikipedia, Great hornbill
+    url: https://en.wikipedia.org/wiki/Great_hornbill
+  - title: Animal Diversity Web, Buceros bicornis
+    url: https://animaldiversity.org/accounts/Buceros_bicornis/

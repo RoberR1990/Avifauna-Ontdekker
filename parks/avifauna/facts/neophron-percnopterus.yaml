@@ -1,0 +1,25 @@
+slug: neophron-percnopterus
+reviewed: false
+is_bird: true
+length_cm: [47, 65]
+height_cm: null
+mass_g: [1600, 2850]
+wingspan_cm: null
+lifespan_wild_y: null
+lifespan_captivity_y: [51, 51]
+clutch: { nl: "Meestal 2 eieren", en: "Usually 2 eggs" }
+incubation_days: [42, 42]
+continents: [europe, africa, asia]
+range: { nl: "Van het Iberisch schiereiland en Noord-Afrika via West-Azië tot India", en: "From the Iberian Peninsula and North Africa through West Asia to India" }
+range_center: { lat: 30, lon: 20 }
+habitat: { nl: "Droge vlakten en lagere heuvels, in de Himalaya tot 2000 m", en: "Dry plains and lower hills, up to 2,000 m in the Himalayas" }
+diet: { nl: "Vooral aas en mest; ook kleine zoogdieren, vogels, reptielen en eieren", en: "Mostly carrion and dung; also small mammals, birds, reptiles and eggs" }
+colors: [white, black, yellow]
+iucn_trend: decreasing
+threats: { nl: "Vergiftiging (o.a. diclofenac), aanvaringen met hoogspanningslijnen, jacht, verlies van leefgebied", en: "Poisoning (incl. diclofenac), power-line collisions, hunting, habitat loss" }
+wow: { nl: "Hij gooit stenen op grote eieren om ze te kraken.", en: "He drops stones onto large eggs to crack them open." }
+sources:
+  - title: Wikipedia, Egyptian vulture
+    url: https://en.wikipedia.org/wiki/Egyptian_vulture
+  - title: Animal Diversity Web, Neophron percnopterus
+    url: https://animaldiversity.org/accounts/Neophron_percnopterus/
