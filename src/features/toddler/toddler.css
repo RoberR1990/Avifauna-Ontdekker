@@ -1,0 +1,227 @@
+/* Peuterstand: stickerboek-stijl, rustig. Eigen klassen met prefix td-. */
+.toddler {
+  --td-tap: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.td-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.875rem;
+}
+
+.td-tile {
+  display: block;
+  width: 100%;
+  min-height: var(--td-tap);
+  padding: 0.5rem 0.5rem 0.625rem;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 5px 0 var(--ink);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.td-grid li:nth-child(odd) .td-tile {
+  transform: rotate(-1deg);
+}
+
+.td-tile:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.td-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--lilac);
+}
+
+.td-tile-name {
+  display: block;
+  margin-top: 0.375rem;
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.td-empty {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Klaar-knop voor de ouder */
+.td-done {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.td-done-btn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 4rem;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--lilac);
+  color: var(--ink);
+  font-family: var(--head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 5px 0 var(--ink);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  -webkit-touch-callout: none;
+}
+
+.td-done-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--teal);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.td-done-btn[data-holding] .td-done-fill {
+  transform: scaleX(1);
+  transition: transform 1s linear;
+}
+
+.td-done-btn[data-holding] {
+  color: #fff;
+}
+
+.td-done-label {
+  position: relative;
+}
+
+.td-parent {
+  margin: 0.5rem 0 0;
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+/* Volledig scherm detail; disclaimerbalk (z-index 100) blijft erboven */
+.td-detail {
+  position: fixed;
+  inset: var(--bar-height) 0 0 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  background: var(--page);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+.td-photo {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  max-width: var(--col);
+  padding: 0.5rem;
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 6px 0 var(--ink);
+  transform: rotate(-0.6deg);
+}
+
+.td-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.td-name {
+  margin: 0;
+  font-family: var(--head);
+  font-size: clamp(2rem, 11vw, 3rem);
+  line-height: 1.05;
+  text-align: center;
+}
+
+.td-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.td-round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 5px 0 var(--ink);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.td-round--main {
+  background: var(--sun);
+}
+
+.td-round:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.td-round svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.td-attr {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .td-grid li:nth-child(odd) .td-tile,
+  .td-photo {
+    transform: none;
+  }
+  .td-tile:active,
+  .td-round:active {
+    transform: none;
+  }
+  .td-done-btn[data-holding] .td-done-fill {
+    transition: none;
+  }
+}
