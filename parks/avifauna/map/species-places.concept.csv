@@ -1,0 +1,22 @@
+scientific_name,slug,place_id,zone_id,basis
+Neophron percnopterus,neophron-percnopterus,,,
+Buceros bicornis,buceros-bicornis,,,
+Bubo bubo,bubo-bubo,,,
+Casuarius casuarius,casuarius-casuarius,,zone-parkrestaurant,"osm-naam, meerdere verblijven (place_id leeg): Helmkasuaris [verblijf-helmkasuaris] | Helmkasuaris [verblijf-helmkasuaris-2]"
+Spheniscus humboldti,spheniscus-humboldti,verblijf-humboldtpinguin,zone-grote-vijver,osm-naam: Humboldtpinguïn
+Saguinus imperator,saguinus-imperator,verblijf-rode-brulaap-witgezichtsaki,zone-noordpad,"osm-naam: Rode brulaap, witgezichtsaki, rode titi, keizertamarin"
+Pelecanus crispus,pelecanus-crispus,verblijf-grote-vijver-kroeskoppelikaan,zone-zuidwest,osm-naam: Grote Vijver - Kroeskoppelikaan
+Balearica regulorum,balearica-regulorum,verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel,zone-ingang,"osm-naam: Noord-Afrikaanse struisvogel, kroonkraanvogel, helmparelhoen"
+Trichoglossus moluccanus,trichoglossus-moluccanus,,,
+Myrmecophaga tridactyla,myrmecophaga-tridactyla,,zone-noordpad,"osm-naam, meerdere verblijven (place_id leeg): Reuzenmiereneter, zwartmaskeribis, witwangfluiteend [verblijf-reuzenmiereneter-zwartmaskeribis] | Vicuña, reuzenmiereneter, Darwin's nandoe, kuihoenderkoet, zwarthalszwaan, peposaka-eend [verblijf-vicuna-reuzenmiereneter]"
+Lemur catta,lemur-catta,verblijf-ringstaartmaki-rode-vari,zone-zuidwest,"osm-naam: Ringstaartmaki, rode vari, roodbuikmaki, zwarte kroonkraanvogel, zwarte ooievaar, kuifparelhoender, gierparelhoender"
+Alouatta seniculus,alouatta-seniculus,verblijf-rode-brulaap-witgezichtsaki,zone-noordpad,"osm-naam: Rode brulaap, witgezichtsaki, rode titi, keizertamarin"
+Phoenicopterus ruber,phoenicopterus-ruber,,,
+Ailurus fulgens,ailurus-fulgens,verblijf-rode-panda-mantsjoerijse-kraanvogel,zone-parkrestaurant,"osm-naam: Rode panda, Mantsjoerijse kraanvogel"
+Varecia rubra,varecia-rubra,verblijf-ringstaartmaki-rode-vari,zone-zuidwest,"osm-naam: Ringstaartmaki, rode vari, roodbuikmaki, zwarte kroonkraanvogel, zwarte ooievaar, kuifparelhoender, gierparelhoender"
+Gyps rueppelli,gyps-rueppelli,,,
+Ara militaris,ara-militaris,,,
+Haliaeetus pelagicus,haliaeetus-pelagicus,verblijf-stellers-zeearend-zwarte-wouw,zone-zuidoost,"osm-naam: Stellers zeearend, zwarte wouw, raaf"
+Struthio camelus,struthio-camelus,verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel,zone-ingang,"osm-naam: Noord-Afrikaanse struisvogel, kroonkraanvogel, helmparelhoen"
+Podocnemis unifilis,podocnemis-unifilis,,,
+Goura victoria,goura-victoria,,,

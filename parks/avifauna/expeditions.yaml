@@ -15,7 +15,7 @@ expeditions:
       icon: rainbow
     stops:
       - id: stop-rode-vogel
-        zone_id: zone-voorbeeld
+        zone_id: zone-grote-vijver
         species: phoenicopterus-ruber
         task:
           type: find
@@ -26,7 +26,7 @@ expeditions:
             nl: Kijk bij het water.
             en: Look near the water.
       - id: stop-tel-pinguins
-        zone_id: zone-voorbeeld
+        zone_id: zone-grote-vijver
         species: spheniscus-humboldti
         task:
           type: count

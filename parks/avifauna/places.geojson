@@ -1,19 +1,1476 @@
 {
-  "type": "FeatureCollection",
-  "name": "avifauna-places-voorbeeld",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": { "id": "zone-voorbeeld", "kind": "zone", "name_nl": "Voorbeeldzone (concept)", "source": "manual" },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[[4.6486, 52.1391], [4.6494, 52.1391], [4.6494, 52.1396], [4.6486, 52.1396], [4.6486, 52.1391]]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "id": "voorziening-voorbeeld-toilet", "kind": "facility", "name_nl": "Toilet (voorbeeld)", "zone_id": "zone-voorbeeld", "facility_type": "toilet", "source": "manual" },
-      "geometry": { "type": "Point", "coordinates": [4.649, 52.1393] }
-    }
-  ]
+ "type": "FeatureCollection",
+ "name": "avifauna-places-concept-osm",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-tropenhal",
+    "kind": "zone",
+    "name_nl": "Tropenhal (concept)",
+    "source": "manual",
+    "indoor": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.650003,
+       52.140898
+      ],
+      [
+       4.649984,
+       52.140914
+      ],
+      [
+       4.649872,
+       52.141097
+      ],
+      [
+       4.649873,
+       52.141117
+      ],
+      [
+       4.649897,
+       52.141132
+      ],
+      [
+       4.650228,
+       52.141209
+      ],
+      [
+       4.6505,
+       52.140841
+      ],
+      [
+       4.650884,
+       52.14022
+      ],
+      [
+       4.650886,
+       52.140204
+      ],
+      [
+       4.65087,
+       52.140189
+      ],
+      [
+       4.650732,
+       52.140157
+      ],
+      [
+       4.650704,
+       52.140162
+      ],
+      [
+       4.650688,
+       52.140175
+      ],
+      [
+       4.650646,
+       52.140167
+      ],
+      [
+       4.650613,
+       52.140178
+      ],
+      [
+       4.650206,
+       52.140831
+      ],
+      [
+       4.650136,
+       52.140817
+      ],
+      [
+       4.650116,
+       52.14082
+      ],
+      [
+       4.650099,
+       52.140831
+      ],
+      [
+       4.650072,
+       52.140826
+      ],
+      [
+       4.650047,
+       52.14083
+      ],
+      [
+       4.650028,
+       52.140843
+      ],
+      [
+       4.650003,
+       52.140898
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-parkrestaurant",
+    "kind": "zone",
+    "name_nl": "Rond het Parkrestaurant (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.649306,
+       52.140038
+      ],
+      [
+       4.649358,
+       52.140036
+      ],
+      [
+       4.649505,
+       52.140016
+      ],
+      [
+       4.649644,
+       52.139959
+      ],
+      [
+       4.649692,
+       52.139927
+      ],
+      [
+       4.65001,
+       52.139404
+      ],
+      [
+       4.65002,
+       52.139363
+      ],
+      [
+       4.649997,
+       52.139313
+      ],
+      [
+       4.649906,
+       52.139247
+      ],
+      [
+       4.649411,
+       52.138984
+      ],
+      [
+       4.649366,
+       52.138969
+      ],
+      [
+       4.649316,
+       52.138964
+      ],
+      [
+       4.64925,
+       52.13897
+      ],
+      [
+       4.64918,
+       52.138998
+      ],
+      [
+       4.648284,
+       52.139595
+      ],
+      [
+       4.648256,
+       52.139629
+      ],
+      [
+       4.648171,
+       52.139795
+      ],
+      [
+       4.648163,
+       52.139827
+      ],
+      [
+       4.648171,
+       52.139859
+      ],
+      [
+       4.648205,
+       52.139897
+      ],
+      [
+       4.648244,
+       52.139918
+      ],
+      [
+       4.648292,
+       52.139931
+      ],
+      [
+       4.649306,
+       52.140038
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-grote-vijver",
+    "kind": "zone",
+    "name_nl": "Rond de Grote Vijver (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.650319,
+       52.140199
+      ],
+      [
+       4.65039,
+       52.140175
+      ],
+      [
+       4.650442,
+       52.140149
+      ],
+      [
+       4.651,
+       52.139707
+      ],
+      [
+       4.651045,
+       52.139652
+      ],
+      [
+       4.651054,
+       52.139591
+      ],
+      [
+       4.651035,
+       52.139546
+      ],
+      [
+       4.651011,
+       52.139518
+      ],
+      [
+       4.650961,
+       52.139484
+      ],
+      [
+       4.650896,
+       52.13946
+      ],
+      [
+       4.650247,
+       52.13933
+      ],
+      [
+       4.650144,
+       52.139322
+      ],
+      [
+       4.650021,
+       52.139343
+      ],
+      [
+       4.650025,
+       52.139373
+      ],
+      [
+       4.650014,
+       52.139404
+      ],
+      [
+       4.649712,
+       52.139909
+      ],
+      [
+       4.649674,
+       52.139947
+      ],
+      [
+       4.64959,
+       52.139985
+      ],
+      [
+       4.649728,
+       52.140081
+      ],
+      [
+       4.649839,
+       52.140127
+      ],
+      [
+       4.65016,
+       52.140205
+      ],
+      [
+       4.65024,
+       52.14021
+      ],
+      [
+       4.650319,
+       52.140199
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-gierenvallei",
+    "kind": "zone",
+    "name_nl": "Gierenvallei (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.650885,
+       52.139134
+      ],
+      [
+       4.650864,
+       52.139186
+      ],
+      [
+       4.650803,
+       52.139437
+      ],
+      [
+       4.650921,
+       52.139464
+      ],
+      [
+       4.650983,
+       52.139493
+      ],
+      [
+       4.651039,
+       52.139545
+      ],
+      [
+       4.65106,
+       52.139606
+      ],
+      [
+       4.65105,
+       52.139653
+      ],
+      [
+       4.651031,
+       52.139682
+      ],
+      [
+       4.650892,
+       52.139797
+      ],
+      [
+       4.65098,
+       52.13984
+      ],
+      [
+       4.651057,
+       52.139862
+      ],
+      [
+       4.651141,
+       52.139875
+      ],
+      [
+       4.651224,
+       52.139878
+      ],
+      [
+       4.651377,
+       52.139675
+      ],
+      [
+       4.651697,
+       52.139416
+      ],
+      [
+       4.651738,
+       52.139239
+      ],
+      [
+       4.651726,
+       52.13916
+      ],
+      [
+       4.651676,
+       52.139087
+      ],
+      [
+       4.651595,
+       52.139026
+      ],
+      [
+       4.651551,
+       52.139005
+      ],
+      [
+       4.651337,
+       52.139017
+      ],
+      [
+       4.651321,
+       52.138956
+      ],
+      [
+       4.651235,
+       52.138958
+      ],
+      [
+       4.651151,
+       52.138971
+      ],
+      [
+       4.651038,
+       52.139009
+      ],
+      [
+       4.650946,
+       52.139064
+      ],
+      [
+       4.650885,
+       52.139134
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-noordpad",
+    "kind": "zone",
+    "name_nl": "Noordelijk pad: apen en grazers (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.649968,
+       52.140504
+      ],
+      [
+       4.650412,
+       52.14049
+      ],
+      [
+       4.650594,
+       52.140197
+      ],
+      [
+       4.650444,
+       52.140152
+      ],
+      [
+       4.65037,
+       52.140187
+      ],
+      [
+       4.650295,
+       52.140207
+      ],
+      [
+       4.650213,
+       52.140212
+      ],
+      [
+       4.650133,
+       52.140202
+      ],
+      [
+       4.649965,
+       52.140164
+      ],
+      [
+       4.649794,
+       52.140115
+      ],
+      [
+       4.649724,
+       52.140083
+      ],
+      [
+       4.649587,
+       52.139987
+      ],
+      [
+       4.649489,
+       52.140022
+      ],
+      [
+       4.64934,
+       52.14004
+      ],
+      [
+       4.649286,
+       52.140039
+      ],
+      [
+       4.649081,
+       52.140018
+      ],
+      [
+       4.648962,
+       52.140048
+      ],
+      [
+       4.648889,
+       52.140093
+      ],
+      [
+       4.648851,
+       52.140151
+      ],
+      [
+       4.648851,
+       52.140214
+      ],
+      [
+       4.648891,
+       52.140273
+      ],
+      [
+       4.648965,
+       52.140317
+      ],
+      [
+       4.649035,
+       52.140337
+      ],
+      [
+       4.649968,
+       52.140504
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-ingang",
+    "kind": "zone",
+    "name_nl": "Ingangsgebied (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.647952,
+       52.140343
+      ],
+      [
+       4.647969,
+       52.141063
+      ],
+      [
+       4.648633,
+       52.141204
+      ],
+      [
+       4.648714,
+       52.141065
+      ],
+      [
+       4.648771,
+       52.141077
+      ],
+      [
+       4.648779,
+       52.141019
+      ],
+      [
+       4.64837,
+       52.140298
+      ],
+      [
+       4.648335,
+       52.140265
+      ],
+      [
+       4.648268,
+       52.140233
+      ],
+      [
+       4.648185,
+       52.14022
+      ],
+      [
+       4.648122,
+       52.140223
+      ],
+      [
+       4.648062,
+       52.140237
+      ],
+      [
+       4.648012,
+       52.140261
+      ],
+      [
+       4.647975,
+       52.140293
+      ],
+      [
+       4.647952,
+       52.140343
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-west",
+    "kind": "zone",
+    "name_nl": "Westelijk speel- en horecagebied (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.647779,
+       52.140574
+      ],
+      [
+       4.647948,
+       52.140427
+      ],
+      [
+       4.64795,
+       52.14033
+      ],
+      [
+       4.647982,
+       52.14028
+      ],
+      [
+       4.648009,
+       52.140259
+      ],
+      [
+       4.64806,
+       52.140235
+      ],
+      [
+       4.6481,
+       52.140224
+      ],
+      [
+       4.648162,
+       52.140217
+      ],
+      [
+       4.648168,
+       52.140209
+      ],
+      [
+       4.648333,
+       52.139939
+      ],
+      [
+       4.648258,
+       52.139926
+      ],
+      [
+       4.648201,
+       52.139898
+      ],
+      [
+       4.648163,
+       52.139849
+      ],
+      [
+       4.648163,
+       52.139805
+      ],
+      [
+       4.648264,
+       52.13961
+      ],
+      [
+       4.648466,
+       52.13947
+      ],
+      [
+       4.648418,
+       52.139447
+      ],
+      [
+       4.648384,
+       52.139509
+      ],
+      [
+       4.646866,
+       52.139183
+      ],
+      [
+       4.646825,
+       52.139213
+      ],
+      [
+       4.646371,
+       52.140015
+      ],
+      [
+       4.646394,
+       52.140115
+      ],
+      [
+       4.646411,
+       52.140152
+      ],
+      [
+       4.646467,
+       52.140214
+      ],
+      [
+       4.647625,
+       52.140478
+      ],
+      [
+       4.647559,
+       52.140607
+      ],
+      [
+       4.647608,
+       52.140613
+      ],
+      [
+       4.647671,
+       52.14061
+      ],
+      [
+       4.647729,
+       52.140597
+      ],
+      [
+       4.647779,
+       52.140574
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-zuidwest",
+    "kind": "zone",
+    "name_nl": "Zuidwestelijk deel: pelikanen en maki's (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.64925,
+       52.137723
+      ],
+      [
+       4.649192,
+       52.137697
+      ],
+      [
+       4.648215,
+       52.137351
+      ],
+      [
+       4.64815,
+       52.137333
+      ],
+      [
+       4.64808,
+       52.137323
+      ],
+      [
+       4.648008,
+       52.137322
+      ],
+      [
+       4.647937,
+       52.137329
+      ],
+      [
+       4.647836,
+       52.137356
+      ],
+      [
+       4.647685,
+       52.137618
+      ],
+      [
+       4.647742,
+       52.137683
+      ],
+      [
+       4.647791,
+       52.137715
+      ],
+      [
+       4.647849,
+       52.137741
+      ],
+      [
+       4.648825,
+       52.138087
+      ],
+      [
+       4.648891,
+       52.138105
+      ],
+      [
+       4.648961,
+       52.138115
+      ],
+      [
+       4.649068,
+       52.138114
+      ],
+      [
+       4.649138,
+       52.138102
+      ],
+      [
+       4.649202,
+       52.138083
+      ],
+      [
+       4.649284,
+       52.13804
+      ],
+      [
+       4.649342,
+       52.137985
+      ],
+      [
+       4.649365,
+       52.137943
+      ],
+      [
+       4.649375,
+       52.137899
+      ],
+      [
+       4.649362,
+       52.137834
+      ],
+      [
+       4.64932,
+       52.137773
+      ],
+      [
+       4.64925,
+       52.137723
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "zone-zuidoost",
+    "kind": "zone",
+    "name_nl": "Zuidoostelijk deel: Emoe, zeearend en Lori landing (concept)",
+    "source": "manual"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.649845,
+       52.139211
+      ],
+      [
+       4.649981,
+       52.139294
+      ],
+      [
+       4.65002,
+       52.13934
+      ],
+      [
+       4.650117,
+       52.139322
+      ],
+      [
+       4.650223,
+       52.139323
+      ],
+      [
+       4.650799,
+       52.139437
+      ],
+      [
+       4.65086,
+       52.139185
+      ],
+      [
+       4.650881,
+       52.139133
+      ],
+      [
+       4.650906,
+       52.139099
+      ],
+      [
+       4.650645,
+       52.13821
+      ],
+      [
+       4.650609,
+       52.138161
+      ],
+      [
+       4.650528,
+       52.138111
+      ],
+      [
+       4.650422,
+       52.138083
+      ],
+      [
+       4.650306,
+       52.138083
+      ],
+      [
+       4.6502,
+       52.13811
+      ],
+      [
+       4.650118,
+       52.13816
+      ],
+      [
+       4.649774,
+       52.138674
+      ],
+      [
+       4.649754,
+       52.138727
+      ],
+      [
+       4.649845,
+       52.139211
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-helmkasuaris",
+    "kind": "enclosure",
+    "name_nl": "Helmkasuaris",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648424,
+     52.139661
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-helmkasuaris-2",
+    "kind": "enclosure",
+    "name_nl": "Helmkasuaris",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648339,
+     52.139827
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-ringstaartmaki-rode-vari",
+    "kind": "enclosure",
+    "name_nl": "Ringstaartmaki, rode vari, roodbuikmaki, zwarte kroonkraanvogel, zwarte ooievaar, kuifparelhoender, gierparelhoender",
+    "source": "osm",
+    "zone_id": "zone-zuidwest"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648032,
+     52.137546
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-grote-vijver-kroeskoppelikaan",
+    "kind": "enclosure",
+    "name_nl": "Grote Vijver - Kroeskoppelikaan",
+    "source": "osm",
+    "zone_id": "zone-zuidwest"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649008,
+     52.137892
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-emoe-saruskraanvogel",
+    "kind": "enclosure",
+    "name_nl": "Emoe, saruskraanvogel, zwarte zwaan, ekstergans",
+    "source": "osm",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650177,
+     52.138954
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-noord-afrikaanse-struisvogel-kroonkraanvogel",
+    "kind": "enclosure",
+    "name_nl": "Noord-Afrikaanse struisvogel, kroonkraanvogel, helmparelhoen",
+    "source": "osm",
+    "zone_id": "zone-ingang"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648171,
+     52.140354
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-stellers-zeearend-zwarte-wouw",
+    "kind": "enclosure",
+    "name_nl": "Stellers zeearend, zwarte wouw, raaf",
+    "source": "osm",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650363,
+     52.138259
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-humboldtpinguin",
+    "kind": "enclosure",
+    "name_nl": "Humboldtpinguïn",
+    "source": "osm",
+    "zone_id": "zone-grote-vijver"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650792,
+     52.139608
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-gierenvallei-umvikeli",
+    "kind": "enclosure",
+    "name_nl": "Gierenvallei - Umvikeli",
+    "source": "osm",
+    "zone_id": "zone-gierenvallei"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.651299,
+     52.139225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-stokstaartje",
+    "kind": "enclosure",
+    "name_nl": "Stokstaartje",
+    "source": "osm",
+    "zone_id": "zone-gierenvallei"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.651206,
+     52.139609
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-rode-panda-mantsjoerijse-kraanvogel",
+    "kind": "enclosure",
+    "name_nl": "Rode panda, Mantsjoerijse kraanvogel",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649309,
+     52.139072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-cuba-voliere",
+    "kind": "enclosure",
+    "name_nl": "Cuba volière",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649199,
+     52.139554
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-kaneeltaling-zilvertaling",
+    "kind": "enclosure",
+    "name_nl": "Kaneeltaling, zilvertaling",
+    "source": "osm",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649501,
+     52.140107
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-rode-brulaap-witgezichtsaki",
+    "kind": "enclosure",
+    "name_nl": "Rode brulaap, witgezichtsaki, rode titi, keizertamarin",
+    "source": "osm",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.64911,
+     52.140182
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-reuzenmiereneter-zwartmaskeribis",
+    "kind": "enclosure",
+    "name_nl": "Reuzenmiereneter, zwartmaskeribis, witwangfluiteend",
+    "source": "osm",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650436,
+     52.140327
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-vicuna-reuzenmiereneter",
+    "kind": "enclosure",
+    "name_nl": "Vicuña, reuzenmiereneter, Darwin's nandoe, kuihoenderkoet, zwarthalszwaan, peposaka-eend",
+    "source": "osm",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649998,
+     52.140344
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "verblijf-mara",
+    "kind": "enclosure",
+    "name_nl": "Mara",
+    "source": "osm",
+    "zone_id": "zone-noordpad"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649888,
+     52.140176
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-entrance-1",
+    "kind": "facility",
+    "name_nl": "Hoofdingang",
+    "facility_type": "entrance",
+    "source": "osm",
+    "zone_id": "zone-ingang"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.64819,
+     52.141109
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-food-1",
+    "kind": "facility",
+    "name_nl": "Parkrestaurant",
+    "facility_type": "food",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant",
+    "indoor": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649543,
+     52.139598
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-food-2",
+    "kind": "facility",
+    "name_nl": "Lepelaar",
+    "facility_type": "food",
+    "source": "osm",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.646612,
+     52.140097
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-picnic-1",
+    "kind": "facility",
+    "name_nl": "Picknicktafel",
+    "facility_type": "picnic",
+    "source": "osm",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.648105,
+     52.139634
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-playground-1",
+    "kind": "facility",
+    "name_nl": "Speeltuin",
+    "facility_type": "playground",
+    "source": "osm",
+    "zone_id": "zone-west"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.647506,
+     52.139981
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-show-1",
+    "kind": "facility",
+    "name_nl": "Vogeldemonstratie (tribune)",
+    "facility_type": "show",
+    "source": "osm",
+    "zone_id": "zone-parkrestaurant"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.649758,
+     52.13968
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-toilet-1",
+    "kind": "facility",
+    "name_nl": "Toilet",
+    "facility_type": "toilet",
+    "source": "osm",
+    "zone_id": "zone-zuidoost"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650046,
+     52.138742
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "voorziening-toilet-2",
+    "kind": "facility",
+    "name_nl": "Toilet",
+    "facility_type": "toilet",
+    "source": "osm",
+    "zone_id": "zone-ingang"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.64819,
+     52.140939
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "anker-tropenhal-1",
+    "kind": "anchor",
+    "name_nl": "Ingang Tropenhal 1",
+    "zone_id": "zone-tropenhal",
+    "source": "osm"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650087,
+     52.140924
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "anker-tropenhal-2",
+    "kind": "anchor",
+    "name_nl": "Ingang Tropenhal 2",
+    "zone_id": "zone-tropenhal",
+    "source": "osm"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650089,
+     52.140805
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "anker-tropenhal-3",
+    "kind": "anchor",
+    "name_nl": "Ingang Tropenhal 3",
+    "zone_id": "zone-tropenhal",
+    "source": "osm"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.650696,
+     52.140206
+    ]
+   }
+  }
+ ]
 }
