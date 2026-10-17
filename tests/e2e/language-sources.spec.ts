@@ -4,6 +4,7 @@ import { BAR_EN, expectBar } from './helpers'
 test('taal EN: UI, soortnaam en tekst in het Engels', async ({ page }) => {
   await page.goto('/soort/spheniscus-humboldti')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Humboldtpinguïn')
+  await page.getByRole('button', { name: 'Taal en peuterstand' }).click()
   await page.locator('.lang-switch').getByRole('button', { name: 'EN' }).click()
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   await expectBar(page, BAR_EN)

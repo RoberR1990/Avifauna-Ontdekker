@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { ParkDataProvider } from '../data/ParkDataProvider'
 import { localized, useT } from '../i18n'
 import { park } from '../park'
@@ -24,7 +24,11 @@ export function Layout() {
   const settings = useSettings()
   const { lang, set } = settings
   const { pathname } = useLocation()
-  const navigate = useNavigate()
+  const menuRef = useRef<HTMLDivElement>(null)
+  // Open voor één route: na navigeren is het menu vanzelf dicht.
+  const [menuOpenAt, setMenuOpenAt] = useState<string | null>(null)
+  const menuOpen = menuOpenAt === pathname
+  const closeMenu = useCallback(() => setMenuOpenAt(null), [])
   const toddlerRoute = pathname === '/peuter'
   const languages = LANGS.filter((l) => (park.languages as string[]).includes(l.code))
 
@@ -32,6 +36,22 @@ export function Layout() {
   useEffect(() => {
     set({ toddler: toddlerRoute })
   }, [toddlerRoute, set])
+
+  // Menu sluiten bij tikken buiten het menu of Escape.
+  useEffect(() => {
+    const onDown = (e: PointerEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) closeMenu()
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMenu()
+    }
+    document.addEventListener('pointerdown', onDown)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('pointerdown', onDown)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [closeMenu])
 
   return (
     <div className="app" data-toddler={toddlerRoute || undefined}>
@@ -45,29 +65,42 @@ export function Layout() {
         <Link to="/" className="app-name" aria-label={`${park.app_name}, ${t('header.home')}`}>
           <span>{park.app_name}</span>
         </Link>
-        <div className="header-tools">
-          <div className="lang-switch" role="group" aria-label={t('header.lang')}>
-            {languages.map((l) => (
-              <button
-                key={l.code}
-                type="button"
-                lang={l.code}
-                aria-pressed={lang === l.code}
-                onClick={() => set({ lang: l.code })}
-              >
-                {l.label}
-              </button>
-            ))}
+        {!toddlerRoute && (
+          <div className="header-menu" ref={menuRef}>
+            <button
+              type="button"
+              className="header-menu__button"
+              aria-label={t('header.menu')}
+              aria-expanded={menuOpen}
+              aria-controls="header-menu-panel"
+              onClick={() => setMenuOpenAt(menuOpen ? null : pathname)}
+            >
+              <Icon d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20" />
+              <span lang={lang}>{lang.toUpperCase()}</span>
+            </button>
+            <div className="header-menu__panel" id="header-menu-panel" hidden={!menuOpen}>
+              <div className="lang-switch" role="group" aria-label={t('header.lang')}>
+                {languages.map((l) => (
+                  <button
+                    key={l.code}
+                    type="button"
+                    lang={l.code}
+                    aria-pressed={lang === l.code}
+                    onClick={() => {
+                      set({ lang: l.code })
+                      closeMenu()
+                    }}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
+              <Link to="/peuter" className="toddler-link" onClick={closeMenu}>
+                <span aria-hidden="true">🐣</span> {t('header.toddler')}
+              </Link>
+            </div>
           </div>
-          <button
-            type="button"
-            className={`toddler-toggle${toddlerRoute ? ' on' : ''}`}
-            aria-pressed={toddlerRoute}
-            onClick={() => navigate(toddlerRoute ? '/' : '/peuter')}
-          >
-            <span aria-hidden="true">🐣</span> {toddlerRoute ? t('header.toddler_off') : t('header.toddler')}
-          </button>
-        </div>
+        )}
       </header>
       <main id="main" className="content">
         <ParkDataProvider>

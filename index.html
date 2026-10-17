@@ -8,6 +8,18 @@
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%icon.svg" />
     <link rel="apple-touch-icon" href="%BASE_URL%icon-192.png" />
     <title>Avifauna Ontdekker</title>
+    <script>
+      // Parkbundel direct laten ophalen (parallel aan de JS), in de taal uit de instellingen.
+      try {
+        var l = (JSON.parse(localStorage.getItem('ao-settings') || '{}').lang || document.documentElement.lang).replace(/[^a-z]/g, '')
+        var p = document.createElement('link')
+        p.rel = 'preload'
+        p.as = 'fetch'
+        p.crossOrigin = 'anonymous'
+        p.href = '%BASE_URL%park/data.' + l + '.json'
+        document.head.appendChild(p)
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

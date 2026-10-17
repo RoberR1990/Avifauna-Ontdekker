@@ -6,7 +6,7 @@ import lighthouse from 'lighthouse'
 import { Launcher, launch } from 'chrome-launcher'
 import { chromium } from '@playwright/test'
 
-const PORT = 4174
+const PORT = Number(process.env.LH_PORT ?? 4174)
 const BASE = `http://localhost:${PORT}`
 const PAGES = ['/', '/atlas', '/soort/spheniscus-humboldti']
 const MIN_PERFORMANCE = 90

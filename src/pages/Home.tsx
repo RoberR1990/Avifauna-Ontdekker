@@ -27,11 +27,6 @@ export function Home() {
           <span className="tile__title">{t('home.tile.map')}</span>
           <span className="tile__sub">{t('home.tile.map.sub')}</span>
         </Link>
-        <Link to="/peuter" className="tile tile--sun">
-          <span className="tile__icon" aria-hidden="true">🐣</span>
-          <span className="tile__title">{t('home.tile.toddler')}</span>
-          <span className="tile__sub">{t('home.tile.toddler.sub')}</span>
-        </Link>
       </div>
 
       {bird && (
