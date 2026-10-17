@@ -16,7 +16,7 @@ expeditions:
     stops:
       - id: stop-rode-vogel
         zone_id: zone-voorbeeld
-        species: phoenicopterus-chilensis
+        species: phoenicopterus-ruber
         task:
           type: find
           prompt:
