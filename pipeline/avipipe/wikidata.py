@@ -103,7 +103,7 @@ def _search_fallback(http: Http, name: str, bronze: dict) -> dict | None:
     values = " ".join(f"wd:{c}" for c in cands)
     rows = run_sparql(
         http,
-        f"SELECT ?item ?name WHERE {{ VALUES ?item {{ {values} }} ?item wdt:P31 wd:Q16521 ; wdt:P225 ?name . }}",
+        f"SELECT ?item ?name WHERE {{ VALUES ?item {{ {values} }} ?item wdt:P225 ?name . }}",
     )
     by_q = {_qid(_val(r, "item")): _val(r, "name") for r in rows}
     for c in cands:

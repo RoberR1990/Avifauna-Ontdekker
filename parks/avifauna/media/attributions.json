@@ -756,6 +756,34 @@
     "modified": "resized to max 400 px wide, converted to WebP (q80)"
   },
   {
+    "slug": "platanus-hispanica",
+    "kind": "photo",
+    "source": "wikimedia-commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:London_Plane_Larousse_Extracted.png",
+    "creator": "Arbres d'ornement-2 - ornamental trees in colour - Public domain book illustration (visual explanation, informative drawing, plate) from Larousse du XXème siècle 1932.jpg https://www.flickr.com/photos/149521109@N03/31052984252//31196536225/",
+    "license": "CC0-1.0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "title": "London Plane Larousse Extracted.png",
+    "retrieved": "2026-10-17",
+    "in_repo": true,
+    "file": "media/photos/platanus-hispanica.webp",
+    "modified": "resized to max 1200 px wide, converted to WebP (q80)"
+  },
+  {
+    "slug": "platanus-hispanica",
+    "kind": "photo",
+    "source": "wikimedia-commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:London_Plane_Larousse_Extracted.png",
+    "creator": "Arbres d'ornement-2 - ornamental trees in colour - Public domain book illustration (visual explanation, informative drawing, plate) from Larousse du XXème siècle 1932.jpg https://www.flickr.com/photos/149521109@N03/31052984252//31196536225/",
+    "license": "CC0-1.0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "title": "London Plane Larousse Extracted.png",
+    "retrieved": "2026-10-17",
+    "in_repo": true,
+    "file": "media/photos/platanus-hispanica-thumb.webp",
+    "modified": "resized to max 400 px wide, converted to WebP (q80)"
+  },
+  {
     "slug": "podocnemis-unifilis",
     "kind": "photo",
     "source": "wikimedia-commons",

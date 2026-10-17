@@ -40,7 +40,7 @@
     "map_georef": "map/georef.json",
     "noindex": true
   },
-  "generated": "2026-10-17T13:29:36+00:00",
+  "generated": "2026-10-17T13:59:44+00:00",
   "species": [
     {
       "slug": "ailurus-fulgens",
@@ -88,11 +88,11 @@
       "audio": [
         {
           "file": "build-cache/audio/alouatta-seniculus.opus",
-          "attribution_index": 68
+          "attribution_index": 70
         },
         {
           "file": "build-cache/audio/alouatta-seniculus.m4a",
-          "attribution_index": 69
+          "attribution_index": 71
         }
       ],
       "links": {
@@ -122,11 +122,11 @@
       "audio": [
         {
           "file": "build-cache/audio/anseranas-semipalmata.opus",
-          "attribution_index": 70
+          "attribution_index": 72
         },
         {
           "file": "build-cache/audio/anseranas-semipalmata.m4a",
-          "attribution_index": 71
+          "attribution_index": 73
         }
       ],
       "links": {
@@ -156,11 +156,11 @@
       "audio": [
         {
           "file": "build-cache/audio/ara-militaris.opus",
-          "attribution_index": 72
+          "attribution_index": 74
         },
         {
           "file": "build-cache/audio/ara-militaris.m4a",
-          "attribution_index": 73
+          "attribution_index": 75
         }
       ],
       "links": {
@@ -190,11 +190,11 @@
       "audio": [
         {
           "file": "build-cache/audio/ardea-cinerea.opus",
-          "attribution_index": 74
+          "attribution_index": 76
         },
         {
           "file": "build-cache/audio/ardea-cinerea.m4a",
-          "attribution_index": 75
+          "attribution_index": 77
         }
       ],
       "links": {
@@ -224,11 +224,11 @@
       "audio": [
         {
           "file": "build-cache/audio/balearica-regulorum.opus",
-          "attribution_index": 76
+          "attribution_index": 78
         },
         {
           "file": "build-cache/audio/balearica-regulorum.m4a",
-          "attribution_index": 77
+          "attribution_index": 79
         }
       ],
       "links": {
@@ -258,11 +258,11 @@
       "audio": [
         {
           "file": "build-cache/audio/branta-hutchinsii.opus",
-          "attribution_index": 78
+          "attribution_index": 80
         },
         {
           "file": "build-cache/audio/branta-hutchinsii.m4a",
-          "attribution_index": 79
+          "attribution_index": 81
         }
       ],
       "links": {
@@ -292,11 +292,11 @@
       "audio": [
         {
           "file": "build-cache/audio/branta-leucopsis.opus",
-          "attribution_index": 80
+          "attribution_index": 82
         },
         {
           "file": "build-cache/audio/branta-leucopsis.m4a",
-          "attribution_index": 81
+          "attribution_index": 83
         }
       ],
       "links": {
@@ -326,11 +326,11 @@
       "audio": [
         {
           "file": "media/audio/branta-ruficollis.opus",
-          "attribution_index": 82
+          "attribution_index": 84
         },
         {
           "file": "media/audio/branta-ruficollis.m4a",
-          "attribution_index": 83
+          "attribution_index": 85
         }
       ],
       "links": {
@@ -360,11 +360,11 @@
       "audio": [
         {
           "file": "build-cache/audio/bubo-bubo.opus",
-          "attribution_index": 84
+          "attribution_index": 86
         },
         {
           "file": "build-cache/audio/bubo-bubo.m4a",
-          "attribution_index": 85
+          "attribution_index": 87
         }
       ],
       "links": {
@@ -394,11 +394,11 @@
       "audio": [
         {
           "file": "build-cache/audio/buceros-bicornis.opus",
-          "attribution_index": 86
+          "attribution_index": 88
         },
         {
           "file": "build-cache/audio/buceros-bicornis.m4a",
-          "attribution_index": 87
+          "attribution_index": 89
         }
       ],
       "links": {
@@ -428,11 +428,11 @@
       "audio": [
         {
           "file": "build-cache/audio/casuarius-casuarius.opus",
-          "attribution_index": 88
+          "attribution_index": 90
         },
         {
           "file": "build-cache/audio/casuarius-casuarius.m4a",
-          "attribution_index": 89
+          "attribution_index": 91
         }
       ],
       "links": {
@@ -462,11 +462,11 @@
       "audio": [
         {
           "file": "build-cache/audio/ciconia-ciconia.opus",
-          "attribution_index": 90
+          "attribution_index": 92
         },
         {
           "file": "build-cache/audio/ciconia-ciconia.m4a",
-          "attribution_index": 91
+          "attribution_index": 93
         }
       ],
       "links": {
@@ -496,11 +496,11 @@
       "audio": [
         {
           "file": "build-cache/audio/cygnus-atratus.opus",
-          "attribution_index": 92
+          "attribution_index": 94
         },
         {
           "file": "build-cache/audio/cygnus-atratus.m4a",
-          "attribution_index": 93
+          "attribution_index": 95
         }
       ],
       "links": {
@@ -530,11 +530,11 @@
       "audio": [
         {
           "file": "build-cache/audio/dromaius-novaehollandiae.opus",
-          "attribution_index": 94
+          "attribution_index": 96
         },
         {
           "file": "build-cache/audio/dromaius-novaehollandiae.m4a",
-          "attribution_index": 95
+          "attribution_index": 97
         }
       ],
       "links": {
@@ -564,11 +564,11 @@
       "audio": [
         {
           "file": "build-cache/audio/goura-victoria.opus",
-          "attribution_index": 96
+          "attribution_index": 98
         },
         {
           "file": "build-cache/audio/goura-victoria.m4a",
-          "attribution_index": 97
+          "attribution_index": 99
         }
       ],
       "links": {
@@ -623,11 +623,11 @@
       "audio": [
         {
           "file": "build-cache/audio/grus-japonensis.opus",
-          "attribution_index": 98
+          "attribution_index": 100
         },
         {
           "file": "build-cache/audio/grus-japonensis.m4a",
-          "attribution_index": 99
+          "attribution_index": 101
         }
       ],
       "links": {
@@ -657,11 +657,11 @@
       "audio": [
         {
           "file": "build-cache/audio/gyps-rueppelli.opus",
-          "attribution_index": 100
+          "attribution_index": 102
         },
         {
           "file": "build-cache/audio/gyps-rueppelli.m4a",
-          "attribution_index": 101
+          "attribution_index": 103
         }
       ],
       "links": {
@@ -691,11 +691,11 @@
       "audio": [
         {
           "file": "build-cache/audio/haliaeetus-pelagicus.opus",
-          "attribution_index": 102
+          "attribution_index": 104
         },
         {
           "file": "build-cache/audio/haliaeetus-pelagicus.m4a",
-          "attribution_index": 103
+          "attribution_index": 105
         }
       ],
       "links": {
@@ -725,11 +725,11 @@
       "audio": [
         {
           "file": "build-cache/audio/lemur-catta.opus",
-          "attribution_index": 104
+          "attribution_index": 106
         },
         {
           "file": "build-cache/audio/lemur-catta.m4a",
-          "attribution_index": 105
+          "attribution_index": 107
         }
       ],
       "links": {
@@ -784,11 +784,11 @@
       "audio": [
         {
           "file": "build-cache/audio/neophron-percnopterus.opus",
-          "attribution_index": 106
+          "attribution_index": 108
         },
         {
           "file": "build-cache/audio/neophron-percnopterus.m4a",
-          "attribution_index": 107
+          "attribution_index": 109
         }
       ],
       "links": {
@@ -818,11 +818,11 @@
       "audio": [
         {
           "file": "build-cache/audio/numida-meleagris.opus",
-          "attribution_index": 108
+          "attribution_index": 110
         },
         {
           "file": "build-cache/audio/numida-meleagris.m4a",
-          "attribution_index": 109
+          "attribution_index": 111
         }
       ],
       "links": {
@@ -852,11 +852,11 @@
       "audio": [
         {
           "file": "build-cache/audio/nycticorax-nycticorax.opus",
-          "attribution_index": 110
+          "attribution_index": 112
         },
         {
           "file": "build-cache/audio/nycticorax-nycticorax.m4a",
-          "attribution_index": 111
+          "attribution_index": 113
         }
       ],
       "links": {
@@ -911,11 +911,11 @@
       "audio": [
         {
           "file": "media/audio/phoenicopterus-ruber.opus",
-          "attribution_index": 112
+          "attribution_index": 114
         },
         {
           "file": "media/audio/phoenicopterus-ruber.m4a",
-          "attribution_index": 113
+          "attribution_index": 115
         }
       ],
       "links": {
@@ -929,8 +929,8 @@
       "scientific_name": "Platanus hispanica",
       "name": "Gewone plataan",
       "name_alt": null,
-      "order": null,
-      "family": null,
+      "order": "Proteales",
+      "family": "Platanaceae",
       "iucn": null,
       "wingspan_cm": null,
       "mass_g": null,
@@ -938,12 +938,15 @@
       "zone_id": null,
       "place_id": "verblijf-007",
       "last_seen": "2026-10-17",
-      "photo": null,
+      "photo": {
+        "file": "media/photos/platanus-hispanica.webp",
+        "attribution_index": 54
+      },
       "audio": [],
       "links": {
-        "wikipedia": null,
+        "wikipedia": "https://nl.wikipedia.org/wiki/Gewone_plataan",
         "xeno_canto": "https://xeno-canto.org/species/Platanus-hispanica",
-        "wikidata": null
+        "wikidata": "https://www.wikidata.org/wiki/Q161374"
       }
     },
     {
@@ -962,7 +965,7 @@
       "last_seen": null,
       "photo": {
         "file": "media/photos/podocnemis-unifilis.webp",
-        "attribution_index": 54
+        "attribution_index": 56
       },
       "audio": [],
       "links": {
@@ -987,16 +990,16 @@
       "last_seen": "2026-10-17",
       "photo": {
         "file": "media/photos/sagittarius-serpentarius.webp",
-        "attribution_index": 56
+        "attribution_index": 58
       },
       "audio": [
         {
           "file": "build-cache/audio/sagittarius-serpentarius.opus",
-          "attribution_index": 114
+          "attribution_index": 116
         },
         {
           "file": "build-cache/audio/sagittarius-serpentarius.m4a",
-          "attribution_index": 115
+          "attribution_index": 117
         }
       ],
       "links": {
@@ -1021,16 +1024,16 @@
       "last_seen": null,
       "photo": {
         "file": "media/photos/saguinus-imperator.webp",
-        "attribution_index": 58
+        "attribution_index": 60
       },
       "audio": [
         {
           "file": "build-cache/audio/saguinus-imperator.opus",
-          "attribution_index": 116
+          "attribution_index": 118
         },
         {
           "file": "build-cache/audio/saguinus-imperator.m4a",
-          "attribution_index": 117
+          "attribution_index": 119
         }
       ],
       "links": {
@@ -1055,16 +1058,16 @@
       "last_seen": null,
       "photo": {
         "file": "media/photos/spheniscus-humboldti.webp",
-        "attribution_index": 60
+        "attribution_index": 62
       },
       "audio": [
         {
           "file": "build-cache/audio/spheniscus-humboldti.opus",
-          "attribution_index": 118
+          "attribution_index": 120
         },
         {
           "file": "build-cache/audio/spheniscus-humboldti.m4a",
-          "attribution_index": 119
+          "attribution_index": 121
         }
       ],
       "links": {
@@ -1089,16 +1092,16 @@
       "last_seen": "2026-10-17",
       "photo": {
         "file": "media/photos/struthio-camelus.webp",
-        "attribution_index": 62
+        "attribution_index": 64
       },
       "audio": [
         {
           "file": "build-cache/audio/struthio-camelus.opus",
-          "attribution_index": 120
+          "attribution_index": 122
         },
         {
           "file": "build-cache/audio/struthio-camelus.m4a",
-          "attribution_index": 121
+          "attribution_index": 123
         }
       ],
       "links": {
@@ -1123,7 +1126,7 @@
       "last_seen": null,
       "photo": {
         "file": "media/photos/trichoglossus-moluccanus.webp",
-        "attribution_index": 64
+        "attribution_index": 66
       },
       "audio": [],
       "links": {
@@ -1148,7 +1151,7 @@
       "last_seen": null,
       "photo": {
         "file": "media/photos/varecia-rubra.webp",
-        "attribution_index": 66
+        "attribution_index": 68
       },
       "audio": [],
       "links": {
