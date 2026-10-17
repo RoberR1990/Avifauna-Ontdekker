@@ -1,0 +1,63 @@
+{
+  "_comment": "GPS -> SVG: x = a*lon + c*lat + e ; y = b*lon + d*lat + f (map-base.svg, viewBox 0 0 W H). Omgekeerd: lon = (d*(x-e) - c*(y-f))/det ; lat = (-b*(x-e) + a*(y-f))/det ; det = a*d - b*c.",
+  "svg": {
+    "file": "map-base.svg",
+    "width": 1000.0,
+    "height": 1234,
+    "viewBox": "0 0 1000 1234"
+  },
+  "projection": {
+    "type": "local-equirectangular",
+    "lat0": 52.139305199999995,
+    "lon0": 4.649018099999999,
+    "cos_lat0": 0.6137437398506868,
+    "earth_radius_m": 6371008.8,
+    "px_per_m": 2.478946007627929,
+    "origin_px": [
+      500.0,
+      617.0
+    ],
+    "north": "up"
+  },
+  "control_points": [
+    {
+      "name": "NW",
+      "lat": 52.1414079,
+      "lon": 4.6462824,
+      "x": 37.184,
+      "y": 37.398
+    },
+    {
+      "name": "NE",
+      "lat": 52.1414079,
+      "lon": 4.6517538,
+      "x": 962.816,
+      "y": 37.398
+    },
+    {
+      "name": "SW",
+      "lat": 52.1372025,
+      "lon": 4.6462824,
+      "x": 37.184,
+      "y": 1196.602
+    }
+  ],
+  "affine": {
+    "a": 169176.4447856005,
+    "b": -4.219264301374064e-08,
+    "c": -3.7074532506374874e-12,
+    "d": -275646.54967445973,
+    "e": -786004.353901907,
+    "f": 14372636.580803812
+  },
+  "check": {
+    "control_point_max_err_px": 1.3259468281719712e-10,
+    "random_nodes": 40,
+    "random_nodes_max_err_px": 0.0001751768159505022
+  },
+  "source": {
+    "osm_way": 31775874,
+    "retrieved": "2026-10-17T08:57:48+00:00"
+  },
+  "license": "ODbL 1.0"
+}
