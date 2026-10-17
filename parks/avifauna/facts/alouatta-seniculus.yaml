@@ -1,0 +1,39 @@
+slug: alouatta-seniculus
+reviewed: false
+is_bird: false
+length_cm: [46, 72]
+height_cm: null
+mass_g: [4200, 9000]
+wingspan_cm: null
+lifespan_wild_y: [25, 25]
+lifespan_captivity_y: null
+clutch:
+  nl: "1 jong per keer; draagtijd ongeveer 190 dagen"
+  en: "1 young at a time; gestation about 190 days"
+incubation_days: null
+continents: [south-america]
+range:
+  nl: "Noordelijk Zuid-Amerika, van Colombia en Venezuela tot Peru, Bolivia en Brazilië"
+  en: "Northern South America, from Colombia and Venezuela to Peru, Bolivia and Brazil"
+range_center: { lat: -3, lon: -68 }
+habitat:
+  nl: "Regenwoud en bos, bijna altijd hoog in het bladerdak"
+  en: "Rainforest and forest, almost always high in the canopy"
+diet:
+  nl: "Vooral bladeren; ook vruchten, bloemen, noten en zaden"
+  en: "Mostly leaves; also fruit, flowers, nuts and seeds"
+colors: [brown, red]
+iucn_trend: decreasing
+threats:
+  nl: "Jacht voor voedsel en verlies van bos"
+  en: "Hunting for food and forest loss"
+wow:
+  nl: "Hun brul is tot ongeveer 5 kilometer ver te horen."
+  en: "Their roar can be heard up to about 5 kilometres away."
+sources:
+  - title: Wikipedia, Colombian red howler (Alouatta seniculus)
+    url: https://en.wikipedia.org/wiki/Colombian_red_howler
+  - title: Animal Diversity Web, Alouatta seniculus
+    url: https://animaldiversity.org/accounts/Alouatta_seniculus/
+  - title: World Land Trust, Colombian Red Howler Monkey (IUCN-status en trend)
+    url: https://www.worldlandtrust.org/species/colombian-red-howler-monkey/

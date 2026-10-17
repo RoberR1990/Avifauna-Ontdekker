@@ -1,0 +1,39 @@
+slug: phoenicopterus-ruber
+reviewed: false
+is_bird: true
+length_cm: null
+height_cm: [120, 145]
+mass_g: [2100, 4100]
+wingspan_cm: [140, 165]
+lifespan_wild_y: [25, 44]
+lifespan_captivity_y: [30, 40]
+clutch:
+  nl: "1 ei (soms 2)"
+  en: "1 egg (sometimes 2)"
+incubation_days: [28, 32]
+continents: [north-america, south-america]
+range:
+  nl: "Caraïbisch gebied, Yucatán, Galápagos en noordelijk Zuid-Amerika"
+  en: "Caribbean, Yucatán, Galápagos and northern South America"
+range_center: { lat: 15, lon: -75 }
+habitat:
+  nl: "Zoute lagunes, slikvlakten en ondiepe brakke meren langs de kust of in het binnenland"
+  en: "Saline lagoons, mudflats and shallow brackish lakes, coastal or inland"
+diet:
+  nl: "Kleine kreeftjes, weekdieren, wormen, insecten, algen en zaden"
+  en: "Small crustaceans, molluscs, worms, insects, algae and seeds"
+colors: [pink, red, black]
+iucn_trend: increasing
+threats:
+  nl: "Vervuiling van voedsel en leefgebied, ziekten en verstoring tijdens het broeden"
+  en: "Pollution of food and habitat, disease and disturbance while breeding"
+wow:
+  nl: "Het roze komt uit zijn eten: kreeftjes bevatten kleurstoffen die de veren roze maken."
+  en: "The pink comes from its food: crustaceans contain pigments that colour the feathers."
+sources:
+  - title: Wikipedia, American flamingo
+    url: https://en.wikipedia.org/wiki/American_flamingo
+  - title: Animal Diversity Web, Phoenicopterus ruber
+    url: https://animaldiversity.org/accounts/Phoenicopterus_ruber/
+  - title: BirdLife DataZone, American flamingo (status en trend)
+    url: https://datazone.birdlife.org/species/factsheet/american-flamingo-phoenicopterus-ruber/text

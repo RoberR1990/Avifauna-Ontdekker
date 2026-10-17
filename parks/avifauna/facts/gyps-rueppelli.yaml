@@ -1,0 +1,37 @@
+slug: gyps-rueppelli
+reviewed: false
+is_bird: true
+length_cm: [85, 107]
+height_cm: null
+mass_g: [5500, 9000]
+wingspan_cm: [220, 260]
+lifespan_wild_y: null
+lifespan_captivity_y: [40, 50]
+clutch:
+  nl: "1 ei"
+  en: "1 egg"
+incubation_days: [55, 55]
+continents: [africa]
+range:
+  nl: "Sahel en Oost-Afrika, van Senegal tot Eritrea en Tanzania"
+  en: "Sahel and East Africa, from Senegal to Eritrea and Tanzania"
+range_center: { lat: 10, lon: 15 }
+habitat:
+  nl: "Savanne en droog land; broedt in kolonies op kliffen"
+  en: "Savanna and dry country; nests in colonies on cliffs"
+diet:
+  nl: "Uitsluitend aas, vooral van wilde hoefdieren"
+  en: "Carrion only, mostly from wild ungulates"
+colors: [brown, black, white]
+iucn_trend: decreasing
+threats:
+  nl: "Vergiftiging (onder andere carbofuran), verlies van leefgebied, jacht voor traditionele medicijnen en minder voedsel"
+  en: "Poisoning (e.g. carbofuran), habitat loss, killing for traditional medicine and less food"
+wow:
+  nl: "Een Rüppells gier is op 11.300 meter hoogte gezien: hoger dan elke andere vogel."
+  en: "A Rüppell's vulture was recorded at 11,300 m, higher than any other bird."
+sources:
+  - title: Wikipedia, Rüppell's vulture
+    url: https://en.wikipedia.org/wiki/R%C3%BCppell%27s_vulture
+  - title: Animal Diversity Web, Gyps rueppellii
+    url: https://animaldiversity.org/accounts/Gyps_rueppellii/

@@ -1,0 +1,37 @@
+slug: ailurus-fulgens
+reviewed: false
+is_bird: false
+length_cm: [51, 63.5]
+height_cm: null
+mass_g: [3700, 6200]
+wingspan_cm: null
+lifespan_wild_y: [8, 10]
+lifespan_captivity_y: [13, 14]
+clutch:
+  nl: "1 tot 4 jongen (gemiddeld 2); draagtijd ongeveer 131 tot 134 dagen"
+  en: "1 to 4 cubs (average 2); gestation about 131 to 134 days"
+incubation_days: null
+continents: [asia]
+range:
+  nl: "Oostelijke Himalaya: Nepal, Sikkim, Bhutan, noord-Myanmar en zuidwest-China"
+  en: "Eastern Himalaya: Nepal, Sikkim, Bhutan, northern Myanmar and south-west China"
+range_center: { lat: 28, lon: 92 }
+habitat:
+  nl: "Berg- en bamboebossen op ongeveer 2000 tot 4300 meter hoogte"
+  en: "Mountain and bamboo forest at roughly 2,000 to 4,300 m"
+diet:
+  nl: "Vooral bamboe (scheuten en bladeren); soms vruchten, eieren en kleine dieren"
+  en: "Mostly bamboo shoots and leaves; sometimes fruit, eggs and small animals"
+colors: [red, black, white]
+iucn_trend: decreasing
+threats:
+  nl: "Verlies en versnippering van bos, stroperij en vee in het leefgebied"
+  en: "Forest loss and fragmentation, poaching and livestock in its habitat"
+wow:
+  nl: "Hij eet per dag meer dan 1,5 kilo vers bamboeblad of ongeveer 4 kilo scheuten."
+  en: "He eats over 1.5 kg of fresh bamboo leaves or about 4 kg of shoots a day."
+sources:
+  - title: Wikipedia, Red panda
+    url: https://en.wikipedia.org/wiki/Red_panda
+  - title: Animal Diversity Web, Ailurus fulgens
+    url: https://animaldiversity.org/accounts/Ailurus_fulgens/

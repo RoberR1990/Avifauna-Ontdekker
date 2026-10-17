@@ -1,0 +1,37 @@
+slug: varecia-rubra
+reviewed: false
+is_bird: false
+length_cm: [53, 53]
+height_cm: null
+mass_g: [3300, 3600]
+wingspan_cm: null
+lifespan_wild_y: [15, 20]
+lifespan_captivity_y: null
+clutch:
+  nl: "Meestal 2 of 3 jongen, soms tot 6; draagtijd ongeveer 102 dagen"
+  en: "Usually 2 or 3 young, sometimes up to 6; gestation about 102 days"
+incubation_days: null
+continents: [africa]
+range:
+  nl: "Alleen het regenwoud van het schiereiland Masoala in noordoost-Madagaskar"
+  en: "Only the rainforest of the Masoala peninsula in north-east Madagascar"
+range_center: { lat: -15.5, lon: 50 }
+habitat:
+  nl: "Tropisch regenwoud"
+  en: "Tropical rainforest"
+diet:
+  nl: "Vooral vruchten (graag vijgen); soms bladeren, scheuten, nectar en stuifmeel"
+  en: "Mostly fruit (especially figs); sometimes leaves, shoots, nectar and pollen"
+colors: [red, black, white]
+iucn_trend: decreasing
+threats:
+  nl: "Houtkap, verbranding van bos, cyclonen, mijnbouw, jacht en handel in huisdieren"
+  en: "Logging, forest burning, cyclones, mining, hunting and the pet trade"
+wow:
+  nl: "Hij leeft nergens anders ter wereld dan op één schiereiland van Madagaskar."
+  en: "He lives nowhere else in the world but on one peninsula of Madagascar."
+sources:
+  - title: Wikipedia, Red ruffed lemur
+    url: https://en.wikipedia.org/wiki/Red_ruffed_lemur
+  - title: Animal Diversity Web, Varecia rubra
+    url: https://animaldiversity.org/accounts/Varecia_rubra/
