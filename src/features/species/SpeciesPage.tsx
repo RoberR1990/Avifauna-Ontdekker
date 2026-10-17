@@ -209,8 +209,8 @@ export function SpeciesPage() {
         <p className="sp-iucn">
           <span className="badge" data-iucn={sp.iucn}>
             <b>{sp.iucn}</b> {iucnName}
+            {trend && <span className="sp-trend"> · {trend}</span>}
           </span>
-          {trend && <span className="sp-trend">{trend}</span>}
         </p>
       )}
 
