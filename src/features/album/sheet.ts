@@ -21,20 +21,43 @@ function fit(ctx: CanvasRenderingContext2D, text: string, max: number): string {
   return `${s}…`
 }
 
-/** Tekent het vel; null als canvas niet beschikbaar is. */
-export async function renderSheet(title: string, items: SheetItem[]): Promise<Blob | null> {
+/** Breekt tekst af op woorden zodat elke regel binnen max past. */
+export function wrapLines(measure: (s: string) => number, text: string, max: number): string[] {
+  const out: string[] = []
+  let line = ''
+  for (const word of text.split(/\s+/)) {
+    const next = line ? `${line} ${word}` : word
+    if (line && measure(next) > max) {
+      out.push(line)
+      line = word
+    } else line = next
+  }
+  if (line) out.push(line)
+  return out
+}
+
+/**
+ * Tekent het vel; null als canvas niet beschikbaar is.
+ * credits: fotoattributie (verplicht bij CC BY/BY-SA), footer: onofficiële vermelding van het park.
+ */
+export async function renderSheet(title: string, items: SheetItem[], credits: string[] = [], footer = ''): Promise<Blob | null> {
   const cols = 3
   const cell = 360
   const gap = 40
   const head = 150
   const rows = Math.max(1, Math.ceil(items.length / cols))
   const w = cols * cell + (cols + 1) * gap
-  const h = head + rows * (cell + 90) + gap
   const canvas = document.createElement('canvas')
-  canvas.width = w
-  canvas.height = h
   const ctx = canvas.getContext('2d')
   if (!ctx) return null
+  const creditFont = '500 22px "Nunito", "Trebuchet MS", sans-serif'
+  ctx.font = creditFont
+  const creditLines = [...credits, footer].filter(Boolean).flatMap((c) => wrapLines((x) => ctx.measureText(x).width, c, w - 2 * gap))
+  const lineH = 30
+  const gridH = head + rows * (cell + 90)
+  const h = gridH + (creditLines.length ? gap + creditLines.length * lineH : 0) + gap
+  canvas.width = w
+  canvas.height = h
   ctx.fillStyle = '#fffdf7'
   ctx.fillRect(0, 0, w, h)
   ctx.fillStyle = '#231942'
@@ -68,6 +91,9 @@ export async function renderSheet(title: string, items: SheetItem[]): Promise<Bl
     ctx.font = '600 26px "Nunito", "Trebuchet MS", sans-serif'
     ctx.fillText(item.date, x, y + cell + 66)
   })
+  ctx.fillStyle = '#231942'
+  ctx.font = creditFont
+  creditLines.forEach((line, i) => ctx.fillText(line, gap, gridH + gap + i * lineH))
   return new Promise((resolve) => canvas.toBlob((b) => resolve(b), 'image/png'))
 }
 

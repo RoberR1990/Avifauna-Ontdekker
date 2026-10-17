@@ -2,6 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ParkBundle } from '../../data/types'
+import { wrapLines } from './sheet'
 import { _resetAlbumForTest, albumActions, getAlbum, today } from '../../state/album'
 import { _reloadSettingsForTest } from '../../state/settings'
 import { AlbumPage } from './AlbumPage'
@@ -15,7 +16,8 @@ const sp = (slug: string, name: string, continents: string[] = []) => ({
 })
 
 const bundle = {
-  park: { id: 'avifauna', app_name: 'Avifauna Ontdekker' },
+  park: { id: 'avifauna', app_name: 'Avifauna Ontdekker', footer: { nl: 'Onofficiële gids' } },
+  attributions: [{ creator: 'Maker X', license: 'CC-BY-SA-4.0', source_url: 'https://commons.wikimedia.org/wiki/File:X.jpg' }],
   species: [sp('a', 'Aap'), sp('b', 'Beer'), sp('c', 'Chinchilla')],
   expeditions: [{ id: 'e', title: 'Route', badge: { id: 'bx', name: 'Routebadge', icon: '🐧' }, stops: [] }],
 } as unknown as ParkBundle
@@ -44,6 +46,19 @@ beforeEach(async () => {
 })
 
 describe('AlbumPage', () => {
+  it('heeft fotobronnen (maker, licentie, bron) voor print bij gevonden stickers', () => {
+    albumActions.addSticker('a', '2026-10-01')
+    setup()
+    const credits = screen.getByTestId('album-credits')
+    expect(credits).toHaveTextContent('Aap: Maker X · CC-BY-SA-4.0 · https://commons.wikimedia.org/wiki/File:X.jpg')
+    expect(credits).toHaveTextContent('Onofficiële gids')
+  })
+
+  it('wrapLines breekt lange attributie af', () => {
+    const lines = wrapLines((s) => s.length, 'een twee drie vier vijf', 9)
+    expect(lines).toEqual(['een twee', 'drie vier', 'vijf'])
+  })
+
   it('toont waarschuwing, teller, gevonden en niet-gevonden stickers', () => {
     albumActions.addSticker('a', '2026-10-01')
     setup()

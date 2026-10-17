@@ -26,7 +26,12 @@
   .album-sticker { rotate: 0deg !important; }
 }
 
+.album-credits {
+  display: none;
+}
+
 @media print {
+  .album-credits { display: block; font-size: 9pt; margin-top: 8mm; overflow-wrap: anywhere; }
   @page { size: A4; margin: 12mm; }
   body * { visibility: hidden; }
   .album-sheet, .album-sheet * { visibility: visible; }

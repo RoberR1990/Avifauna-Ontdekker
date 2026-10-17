@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { mediaUrl, useBundle } from '../../data/ParkDataProvider'
+import { localized } from '../../i18n'
 import { today, useAlbum } from '../../state/album'
 import { useSettings } from '../../state/settings'
 import { allBadges } from './badges'
@@ -44,6 +45,15 @@ export function AlbumPage() {
     if (fileRef.current) fileRef.current.value = ''
   }
 
+  // Fotoattributie voor afbeelding en print (CC BY/BY-SA vraagt maker, licentie en bron).
+  const credits = bundle.species
+    .filter((s) => album.stickers[s.slug] && s.photo && bundle.attributions[s.photo.attribution])
+    .map((s) => {
+      const a = bundle.attributions[s.photo!.attribution]
+      return { slug: s.slug, text: `${s.name}: ${a.creator} · ${a.license} · ${a.source_url}` }
+    })
+  const footer = localized(bundle.park.footer, lang)
+
   const doImage = async () => {
     const items = bundle.species
       .filter((s) => album.stickers[s.slug])
@@ -54,7 +64,12 @@ export function AlbumPage() {
     }
     setMessage(t('image.busy'))
     try {
-      const blob = await renderSheet(`${t('sheet.title')} · ${bundle.park.app_name}`, items)
+      const blob = await renderSheet(
+        `${t('sheet.title')} · ${bundle.park.app_name}`,
+        items,
+        [t('credits'), ...credits.map((c) => c.text)],
+        footer,
+      )
       if (!blob) throw new Error('geen canvas')
       downloadBlob(blob, `stickervel-${bundle.park.id}-${today()}.png`)
       albumExport('png')
@@ -119,6 +134,17 @@ export function AlbumPage() {
             )
           })}
         </ul>
+        {credits.length > 0 && (
+          <div className="album-credits" data-testid="album-credits">
+            <h3>{t('credits')}</h3>
+            <ul>
+              {credits.map((c) => (
+                <li key={c.slug}>{c.text}</li>
+              ))}
+            </ul>
+            <p>{footer}</p>
+          </div>
+        )}
       </section>
 
       <section className="card c-r" aria-labelledby="album-badges">
