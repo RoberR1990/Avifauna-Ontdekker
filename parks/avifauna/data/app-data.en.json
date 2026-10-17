@@ -1,0 +1,702 @@
+{
+  "park": {
+    "id": "avifauna",
+    "app_name": "Avifauna Ontdekker",
+    "park_name": "Vogelpark Avifauna",
+    "languages": [
+      "nl",
+      "en"
+    ],
+    "default_language": "nl",
+    "disclaimer_bar": {
+      "nl": "Onofficieel prototype · gemaakt als voorstel voor Stichting Avifauna",
+      "en": "Unofficial prototype · made as a proposal for Stichting Avifauna"
+    },
+    "footer": {
+      "nl": "Onofficiële gids · niet verbonden aan Stichting Avifauna",
+      "en": "Unofficial guide · not affiliated with Stichting Avifauna"
+    },
+    "about": {
+      "builder": "Robert Riteco",
+      "nl": "Gebouwd door Robert Riteco als hobbyproject.",
+      "en": "Built by Robert Riteco as a hobby project.",
+      "source_code_url": "https://github.com/RoberR1990/Avifauna-Ontdekker",
+      "personal_site_url": null
+    },
+    "links": {
+      "official_site": "https://www.avifauna.nl/",
+      "tickets": "https://www.avifauna.nl/tickets",
+      "programme": "https://www.avifauna.nl/dagprogramma"
+    },
+    "theme": {
+      "primary": "#E07A2F",
+      "background": "#FFF8EE",
+      "text": "#2B2118"
+    },
+    "map_georef": null,
+    "noindex": true
+  },
+  "generated": "2026-10-17T09:39:17+00:00",
+  "species": [
+    {
+      "slug": "neophron-percnopterus",
+      "scientific_name": "Neophron percnopterus",
+      "name": "Egyptian Vulture",
+      "name_alt": "Aasgier",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iucn": null,
+      "wingspan_cm": 167.6,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/neophron-percnopterus.webp",
+        "attribution_index": 0
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/neophron-percnopterus.opus",
+          "attribution_index": 42
+        },
+        {
+          "file": "build-cache/audio/neophron-percnopterus.m4a",
+          "attribution_index": 43
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Egyptian_vulture",
+        "xeno_canto": "https://xeno-canto.org/species/Neophron-percnopterus",
+        "wikidata": "https://www.wikidata.org/wiki/Q33504"
+      }
+    },
+    {
+      "slug": "buceros-bicornis",
+      "scientific_name": "Buceros bicornis",
+      "name": "Great Hornbill",
+      "name_alt": "Dubbele neushoornvogel",
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/buceros-bicornis.webp",
+        "attribution_index": 2
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/buceros-bicornis.opus",
+          "attribution_index": 44
+        },
+        {
+          "file": "build-cache/audio/buceros-bicornis.m4a",
+          "attribution_index": 45
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Great_hornbill",
+        "xeno_canto": "https://xeno-canto.org/species/Buceros-bicornis",
+        "wikidata": "https://www.wikidata.org/wiki/Q232768"
+      }
+    },
+    {
+      "slug": "bubo-bubo",
+      "scientific_name": "Bubo bubo",
+      "name": "Eurasian Eagle-owl",
+      "name_alt": "Europese oehoe",
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iucn": "LC",
+      "wingspan_cm": 174.0,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/bubo-bubo.webp",
+        "attribution_index": 4
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/bubo-bubo.opus",
+          "attribution_index": 46
+        },
+        {
+          "file": "build-cache/audio/bubo-bubo.m4a",
+          "attribution_index": 47
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Eurasian_eagle-owl",
+        "xeno_canto": "https://xeno-canto.org/species/Bubo-bubo",
+        "wikidata": "https://www.wikidata.org/wiki/Q130933"
+      }
+    },
+    {
+      "slug": "casuarius-casuarius",
+      "scientific_name": "Casuarius casuarius",
+      "name": "Southern Cassowary",
+      "name_alt": "Helmkasuaris",
+      "order": "Casuariiformes",
+      "family": "Casuariidae",
+      "iucn": "LC",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/casuarius-casuarius.webp",
+        "attribution_index": 6
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/casuarius-casuarius.opus",
+          "attribution_index": 48
+        },
+        {
+          "file": "build-cache/audio/casuarius-casuarius.m4a",
+          "attribution_index": 49
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Southern_cassowary",
+        "xeno_canto": "https://xeno-canto.org/species/Casuarius-casuarius",
+        "wikidata": "https://www.wikidata.org/wiki/Q375790"
+      }
+    },
+    {
+      "slug": "spheniscus-humboldti",
+      "scientific_name": "Spheniscus humboldti",
+      "name": "Humboldt Penguin",
+      "name_alt": "Humboldt pinguïn",
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/spheniscus-humboldti.webp",
+        "attribution_index": 8
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/spheniscus-humboldti.opus",
+          "attribution_index": 50
+        },
+        {
+          "file": "build-cache/audio/spheniscus-humboldti.m4a",
+          "attribution_index": 51
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Humboldt_penguin",
+        "xeno_canto": "https://xeno-canto.org/species/Spheniscus-humboldti",
+        "wikidata": "https://www.wikidata.org/wiki/Q224151"
+      }
+    },
+    {
+      "slug": "saguinus-imperator",
+      "scientific_name": "Saguinus imperator",
+      "name": "emperor tamarin",
+      "name_alt": "Keizertamarin",
+      "order": "Primates",
+      "family": "Callitrichidae",
+      "iucn": "LC",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/saguinus-imperator.webp",
+        "attribution_index": 10
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/saguinus-imperator.opus",
+          "attribution_index": 52
+        },
+        {
+          "file": "build-cache/audio/saguinus-imperator.m4a",
+          "attribution_index": 53
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Emperor_tamarin",
+        "xeno_canto": "https://xeno-canto.org/species/Saguinus-imperator",
+        "wikidata": "https://www.wikidata.org/wiki/Q114937"
+      }
+    },
+    {
+      "slug": "pelecanus-crispus",
+      "scientific_name": "Pelecanus crispus",
+      "name": "Dalmatian Pelican",
+      "name_alt": "Kroeskoppelikaan",
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iucn": "NT",
+      "wingspan_cm": 320.0,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/pelecanus-crispus.webp",
+        "attribution_index": 12
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dalmatian_pelican",
+        "xeno_canto": "https://xeno-canto.org/species/Pelecanus-crispus",
+        "wikidata": "https://www.wikidata.org/wiki/Q184751"
+      }
+    },
+    {
+      "slug": "balearica-regulorum",
+      "scientific_name": "Balearica regulorum",
+      "name": "Grey Crowned Crane",
+      "name_alt": "Kroonkraanvogel",
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iucn": null,
+      "wingspan_cm": null,
+      "mass_g": 152,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/balearica-regulorum.webp",
+        "attribution_index": 14
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/balearica-regulorum.opus",
+          "attribution_index": 54
+        },
+        {
+          "file": "build-cache/audio/balearica-regulorum.m4a",
+          "attribution_index": 55
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Grey_crowned_crane",
+        "xeno_canto": "https://xeno-canto.org/species/Balearica-regulorum",
+        "wikidata": "https://www.wikidata.org/wiki/Q335992"
+      }
+    },
+    {
+      "slug": "trichoglossus-moluccanus",
+      "scientific_name": "Trichoglossus moluccanus",
+      "name": "Rainbow Lorikeet",
+      "name_alt": "Regenbooglori",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iucn": "LC",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/trichoglossus-moluccanus.webp",
+        "attribution_index": 16
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Rainbow_lorikeet",
+        "xeno_canto": "https://xeno-canto.org/species/Trichoglossus-moluccanus",
+        "wikidata": "https://www.wikidata.org/wiki/Q1809222"
+      }
+    },
+    {
+      "slug": "myrmecophaga-tridactyla",
+      "scientific_name": "Myrmecophaga tridactyla",
+      "name": "giant anteater",
+      "name_alt": "Reuzenmiereneter",
+      "order": "Pilosa",
+      "family": "Myrmecophagidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": 1350,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/myrmecophaga-tridactyla.webp",
+        "attribution_index": 18
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Giant_anteater",
+        "xeno_canto": "https://xeno-canto.org/species/Myrmecophaga-tridactyla",
+        "wikidata": "https://www.wikidata.org/wiki/Q203033"
+      }
+    },
+    {
+      "slug": "lemur-catta",
+      "scientific_name": "Lemur catta",
+      "name": "ring-tailed lemur",
+      "name_alt": "Ringstaartmaki",
+      "order": "Primates",
+      "family": "Lemuridae",
+      "iucn": null,
+      "wingspan_cm": null,
+      "mass_g": 60,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/lemur-catta.webp",
+        "attribution_index": 20
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/lemur-catta.opus",
+          "attribution_index": 56
+        },
+        {
+          "file": "build-cache/audio/lemur-catta.m4a",
+          "attribution_index": 57
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ring-tailed_lemur",
+        "xeno_canto": "https://xeno-canto.org/species/Lemur-catta",
+        "wikidata": "https://www.wikidata.org/wiki/Q185385"
+      }
+    },
+    {
+      "slug": "alouatta-seniculus",
+      "scientific_name": "Alouatta seniculus",
+      "name": "Venezuelan red howler",
+      "name_alt": "Rode brulaap",
+      "order": "Primates",
+      "family": "Atelidae",
+      "iucn": "LC",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/alouatta-seniculus.webp",
+        "attribution_index": 22
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/alouatta-seniculus.opus",
+          "attribution_index": 58
+        },
+        {
+          "file": "build-cache/audio/alouatta-seniculus.m4a",
+          "attribution_index": 59
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Colombian_red_howler",
+        "xeno_canto": "https://xeno-canto.org/species/Alouatta-seniculus",
+        "wikidata": "https://www.wikidata.org/wiki/Q583362"
+      }
+    },
+    {
+      "slug": "phoenicopterus-ruber",
+      "scientific_name": "Phoenicopterus ruber",
+      "name": "American Flamingo",
+      "name_alt": "Rode flamingo",
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iucn": "LC",
+      "wingspan_cm": 153.0,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/phoenicopterus-ruber.webp",
+        "attribution_index": 24
+      },
+      "audio": [
+        {
+          "file": "media/audio/phoenicopterus-ruber.opus",
+          "attribution_index": 60
+        },
+        {
+          "file": "media/audio/phoenicopterus-ruber.m4a",
+          "attribution_index": 61
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/American_flamingo",
+        "xeno_canto": "https://xeno-canto.org/species/Phoenicopterus-ruber",
+        "wikidata": "https://www.wikidata.org/wiki/Q208004"
+      }
+    },
+    {
+      "slug": "ailurus-fulgens",
+      "scientific_name": "Ailurus fulgens",
+      "name": "Red Panda",
+      "name_alt": "Rode panda",
+      "order": "Carnivora",
+      "family": "Ailuridae",
+      "iucn": null,
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/ailurus-fulgens.webp",
+        "attribution_index": 26
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Red_panda",
+        "xeno_canto": "https://xeno-canto.org/species/Ailurus-fulgens",
+        "wikidata": "https://www.wikidata.org/wiki/Q41960"
+      }
+    },
+    {
+      "slug": "varecia-rubra",
+      "scientific_name": "Varecia rubra",
+      "name": "red ruffed lemur",
+      "name_alt": "Rode vari",
+      "order": "Primates",
+      "family": "Lemuridae",
+      "iucn": "CR",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/varecia-rubra.webp",
+        "attribution_index": 28
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Red_ruffed_lemur",
+        "xeno_canto": "https://xeno-canto.org/species/Varecia-rubra",
+        "wikidata": "https://www.wikidata.org/wiki/Q516703"
+      }
+    },
+    {
+      "slug": "gyps-rueppelli",
+      "scientific_name": "Gyps rueppelli",
+      "name": "Rüppell's Vulture",
+      "name_alt": "Rüppells gier",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iucn": "CR",
+      "wingspan_cm": 240.8,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/gyps-rueppelli.webp",
+        "attribution_index": 30
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/gyps-rueppelli.opus",
+          "attribution_index": 62
+        },
+        {
+          "file": "build-cache/audio/gyps-rueppelli.m4a",
+          "attribution_index": 63
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/R%C3%BCppell%27s_vulture",
+        "xeno_canto": "https://xeno-canto.org/species/Gyps-rueppelli",
+        "wikidata": "https://www.wikidata.org/wiki/Q55111925"
+      }
+    },
+    {
+      "slug": "ara-militaris",
+      "scientific_name": "Ara militaris",
+      "name": "Military Macaw",
+      "name_alt": "Soldatenara",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/ara-militaris.webp",
+        "attribution_index": 32
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/ara-militaris.opus",
+          "attribution_index": 64
+        },
+        {
+          "file": "build-cache/audio/ara-militaris.m4a",
+          "attribution_index": 65
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Military_macaw",
+        "xeno_canto": "https://xeno-canto.org/species/Ara-militaris",
+        "wikidata": "https://www.wikidata.org/wiki/Q838924"
+      }
+    },
+    {
+      "slug": "haliaeetus-pelagicus",
+      "scientific_name": "Haliaeetus pelagicus",
+      "name": "Steller’s Sea Eagle",
+      "name_alt": "Stellers zeearend",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iucn": "VU",
+      "wingspan_cm": 220.0,
+      "mass_g": 6675,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/haliaeetus-pelagicus.webp",
+        "attribution_index": 34
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/haliaeetus-pelagicus.opus",
+          "attribution_index": 66
+        },
+        {
+          "file": "build-cache/audio/haliaeetus-pelagicus.m4a",
+          "attribution_index": 67
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Steller%27s_sea_eagle",
+        "xeno_canto": "https://xeno-canto.org/species/Haliaeetus-pelagicus",
+        "wikidata": "https://www.wikidata.org/wiki/Q269896"
+      }
+    },
+    {
+      "slug": "struthio-camelus",
+      "scientific_name": "Struthio camelus",
+      "name": "common ostrich",
+      "name_alt": "Struisvogel",
+      "order": "Struthioniformes",
+      "family": "Struthionidae",
+      "iucn": "LC",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/struthio-camelus.webp",
+        "attribution_index": 36
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/struthio-camelus.opus",
+          "attribution_index": 68
+        },
+        {
+          "file": "build-cache/audio/struthio-camelus.m4a",
+          "attribution_index": 69
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Common_ostrich",
+        "xeno_canto": "https://xeno-canto.org/species/Struthio-camelus",
+        "wikidata": "https://www.wikidata.org/wiki/Q17592"
+      }
+    },
+    {
+      "slug": "podocnemis-unifilis",
+      "scientific_name": "Podocnemis unifilis",
+      "name": "Yellow-spotted river turtle",
+      "name_alt": "Terekayschildpad",
+      "order": "Testudines",
+      "family": "Podocnemididae",
+      "iucn": "VU",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/podocnemis-unifilis.webp",
+        "attribution_index": 38
+      },
+      "audio": [],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Yellow-spotted_river_turtle",
+        "xeno_canto": "https://xeno-canto.org/species/Podocnemis-unifilis",
+        "wikidata": "https://www.wikidata.org/wiki/Q863041"
+      }
+    },
+    {
+      "slug": "goura-victoria",
+      "scientific_name": "Goura victoria",
+      "name": "Victoria Crowned Pigeon",
+      "name_alt": "Victoria kroonduif",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "iucn": "NT",
+      "wingspan_cm": null,
+      "mass_g": null,
+      "lifespan_y": null,
+      "zone_id": null,
+      "place_id": null,
+      "last_seen": null,
+      "photo": {
+        "file": "media/photos/goura-victoria.webp",
+        "attribution_index": 40
+      },
+      "audio": [
+        {
+          "file": "build-cache/audio/goura-victoria.opus",
+          "attribution_index": 70
+        },
+        {
+          "file": "build-cache/audio/goura-victoria.m4a",
+          "attribution_index": 71
+        }
+      ],
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Victoria_crowned_pigeon",
+        "xeno_canto": "https://xeno-canto.org/species/Goura-victoria",
+        "wikidata": "https://www.wikidata.org/wiki/Q579213"
+      }
+    }
+  ]
+}
