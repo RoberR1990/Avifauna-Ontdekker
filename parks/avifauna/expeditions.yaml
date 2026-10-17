@@ -1,0 +1,36 @@
+# CONCEPT: voorbeeldexpeditie om het formaat te tonen; echte expedities komen na het veldwerk.
+expeditions:
+  - id: kleurenjacht-voorbeeld
+    title:
+      nl: Kleurenjacht (voorbeeld)
+      en: Colour hunt (example)
+    intro:
+      nl: Zoek vogels met opvallende kleuren en tel wat je ziet.
+      en: Look for brightly coloured birds and count what you see.
+    badge:
+      id: badge-kleurenjager-voorbeeld
+      name:
+        nl: Kleurenjager
+        en: Colour hunter
+      icon: rainbow
+    stops:
+      - id: stop-rode-vogel
+        zone_id: zone-voorbeeld
+        species: phoenicopterus-chilensis
+        task:
+          type: find
+          prompt:
+            nl: Zoek een vogel met roze veren.
+            en: Find a bird with pink feathers.
+          hint:
+            nl: Kijk bij het water.
+            en: Look near the water.
+      - id: stop-tel-pinguins
+        zone_id: zone-voorbeeld
+        species: spheniscus-humboldti
+        task:
+          type: count
+          prompt:
+            nl: Hoeveel pinguïns zie je op het land?
+            en: How many penguins can you see on land?
+          answer: 3

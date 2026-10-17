@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "name": "avifauna-places-voorbeeld",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "zone-voorbeeld", "kind": "zone", "name_nl": "Voorbeeldzone (concept)", "source": "manual" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[4.6486, 52.1391], [4.6494, 52.1391], [4.6494, 52.1396], [4.6486, 52.1396], [4.6486, 52.1391]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "voorziening-voorbeeld-toilet", "kind": "facility", "name_nl": "Toilet (voorbeeld)", "zone_id": "zone-voorbeeld", "facility_type": "toilet", "source": "manual" },
+      "geometry": { "type": "Point", "coordinates": [4.649, 52.1393] }
+    }
+  ]
+}
