@@ -11,7 +11,8 @@ USER_AGENT = "AvifaunaOntdekker/0.1 (https://github.com/RoberR1990/Avifauna-Ontd
 
 PIPELINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = PIPELINE_DIR.parent
-CACHE_DIR = PIPELINE_DIR / "data" / "cache"
+# HTTP-cache; te overschrijven met env AVIPIPE_CACHE_DIR (bv. de cache van de hoofdcheckout)
+CACHE_DIR = Path(os.environ["AVIPIPE_CACHE_DIR"]) if os.environ.get("AVIPIPE_CACHE_DIR") else PIPELINE_DIR / "data" / "cache"
 NC_AUDIO_DIR = REPO_ROOT / "build-cache" / "audio"
 
 

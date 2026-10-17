@@ -1,4 +1,22 @@
-scientific_name,slug,name_nl,zone_id,place_id,last_seen,wikidata_qid,status,notes
-Spheniscus humboldti,spheniscus-humboldti,Humboldtpinguïn,,,,Q224151,draft,Concept-voorbeeldrij; nog niet gecontroleerd in het park
-Casuarius casuarius,casuarius-casuarius,Helmkasuaris,,,,Q375790,draft,Concept-voorbeeldrij; nog niet gecontroleerd in het park
-Phoenicopterus chilensis,phoenicopterus-chilensis,Chileense flamingo,,,,Q317220,draft,Concept-voorbeeldrij; nog niet gecontroleerd in het park
+scientific_name,slug,name_nl,zone_id,place_id,last_seen,wikidata_qid,status,notes,park_url
+Neophron percnopterus,neophron-percnopterus,Aasgier,,,,Q33504,draft,,https://avifauna.nl/onze-dieren/aasgier/
+Buceros bicornis,buceros-bicornis,Dubbele neushoornvogel,,,,Q232768,draft,,https://avifauna.nl/onze-dieren/dubbele-neushoornvogel/
+Bubo bubo,bubo-bubo,Europese oehoe,,,,Q130933,draft,,https://avifauna.nl/onze-dieren/europese-oehoe/
+Casuarius casuarius,casuarius-casuarius,Helmkasuaris,,,,Q375790,draft,,https://avifauna.nl/onze-dieren/helmkasuaris/
+Spheniscus humboldti,spheniscus-humboldti,Humboldt pinguïn,,,,Q224151,draft,,https://avifauna.nl/onze-dieren/humboldt-pinguin/
+Saguinus imperator,saguinus-imperator,Keizertamarin,,,,Q114937,draft,,https://avifauna.nl/onze-dieren/keizertamarin/
+Pelecanus crispus,pelecanus-crispus,Kroeskoppelikaan,,,,Q184751,draft,,https://avifauna.nl/onze-dieren/kroeskoppelikaan/
+Balearica regulorum,balearica-regulorum,Kroonkraanvogel,,,,Q335992,draft,onzeker: kan ook B. pavonina zijn (zwarte kroonkraanvogel); controleren,https://avifauna.nl/onze-dieren/kroonkraanvogel/
+Trichoglossus moluccanus,trichoglossus-moluccanus,Regenbooglori,,,,Q1809222,draft,onzeker: ook T. haematodus (groene-nek-lori) in omloop als 'regenbooglori'; controleren,https://avifauna.nl/onze-dieren/regenbooglori/
+Myrmecophaga tridactyla,myrmecophaga-tridactyla,Reuzenmiereneter,,,,Q203033,draft,,https://avifauna.nl/onze-dieren/reuzenmiereneter/
+Lemur catta,lemur-catta,Ringstaartmaki,,,,Q185385,draft,,https://avifauna.nl/onze-dieren/ringstaartmaki/
+Alouatta seniculus,alouatta-seniculus,Rode brulaap,,,,Q583362,draft,onzeker: 'rode brulaap' kan ook A. macconnelli/A. arctoidea zijn; controleren,https://avifauna.nl/onze-dieren/rode-brulaap/
+Phoenicopterus ruber,phoenicopterus-ruber,Rode flamingo,,,,Q208004,draft,,https://avifauna.nl/onze-dieren/rode-flamingo/
+Ailurus fulgens,ailurus-fulgens,Rode panda,,,,Q41960,draft,,https://avifauna.nl/onze-dieren/rode-panda/
+Varecia rubra,varecia-rubra,Rode vari,,,,Q516703,draft,,https://avifauna.nl/onze-dieren/rode-vari/
+Gyps rueppelli,gyps-rueppelli,Rüppells gier,,,,Q55111925,draft,,https://avifauna.nl/onze-dieren/ruppells-gier/
+Ara militaris,ara-militaris,Soldatenara,,,,Q838924,draft,,https://avifauna.nl/onze-dieren/soldatenara/
+Haliaeetus pelagicus,haliaeetus-pelagicus,Stellers zeearend,,,,Q269896,draft,,https://avifauna.nl/onze-dieren/stellers-zeearend/
+Struthio camelus,struthio-camelus,Struisvogel,,,,Q17592,draft,,https://avifauna.nl/onze-dieren/struisvogel/
+Podocnemis unifilis,podocnemis-unifilis,Terekayschildpad,,,,Q863041,draft,,https://avifauna.nl/onze-dieren/terekayschildpad/
+Goura victoria,goura-victoria,Victoria kroonduif,,,,Q579213,draft,,https://avifauna.nl/onze-dieren/victoria-kroonduif/

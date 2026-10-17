@@ -20,6 +20,7 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--media-dir", required=True, type=Path, help="map voor foto's/audio (foto's -> <dir>/photos, repo-audio -> <dir>/audio)")
     r.add_argument("--nc-dir", type=Path, default=None, help="map voor BY-NC-SA-audio (standaard build-cache/audio in de repo-root)")
     r.add_argument("--park", type=Path, default=None, help="park.json voor het park-blok in goud (standaard parks/avifauna/park.json indien aanwezig)")
+    r.add_argument("--publish", type=Path, default=None, metavar="PARKDIR", help="kopieer goud + in_repo-media + attributions.json naar <PARKDIR>/data en <PARKDIR>/media")
     r.add_argument("--steps", default=",".join(STEPS), help=f"kommagescheiden subset van {STEPS}")
     r.add_argument("--skip-audio", action="store_true")
     r.add_argument("--skip-photos", action="store_true")
@@ -40,7 +41,7 @@ def main(argv: list[str] | None = None) -> int:
     park = args.park
     if park is None and (REPO_ROOT / "parks" / "avifauna" / "park.json").exists():
         park = REPO_ROOT / "parks" / "avifauna" / "park.json"
-    report = run(args.input, args.out, args.media_dir, steps, refresh=args.refresh, park_json=park, nc_dir=args.nc_dir)
+    report = run(args.input, args.out, args.media_dir, steps, refresh=args.refresh, park_json=park, nc_dir=args.nc_dir, publish_dir=args.publish)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 

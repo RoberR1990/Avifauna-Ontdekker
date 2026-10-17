@@ -84,3 +84,34 @@ def test_commons_evaluate():
     assert commons.evaluate("File:C.svg", svg)[0] is None
     url = "http://commons.wikimedia.org/wiki/Special:FilePath/Bubo%20bubo_1.jpg"
     assert commons.file_title_from_p18(url) == "File:Bubo bubo 1.jpg"
+
+
+def test_gold_nulls_large_spread():
+    from avipipe.pipeline import spread_report, spread_too_large
+
+    wild = {"mean": 1036, "min": 94.0, "max": 1977.0, "n": 2}
+    assert spread_too_large(wild)
+    assert not spread_too_large({"mean": 100, "min": 80.0, "max": 200.0, "n": 2})  # precies 2,5 mag
+    assert not spread_too_large({"mean": 5, "min": 5.0, "max": 5.0, "n": 1})
+    s = silver(mass_g=wild)
+    sp = build_gold([s], [ATTR], {}, "nl")["species"][0]
+    assert sp["mass_g"] is None and sp["wingspan_cm"] == 174.0
+    assert spread_report([s]) == [{"slug": "bubo-bubo", "field": "mass_g", "min": 94.0, "max": 1977.0}]
+
+
+def test_publish_copies_only_in_repo(tmp_path):
+    from avipipe.pipeline import publish
+
+    out, media, park = tmp_path / "out", tmp_path / "media", tmp_path / "park"
+    (out / "gold").mkdir(parents=True)
+    for lang in ("nl", "en"):
+        (out / "gold" / f"app-data.{lang}.json").write_text("{}", encoding="utf-8")
+    (media / "photos").mkdir(parents=True)
+    (media / "photos" / "bubo-bubo.webp").write_bytes(b"x")
+    nc = {**ATTR, "file": "build-cache/audio/bubo-bubo.opus", "kind": "audio", "in_repo": False}
+    rep = publish(out, media, park, [], [ATTR, nc])
+    assert (park / "data" / "app-data.nl.json").exists()
+    assert (park / "media" / "photos" / "bubo-bubo.webp").exists()
+    assert not (park / "build-cache").exists() and not (park / "media" / "audio").exists()
+    assert rep["copied_files"] == 1 and rep["attributions"] == 2
+    assert json.loads((park / "media" / "attributions.json").read_text(encoding="utf-8"))[1]["in_repo"] is False

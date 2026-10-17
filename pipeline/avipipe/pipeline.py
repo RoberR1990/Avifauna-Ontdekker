@@ -5,6 +5,7 @@ import csv
 import json
 import logging
 import os
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -124,6 +125,51 @@ def step_audio(http: Http, silver: list[dict], out: Path, media_dir: Path, attri
     return f"Audio: {n}/{len(silver)} soorten"
 
 
+MAX_SPREAD = 2.5  # max/min boven deze waarde: Wikidata-waarde onbetrouwbaar -> null in goud
+
+
+def spread_too_large(q: dict | None) -> bool:
+    if not q or q.get("min") is None or q.get("max") is None or q["min"] <= 0:
+        return False
+    return q["max"] / q["min"] > MAX_SPREAD
+
+
+def spread_report(silver: list[dict]) -> list[dict]:
+    out = []
+    for s in silver:
+        for k in ("wingspan_cm", "mass_g", "lifespan_y"):
+            if spread_too_large(s.get(k)):
+                out.append({"slug": s["slug"], "field": k, "min": s[k]["min"], "max": s[k]["max"]})
+    return out
+
+
+def publish(out: Path, media_dir: Path, parkdir: Path, silver: list[dict], attributions: list[dict]) -> dict:
+    """Kopieer goud en in_repo-media naar het parkpakket. NC-audio (in_repo false) blijft in build-cache."""
+    parkdir = Path(parkdir)
+    for lang in ("nl", "en"):
+        src = out / "gold" / f"app-data.{lang}.json"
+        dst = parkdir / "data" / f"app-data.{lang}.json"
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dst)
+    copied, missing = 0, []
+    for a in attributions:
+        if not a.get("in_repo"):
+            continue
+        rel = Path(a["file"])  # media/photos/x.webp of media/audio/x.opus
+        src = media_dir / Path(*rel.parts[1:])
+        if not src.exists():
+            missing.append(a["file"])
+            continue
+        dst = parkdir / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dst)
+        copied += 1
+    repo_attr = [a for a in attributions if a.get("in_repo") and a["file"] not in missing]
+    # attribution_index in goud verwijst naar de volledige lijst; houd de volgorde gelijk
+    _write_json(parkdir / "media" / "attributions.json", attributions)
+    return {"copied_files": copied, "missing_files": missing, "attributions": len(attributions), "in_repo": len(repo_attr)}
+
+
 def build_gold(silver: list[dict], attributions: list[dict], park: dict, lang: str) -> dict:
     index = {a["file"]: i for i, a in enumerate(attributions)}
     other = "en" if lang == "nl" else "nl"
@@ -137,7 +183,7 @@ def build_gold(silver: list[dict], attributions: list[dict], park: dict, lang: s
         if s.get("photo") and s["photo"]["file"] in index:
             photo = {"file": s["photo"]["file"], "attribution_index": index[s["photo"]["file"]]}
         audio = [{"file": a["file"], "attribution_index": index[a["file"]]} for a in s.get("audio") or [] if a["file"] in index]
-        mean = lambda k: (s.get(k) or {}).get("mean")  # noqa: E731
+        mean = lambda k: None if spread_too_large(s.get(k)) else (s.get(k) or {}).get("mean")  # noqa: E731
         species.append({
             "slug": s["slug"], "scientific_name": s["scientific_name"],
             "name": name, "name_alt": alt,
@@ -180,7 +226,7 @@ def attributions_md(attributions: list[dict]) -> str:
 
 
 def run(input_csv: Path, out: Path, media_dir: Path, steps: list[str], refresh: bool = False,
-        park_json: Path | None = None, nc_dir: Path | None = None) -> dict:
+        park_json: Path | None = None, nc_dir: Path | None = None, publish_dir: Path | None = None) -> dict:
     """Voer de gevraagde stappen uit. Zilver wordt hergebruikt als een stap wordt overgeslagen."""
     http = Http(refresh=refresh)
     silver_path, attr_path = out / "silver" / "species.json", out / "silver" / "attributions.json"
@@ -204,6 +250,11 @@ def run(input_csv: Path, out: Path, media_dir: Path, steps: list[str], refresh: 
             _write_json(out / "gold" / f"app-data.{lang}.json", build_gold(silver, attributions, park, lang))
         (out / "gold" / "ATTRIBUTIONS.md").write_text(attributions_md(attributions), encoding="utf-8")
     report["coverage"] = coverage_report(silver)
+    report["spread_nulled"] = spread_report(silver)
+    if publish_dir is not None:
+        if "gold" not in steps and not (out / "gold" / "app-data.nl.json").exists():
+            raise SystemExit("--publish vereist een goudstap (of bestaand goud).")
+        report["publish"] = publish(out, media_dir, publish_dir, silver, attributions)
     return report
 
 
