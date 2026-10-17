@@ -203,7 +203,7 @@ export interface AppSpecies {
   slug: string
   scientific_name: string
   name: string | null
-  name_alt: string[] | null
+  name_alt: string | null
   order: string | null
   family: string | null
   iucn: IucnCategory | null

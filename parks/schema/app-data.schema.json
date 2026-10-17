@@ -34,7 +34,7 @@
         "slug": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" },
         "scientific_name": { "type": "string", "minLength": 1 },
         "name": { "type": ["string", "null"] },
-        "name_alt": { "type": ["array", "null"], "items": { "type": "string" } },
+        "name_alt": { "type": ["string", "null"], "description": "naam in de andere taal" },
         "order": { "type": ["string", "null"] },
         "family": { "type": ["string", "null"] },
         "iucn": { "enum": ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE", null] },
