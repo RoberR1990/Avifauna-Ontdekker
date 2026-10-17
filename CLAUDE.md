@@ -47,6 +47,6 @@ Sluit af met gate 0.
 
 ## Open punten (nog niet besloten)
 - Merkcheck "Avifauna" in BOIP.
-- Statistieken ja/nee.
+- Statistieken: besloten bij gate 0 → Umami, cookieloos; zie docs/GATE-0.md. Hosting nog open.
 - Domein.
 - Geluidsbronnen: zie PLAN.md §7.5.
