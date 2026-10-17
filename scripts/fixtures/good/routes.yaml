@@ -1,0 +1,7 @@
+routes:
+  - id: kort
+    profile: short
+    title: { nl: Korte route, en: Short route }
+    intro: { nl: Een rondje., en: A short loop. }
+    waypoints: [verblijf-voorbeeld, toilet-voorbeeld]
+    note: { nl: Check de borden. }

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avifauna-ontdekker.local/schema/routes.schema.json",
+  "title": "routes.yaml (na het parsen)",
+  "description": "Wandelroutes als lijst place-id's; de build rekent de lijn over het padennetwerk (map/osm-extract.json).",
+  "type": "object",
+  "required": ["routes"],
+  "additionalProperties": false,
+  "properties": {
+    "routes": { "type": "array", "items": { "$ref": "#/$defs/route" } }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "localized": {
+      "type": "object",
+      "required": ["nl"],
+      "additionalProperties": false,
+      "properties": { "nl": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
+    },
+    "route": {
+      "type": "object",
+      "required": ["id", "profile", "title", "intro", "waypoints"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "profile": { "enum": ["stroller", "rain", "all", "short"] },
+        "title": { "$ref": "#/$defs/localized" },
+        "intro": { "$ref": "#/$defs/localized" },
+        "waypoints": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/id" } },
+        "note": { "$ref": "#/$defs/localized" }
+      }
+    }
+  }
+}

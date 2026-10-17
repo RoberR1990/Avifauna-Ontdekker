@@ -8,6 +8,8 @@ import type { ErrorObject, ValidateFunction } from 'ajv/dist/2020.js'
 import addFormatsModule from 'ajv-formats'
 import Papa from 'papaparse'
 import { parse as parseYaml } from 'yaml'
+import { deriveZones } from './park-build/zones.ts'
+import type { PlacesCollection } from '../src/park/types.ts'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 export const SCHEMA_DIR = path.resolve(here, '..', 'parks', 'schema')
@@ -205,7 +207,9 @@ export function validatePark(parkDirArg: string): Report {
   }
 
   // ----- places.geojson (eerst, voor kruisverwijzingen) -----
-  const places = new Map<string, { kind: string; zone_id?: string }>()
+  const places = new Map<string, { kind: string; zone_id?: string; indoor?: boolean }>()
+  let derivedZone = new Map<string, string>()
+  const zoneOf = (id: string): string | undefined => places.get(id)?.zone_id ?? derivedZone.get(id)
   const placesPath = path.join(parkDir, 'places.geojson')
   c.touch('places.geojson')
   if (!existsSync(placesPath)) c.error('places.geojson', 'verplicht bestand ontbreekt')
@@ -219,7 +223,16 @@ export function validatePark(parkDirArg: string): Report {
         if (!pr || typeof pr.id !== 'string') continue
         if (seen.has(pr.id)) c.error('places.geojson', `features[${i}]: dubbele id "${pr.id}"`)
         seen.add(pr.id)
-        places.set(pr.id, { kind: String(pr.kind), zone_id: typeof pr.zone_id === 'string' ? pr.zone_id : undefined })
+        places.set(pr.id, { kind: String(pr.kind), zone_id: typeof pr.zone_id === 'string' ? pr.zone_id : undefined, indoor: pr.indoor === true })
+      }
+      // Afgeleide zones (docs/FASE-2.md §3.5): plekken zonder zone_id krijgen er een via punt-in-polygoon.
+      // Alleen voor kruiscontroles hieronder; de eigen zone_id-controles blijven op het bestand zelf.
+      derivedZone = new Map<string, string>()
+      try {
+        for (const f of deriveZones(gj as unknown as PlacesCollection).features)
+          if (f.properties.zone_id && !places.get(f.properties.id)?.zone_id) derivedZone.set(f.properties.id, f.properties.zone_id)
+      } catch {
+        // ongeldige geometrie: al gemeld door het schema
       }
       for (const [i, f] of (Array.isArray(gj.features) ? gj.features : []).entries()) {
         const pr = f?.properties
@@ -234,6 +247,7 @@ export function validatePark(parkDirArg: string): Report {
   // ----- species.csv -----
   const slugs = new Set<string>()
   const speciesRows: Record<string, string>[] = []
+  const speciesStatus = new Map<string, string>()
   const csvPath = path.join(parkDir, 'species.csv')
   c.touch('species.csv')
   if (!existsSync(csvPath)) c.error('species.csv', 'verplicht bestand ontbreekt')
@@ -259,6 +273,7 @@ export function validatePark(parkDirArg: string): Report {
           if (seenSlug.has(row.slug)) c.error('species.csv', `${label}: dubbele slug (ook in rij ${seenSlug.get(row.slug)})`)
           else seenSlug.set(row.slug, line)
           slugs.add(row.slug)
+          speciesStatus.set(row.slug, row.status ?? 'draft')
         }
         if (row.scientific_name) {
           if (seenName.has(row.scientific_name)) c.error('species.csv', `${label}: dubbele wetenschappelijke naam (ook in rij ${seenName.get(row.scientific_name)})`)
@@ -324,15 +339,90 @@ export function validatePark(parkDirArg: string): Report {
             if (typeof st.place_id === 'string') {
               const pl = places.get(st.place_id)
               if (!pl) c.error('expeditions.yaml', `${sl}: place_id "${st.place_id}" bestaat niet in places.geojson`)
-              else if (pl.zone_id && pl.zone_id !== st.zone_id && pl.kind !== 'zone')
-                c.warn('expeditions.yaml', `${sl}: place_id "${st.place_id}" ligt in zone "${pl.zone_id}", niet in "${String(st.zone_id)}"`)
+              else if (pl.kind !== 'zone' && zoneOf(st.place_id) && zoneOf(st.place_id) !== st.zone_id)
+                c.warn('expeditions.yaml', `${sl}: place_id "${st.place_id}" ligt in zone "${String(zoneOf(st.place_id))}", niet in "${String(st.zone_id)}"`)
             }
-            if (typeof st.species === 'string' && !slugs.has(st.species)) c.error('expeditions.yaml', `${sl}: soort "${st.species}" bestaat niet in species.csv`)
+            if (typeof st.species === 'string') {
+              if (!slugs.has(st.species)) c.error('expeditions.yaml', `${sl}: soort "${st.species}" bestaat niet in species.csv`)
+              else if (speciesStatus.get(st.species) !== 'confirmed')
+                c.error('expeditions.yaml', `${sl}: soort "${st.species}" heeft status "${String(speciesStatus.get(st.species))}"; opdrachten alleen met confirmed soorten`)
+            }
             const t = st.task
+            // Binnenregel (docs/FASE-2.md §3.1): binnen geen GPS, dus alleen een controleerbaar antwoord.
+            const indoor = st.indoor === true || (typeof st.zone_id === 'string' && places.get(st.zone_id)?.indoor === true)
+            if (indoor && t && typeof t === 'object' && !((t.type === 'choose' || t.type === 'count') && t.answer !== undefined && t.answer !== null))
+              c.error('expeditions.yaml', `${sl}: binnen-stop (indoor) moet type choose of count hebben mét answer (nu ${String(t.type)}${t.answer === undefined ? ', zonder answer' : ''})`)
             if (t?.type === 'choose' && Array.isArray(t.options) && typeof t.answer === 'number' && t.answer >= t.options.length)
               c.error('expeditions.yaml', `${sl}: answer ${t.answer} wijst buiten options (${t.options.length} opties)`)
           }
         }
+      }
+    }
+  }
+
+  // ----- bingo.yaml -----
+  const bingoPath = path.join(parkDir, 'bingo.yaml')
+  c.touch('bingo.yaml')
+  if (!existsSync(bingoPath)) c.warn('bingo.yaml', 'bestand ontbreekt (optioneel)')
+  else {
+    let data: unknown
+    try {
+      data = parseYaml(readText(bingoPath))
+    } catch (e) {
+      c.error('bingo.yaml', `ongeldige YAML: ${(e as Error).message}`)
+    }
+    if (data !== undefined) {
+      for (const m of schemaErrors('bingo', data)) c.error('bingo.yaml', m)
+      const b = data as { sizes?: unknown; species_share?: unknown; behaviours?: unknown; exclude?: unknown } | null
+      if (b && typeof b === 'object') {
+        const behaviours = Array.isArray(b.behaviours) ? b.behaviours : []
+        if (Array.isArray(b.sizes) && b.sizes.includes(16) && behaviours.length < 16)
+          c.error('bingo.yaml', `behaviours: minstens 16 nodig voor een 4x4-kaart (nu ${behaviours.length})`)
+        if (typeof b.species_share === 'number' && (b.species_share < 0 || b.species_share > 1))
+          c.error('bingo.yaml', `species_share ${b.species_share} moet tussen 0 en 1 liggen`)
+        const seen = new Set<string>()
+        for (const [i, bh] of behaviours.entries()) {
+          const id = (bh as { id?: unknown } | null)?.id
+          if (typeof id !== 'string') continue
+          if (seen.has(id)) c.error('bingo.yaml', `behaviours[${i}]: dubbele id "${id}"`)
+          seen.add(id)
+        }
+        if (Array.isArray(b.exclude))
+          for (const s of b.exclude) if (typeof s === 'string' && !slugs.has(s)) c.error('bingo.yaml', `exclude: soort "${s}" bestaat niet in species.csv`)
+      }
+    }
+  }
+
+  // ----- routes.yaml -----
+  const routesPath = path.join(parkDir, 'routes.yaml')
+  c.touch('routes.yaml')
+  if (!existsSync(routesPath)) c.warn('routes.yaml', 'bestand ontbreekt (optioneel)')
+  else {
+    let data: unknown
+    try {
+      data = parseYaml(readText(routesPath))
+    } catch (e) {
+      c.error('routes.yaml', `ongeldige YAML: ${(e as Error).message}`)
+    }
+    if (data !== undefined) {
+      for (const m of schemaErrors('routes', data)) c.error('routes.yaml', m)
+      const routes = (data as { routes?: unknown } | null)?.routes
+      if (Array.isArray(routes)) {
+        const ids = new Set<string>()
+        for (const [i, r] of routes.entries()) {
+          if (!r || typeof r !== 'object') continue
+          const ro = r as { id?: unknown; waypoints?: unknown }
+          const rl = `routes[${i}]${typeof ro.id === 'string' ? ` (${ro.id})` : ''}`
+          if (typeof ro.id === 'string') {
+            if (ids.has(ro.id)) c.error('routes.yaml', `${rl}: dubbele route-id`)
+            ids.add(ro.id)
+          }
+          if (Array.isArray(ro.waypoints)) {
+            for (const w of ro.waypoints) if (typeof w === 'string' && !places.has(w)) c.error('routes.yaml', `${rl}: waypoint "${w}" bestaat niet in places.geojson`)
+          }
+        }
+        if (routes.length > 0 && !existsSync(path.join(parkDir, 'map', 'osm-extract.json')))
+          c.warn('routes.yaml', 'map/osm-extract.json ontbreekt: routes worden rechte lijnen')
       }
     }
   }

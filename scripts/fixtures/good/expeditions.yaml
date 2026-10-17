@@ -7,6 +7,8 @@ expeditions:
     intro:
       nl: Zoek vogels met opvallende kleuren en tel wat je ziet.
       en: Look for brightly coloured birds and count what you see.
+    age: 4-6
+    minutes: 20
     badge:
       id: badge-kleurenjager-voorbeeld
       name:
@@ -15,8 +17,11 @@ expeditions:
       icon: rainbow
     stops:
       - id: stop-rode-vogel
+        title:
+          nl: Bij het verblijf
+          en: At the enclosure
         zone_id: zone-voorbeeld
-        species: phoenicopterus-chilensis
+        species: spheniscus-humboldti
         task:
           type: find
           prompt:

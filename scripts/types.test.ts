@@ -6,7 +6,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js'
 import addFormatsModule from 'ajv-formats'
 import { describe, expect, it } from 'vitest'
 import type {
-  AppData, Attributions, ExpeditionsFile, ParkJson, PlacesCollection, Programme, SpeciesRow, TextFrontmatter,
+  AppData, Attributions, BingoFile, ExpeditionsFile, ParkJson, PlacesCollection, Programme, RoutesFile, SpeciesRow, TextFrontmatter,
 } from '../src/park/types'
 
 const schemaDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'parks', 'schema')
@@ -42,16 +42,23 @@ const places: PlacesCollection = {
 }
 const expeditions: ExpeditionsFile = {
   expeditions: [{
-    id: 'e1', title: { nl: 'Titel' }, intro: { nl: 'Intro', en: 'Intro' }, season: { from: '04-01', to: '10-31' },
+    id: 'e1', title: { nl: 'Titel' }, intro: { nl: 'Intro', en: 'Intro' }, age: '4-6', minutes: 20, season: { from: '04-01', to: '10-31' },
     badge: { id: 'b1', name: { nl: 'Badge' }, icon: 'star' },
     stops: [
-      { id: 's1', zone_id: 'zone-a', task: { type: 'find', prompt: { nl: 'Zoek' } } },
+      { id: 's1', title: { nl: 'Bij de pinguïns' }, zone_id: 'zone-a', task: { type: 'find', prompt: { nl: 'Zoek' } } },
       { id: 's2', zone_id: 'zone-a', place_id: 'verblijf-a', species: 'spheniscus-humboldti', indoor: false,
         task: { type: 'choose', prompt: { nl: 'Kies' }, options: [{ nl: 'a' }, { nl: 'b' }], answer: 1, hint: { nl: 'Tip' } } },
       { id: 's3', zone_id: 'zone-a', task: { type: 'count', prompt: { nl: 'Tel' }, answer: 4 } },
       { id: 's4', zone_id: 'zone-a', task: { type: 'answer', prompt: { nl: 'Vraag' }, answer: 'pinguïn' } },
     ],
   }],
+}
+const bingo: BingoFile = {
+  sizes: [9, 16], species_share: 0.6, exclude: ['platanus-hispanica'],
+  behaviours: [{ id: 'een-poot', icon: 'x', label: { nl: 'Op één poot', en: 'On one leg' }, indoor_ok: true }],
+}
+const routes: RoutesFile = {
+  routes: [{ id: 'kort', profile: 'short', title: { nl: 'Kort' }, intro: { nl: 'Intro' }, waypoints: ['verblijf-a', 'wc-a'], note: { nl: 'Let op' } }],
 }
 const programme: Programme = {
   last_checked: '2026-10-17', source_url: 'https://example.org/programma',
@@ -83,6 +90,8 @@ describe('types passen bij de schemas', () => {
   it('species-row', () => check('species-row', row))
   it('places', () => check('places', places))
   it('expeditions', () => check('expeditions', expeditions))
+  it('bingo', () => check('bingo', bingo))
+  it('routes', () => check('routes', routes))
   it('programme', () => check('programme', programme))
   it('text-frontmatter', () => check('text-frontmatter', front))
   it('attributions', () => check('attributions', attributions))

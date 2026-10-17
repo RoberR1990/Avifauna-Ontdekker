@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url'
 import matter from 'gray-matter'
 import Papa from 'papaparse'
 import { parse as parseYaml } from 'yaml'
+import { buildBingo, buildExpeditions, buildRoutes } from './content.ts'
 import { mediumFileName, thumbFileName } from './medium.ts'
+import { deriveZones } from './zones.ts'
 import type {
   AudioRef,
   BundleAttribution,
@@ -334,20 +336,23 @@ export function buildBundle(parkDir: string, lang: Lang, opts: BuildOptions = {}
     }
   }
 
+  const places = deriveZones(readJson<PlacesCollection>(join(parkDir, 'places.geojson')))
+  const ctx = { parkDir, lang, places, species, warnings }
+
   const bundle: ParkBundle = {
     lang,
     generated: opts.now ?? new Date().toISOString(),
     park,
     species,
-    places: readJson<PlacesCollection>(join(parkDir, 'places.geojson')),
+    places,
     programme: readJson<Programme>(join(parkDir, 'programme.json')),
     attributions: outAttr,
     map,
     media_manifest: mediaManifest,
-    // Fase 2: gevuld door W1 (docs/FASE-2.md §4).
-    expeditions: [],
-    bingo: null,
-    routes: [],
+    // Fase 2 (docs/FASE-2.md §4)
+    expeditions: buildExpeditions(ctx),
+    bingo: buildBingo(ctx),
+    routes: buildRoutes(ctx, map?.georef ?? null),
   }
   return { bundle, files: [...files.values()], warnings }
 }

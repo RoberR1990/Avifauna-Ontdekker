@@ -32,6 +32,8 @@
         "id": { "$ref": "#/$defs/id" },
         "title": { "$ref": "#/$defs/localized" },
         "intro": { "$ref": "#/$defs/localized" },
+        "age": { "enum": ["4-6", "6-10", "all"] },
+        "minutes": { "type": "integer", "minimum": 1 },
         "season": { "$ref": "#/$defs/season" },
         "badge": {
           "type": "object",
@@ -52,6 +54,7 @@
       "additionalProperties": false,
       "properties": {
         "id": { "$ref": "#/$defs/id" },
+        "title": { "$ref": "#/$defs/localized" },
         "zone_id": { "$ref": "#/$defs/id" },
         "place_id": { "$ref": "#/$defs/id" },
         "species": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" },

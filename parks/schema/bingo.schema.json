@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avifauna-ontdekker.local/schema/bingo.schema.json",
+  "title": "bingo.yaml (na het parsen)",
+  "description": "Gedrag- en dingen-vakjes voor de bingo plus het deel soortvakjes. Soortvakjes komen uit species.csv (confirmed, met foto, niet in exclude).",
+  "type": "object",
+  "required": ["sizes", "species_share", "behaviours"],
+  "additionalProperties": false,
+  "properties": {
+    "sizes": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": [9, 16] } },
+    "species_share": { "type": "number", "minimum": 0, "maximum": 1 },
+    "behaviours": { "type": "array", "items": { "$ref": "#/$defs/behaviour" } },
+    "exclude": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z]+-[a-z][a-z-]*$" } }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "localized": {
+      "type": "object",
+      "required": ["nl"],
+      "additionalProperties": false,
+      "properties": { "nl": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
+    },
+    "behaviour": {
+      "type": "object",
+      "required": ["id", "icon", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "icon": { "type": "string", "minLength": 1 },
+        "label": { "$ref": "#/$defs/localized" },
+        "indoor_ok": { "type": "boolean" }
+      }
+    }
+  }
+}
